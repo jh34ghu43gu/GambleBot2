@@ -1,0 +1,35 @@
+
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+	implementation 'com.google.code.gson:gson:2.8.7'
+	implementation 'ch.qos.logback:logback-classic:1.2.3'
+
+	//implementation 'org.springframework:spring-core:5.3.10'
+	implementation 'org.springframework:spring-beans:5.3.10'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.5'
+	implementation 'mysql:mysql-connector-java:5.1.13'
+	//Hibernate
+	implementation 'javax.xml.bind:jaxb-api:2.2.4'
+	implementation 'org.hibernate:hibernate-core:5.6.0.Final'
+	implementation 'org.hibernate:hibernate-entitymanager:5.6.0.Final'
+	
+	
+	implementation 'net.dv8tion:JDA:4.3.0_339'
+	implementation 'pw.chew:jda-chewtils:1.22.0'
+
+    implementation 'com.google.guava:guava:23.0'
+    testImplementation 'junit:junit:4.12'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+    	name 'm2-dv8tion'
+    	url 'https://m2.dv8tion.net/releases'
+    }
+    maven { url "https://m2.chew.pro/releases" }
+}

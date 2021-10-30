@@ -1,0 +1,188 @@
+{"weapons": [{
+"Name": "Scattergun", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, { 
+"Name": "Force-A-Nature", "Stock": false, "Australium": true, "Drop": true, "KS":true, "Weight":10}, { 
+"Name": "Shortstop", "Stock": false, "Australium": false, "Drop": true, "KS":true}, { 
+"Name": "Soda Popper", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Baby Face's Blaster", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Back Scatter", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Pistol", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Lugermorph", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "C.A.P.P.E.R", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Winger", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Pretty Boy's Pocket Pistol", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Flying Guillotine", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Bonk! Atomic Punch", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Crit-a-Cola", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Mad Milk", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Bat", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Holy Mackerel", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Unarmed Combat", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Batsaber", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Sandman", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Candy Cane", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Boston Basher", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Three-Rune Blase", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Fan O'War", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Atomizer", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Wrap Assassin", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Rocket Launcher", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
+"Name": "Original", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Direct Hit", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Black Box", "Stock": false, "Australium": true, "Drop": true, "KS":true, "Weight":10}, {
+"Name": "Rocket Jumper", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Liberty Launcher", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Cow Mangler 5000", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Beggar's Bazooka", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Air Strike", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Shotgun", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Reserve Shooter", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Buff Banner", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Gunboats", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Battallion's Backup", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Concheror", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Mantreads", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Righteous Bison", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "B.A.S.E. Jumper", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Panic Attack", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Shovel", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Equalizer", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Pain Train", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Half-Zatoichi", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Disciplinary Action", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Market Gardener", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Escape Plan", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Flame Thrower", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
+"Name": "Rainblower", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Nostromo Napalmer", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Backburner", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Degreaser", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Phlogistinator", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Dragon's Fury", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Flare Gun", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Detonator", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Manmelter", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Scorch Shot", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Thermal Thruster", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Gas Passer", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Fire Axe", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Lollichop", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Axtinguisher", "Stock": false, "Australium": true, "Drop": true, "KS":true, "Weight":10}, {
+"Name": "Postal Pummeler", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Homewrecker", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Maul", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Powerjack", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Back Scratcher", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Sharpened Volcano Fragment", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Third Degree", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Neon Annihilator", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Hot Hand", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Grenade Launcher", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
+"Name": "Loch-n-Load", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Ali Baba's Wee Booties", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Bootlegger", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Loose Cannon", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Iron Bomber", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Stickybomb Launcher", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
+"Name": "Scottish Resistance", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Chargin' Targe'", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Sticky Jumper", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Splendid Screen", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Tide Turner", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Quickiebomb Launcher", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Bottle", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Scottish Handshake", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Eyelander", "Stock": false, "Australium": true, "Drop": true, "KS":true, "Weight":3}, {
+"Name": "Nessie's Nine Iron", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Scotsman's Skullcutter", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Pain Train", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Ullapool Caber", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Claidheamh Mor", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Persian Persuader", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Minigun", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
+"Name": "Iron Curtain", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Natascha", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Brass Beast", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Tomislav", "Stock": false, "Australium": true, "Drop": true, "KS":true, "Weight":10}, {
+"Name": "Huo-Long Heater", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Family Business", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Sandvich", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Dalokohs Bar", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Buffalo Steak Sandvich", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Second Banana", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Fists", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Apoco-Fists", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Killing Gloves of Boxing", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Gloves of Running Urgently", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Bread Bite", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Warrior's Spirit", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Fists of Steel", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Eviction Notice", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Holiday Punch", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Frontier Justice", "Stock": false, "Australium": true, "Drop": true, "KS":true, "Weight":10}, {
+"Name": "Widowmaker", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Pomson 6000", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Rescue Ranger", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Panic Attack", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Wrangler", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Short Circuit", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Wrench", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":5}, {
+"Name": "Gunslinger", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Southern Hospitality", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Jag", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Eureka Effect", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Syringe Gun", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Blutsauger", "Stock": false, "Australium": true, "Drop": true, "KS":true, "Weight":10}, {
+"Name": "Crusader's Crossbow", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Overdose", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Medi Gun", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":5}, {
+"Name": "Quick-Fix", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Kritzkrieg", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Vaccinator", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Bonesaw", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Ubersaw", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Vita-Saw", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Amputator", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Solemn Vow", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Sniper Rifle", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
+"Name": "AWPer Hand", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Huntsman", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Fortified Compound", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Sydney Sleeper", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Bazaar Bargain", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Machina", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Shooting Star", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Hitman's Heatmaker", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Classic", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Submachine Gun", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
+"Name": "Cleaner's Carbine", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Jarate", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Razorback", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Darwin's Danger Shield", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Cozy Camper", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Kukri", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Tribalman's Shiv", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Bushwacka", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Shahanshah", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Revolver", "Stock": true, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Big Kill", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Ambassador", "Stock": false, "Australium": true, "Drop": true, "KS":true, "Weight":10}, {
+"Name": "L'Etranger", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Enforcer", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Diamondback", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Knife", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
+"Name": "Sharp Dresser", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Black Rose", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Your Eternal Reward", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Wanga Prick", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Conniver's Kunai", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Big Earner", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Spy-cicle", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Cloak And Dagger", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Dead Ringer", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Red-Tape Recorder", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Frying Pan", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Conscientious Objector", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Freedom Staff", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Bat Outta Hell", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
+"Name": "Ham Shank", "Stock": false, "Australium": false, "Drop": false, "KS":true}]
+}

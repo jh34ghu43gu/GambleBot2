@@ -1,0 +1,1258 @@
+{
+"The Concealed Killer Weapons Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Forest Fire Flame Thrower",
+		"Masked Mender Medi Gun",
+		"King of the Jungle Minigun",
+		"Backwoods Boomstick Shotgun",
+		"Woodsy Widowmaker SMG",
+		"Night Owl Sniper Rifle"
+	]
+	"commando": [
+		"Wrapped Reviver Medi Gun",
+		"Woodland Warrior Rocket Launcher",
+		"Carpet Bomber Stickybomb Launcher",
+		"Night Terror Scattergun"
+	]
+	"assassin": [
+		"Sudden Flurry Stickybomb Launcher",
+		"Purple Range Sniper Rifle",
+		"Psychedelic Slugger Revolver"
+	]
+	"elite": [
+		"Red Rock Roscoe Pistol",
+		"Sand Cannon Rocket Launcher"
+	]
+}
+"The Powerhouse Weapons Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Lightning Rod Shotgun",
+		"Turbine Torcher Flame Thrower",
+		"Low Profile SMG",
+		"Aqua Marine Rocket Launcher",
+		"Brick House Minigun"
+	]
+	"commando": [
+		"Sandstone Special Pistol",
+		"Black Dahlia Pistol",
+		"Dead Reckoner Revolver",
+		"Spark of Life Medi Gun",
+		"Flash Fryer Flame Thrower"
+	]
+	"assassin": [
+		"Shell Shocker Rocket Launcher",
+		"Pink Elephant Stickybomb Launcher",
+		"Current Event Scattergun"
+	]
+	"elite": [
+		"Thunderbolt Sniper Rifle",
+		"Liquid Asset Stickybomb Launcher"
+	]
+}
+"Gun Mettle Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Commissar's Coat",
+		"Flak Jack",
+		"Lurker's Leathers",
+		"Rotation Sensation",
+		"Support Spurs",
+		"Vascular Vestment",
+		"Wild West Waistcoat"
+	]
+	"commando": [
+		"Fortunate Son",
+		"Outta' Sight",
+		"Physician's Protector",
+		"White Russian"
+	]
+	"assassin": [
+		"Bruce's Bonnet",
+		"El Duderino",
+		"Sheriff's Stetson"
+	]
+	"elite": [
+		"Captain Cardbeard Cutthroat",
+		"Potassium Bonnet"
+	]
+}
+"Quarantined Collection Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Universal Translator",
+		"Phobos Filter",
+		"Final Frontiersman",
+		"Life Support System"
+	]
+	"commando": [
+		"Rocket Operator",
+		"Captain Space Mann",
+		"Shooting Star"
+	]
+	"assassin": [
+		"Giger Counter",
+		"Starduster"
+	]
+	"elite": [
+		"Corona Australis",
+		"Sucker Slug"
+	]
+}
+"Confidential Collection Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Graylien",
+		"Cadet Visor",
+		"Space Diver",
+		"A Head Full of Hot Air"
+	]
+	"commando": [
+		"C.A.P.P.E.R",
+		"Phononaut",
+		"Jupiter Jetpack"
+	]
+	"assassin": [
+		"Space Hamster Hammy",
+		"Burstchester"
+	]
+	"elite": [
+		"Batsaber"
+	]
+}
+"Gargoyle Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Face of Mercy",
+		"El Patron",
+		"Hellmet",
+		"Smokey Sombrero",
+		"Thrilling Tracksuit",
+		"B'aaarrgh-n-Britches",
+		"Prehistoric Pullover",
+		"Roboot"
+	]
+	"commando": [
+		"Duck Billed Hatypus",
+		"Iron Lung",
+		"Neptune's Nightmare",
+		"El Caballero",
+		"B'aaarrgh-n-Bicorne",
+		"Death Racer's Helmet"
+	]
+	"assassin": [
+		"Grim Tweeter",
+		"Crusader's Getup",
+		"Dead'er Alive"
+	]
+	"elite": [
+		"Arthropod's Aspect",
+		"Catastrophic Companions"
+	]
+}
+"Pyroland Weapons Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Flower Power Shotgun",
+		"Flower Power Scattergun",
+		"Flower Power Revolver",
+		"Flower Power Medi Gun",
+		"Brain Candy Rocket Launcher",
+		"Brain Candy Pistol",
+		"Brain Candy Minigun",
+		"Brain Candy Knife",
+		"Shot to Hell Pistol",
+		"Stabbed to Hell Knife",
+		"Blue Mew SMG"
+	]
+	"commando": [
+		"Torqued to Hell Wrench",
+		"Shot to Hell Scattergun",
+		"Blue Mew Scattergun",
+		"Blue Mew Rocket Launcher",
+		"Blue Mew Pistol",
+		"Blue Mew Knife",
+		"Mister Cuddles Minigun"
+	]
+	"assassin": [
+		"Balloonicorn Flame Thrower",
+		"Sweet Dreams Stickybomb Launcher",
+		"Sweet Dreams Grenade Launcher",
+		"Balloonicorn Sniper Rifle"
+	]
+	"elite": [
+		"Rainbow Flame Thrower",
+		"Rainbow Sniper Rifle",
+		"Rainbow Grenade Launcher"
+	]
+}
+"Warbird Weapons Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Blitzkrieg Knife",
+		"Butcher Bird Grenade Launcher",
+		"Corsair Scattergun",
+		"Airwolf Wrench",
+		"Blitzkrieg SMG",
+		"Blitzkrieg Revolver",
+		"Blitzkrieg Pistol",
+		"Blitzkrieg Medi Gun"
+	]
+	"commando": [
+		"Airwolf Knife",
+		"Corsair Medi Gun",
+		"Blitzkrieg Stickybomb Launcher",
+		"Airwolf Sniper Rifle",
+		"Butcher Bird Minigun"
+	]
+	"assassin": [
+		"Warhawk Flame Thrower",
+		"Red Bear Shotgun",
+		"Warhawk Grenade Launcher"
+	]
+	"elite": [
+		"Warhawk Rocket Launcher",
+		"Killer Bee Scattergun"
+	]
+}
+"Tough Break Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Patriot Peak",
+		"Berlin Brain Bowl",
+		"Hot Heels",
+		"A Hat to Kill For",
+		"Shin Shredders",
+		"Medical Monarch",
+		"Siberian Sweater",
+		"Chicago Overcoat",
+		"Diplomat",
+		"Bunnyhopper's Ballistics Vest"
+	]
+	"commando": [
+		"Winter Backup",
+		"Bonk Batter's Backup",
+		"Gift Bringer",
+		"Chill Chullo"
+	]
+	"assassin": [
+		"A Well Wrapped Hat"
+	]
+	"elite": [
+		
+	]
+}
+"Mayflower Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Courtly Cuirass",
+		"Demo's Dustcatcher",
+		"Surgical Survivalist",
+		"Squire's Sabatons",
+		"Airdog",
+		"Scoped Spartan"
+	]
+	"commando": [
+		"Herald's Helm",
+		"Gauzed Gaze",
+		"Lurking Legionnaire",
+		"Patriot's Pouches"
+	]
+	"assassin": [
+		"Dad Duds",
+		"Dayjogger"
+	]
+	"elite": [
+		"Dead Head",
+		"Bedouin Bandana"
+	]
+}
+"Creepy Crawly Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Showstopper",
+		"Mad Mask",
+		"Surgeon's Sidearms",
+		"Nasty Norsemann",
+		"Colossal Cranium",
+		"El Paso Poncho",
+		"Spooktacles",
+		"Wide-Brimmed Bandito",
+		"Cranial Carcharodon",
+		"Wing Mann"
+	]
+	"commando": [
+		"Toadstool Topper",
+		"Spirit of the Bombing Past",
+		"Corpus Christi Cranium",
+		"Heavy Tourism",
+		"Big Topper",
+		"Lil' Bitey"
+	]
+	"assassin": [
+		"Mo'Horn",
+		"Pestering Jester",
+		"Burly Beast"
+	]
+	"elite": [
+		"Class Crown",
+		"Combustible Cutie"
+	]
+}
+"Unlocked Winter 2016 Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Handy Canes",
+		"Reader's Choice",
+		"Brain-Warming Wear",
+		"Packable Provisions",
+		"Elf Esteem",
+		"Sweet Smissmas Sweater",
+		"Santarchimedes"
+	]
+	"commando": [
+		"Socked and Loaded",
+		"Flammable Favor",
+		"Bomb Beanie",
+		"Electric Twanger",
+		"Woolen Warmer"
+	]
+	"assassin": [
+		"Snowwing",
+		"Pyro the Flamedeer",
+		"Head Prize"
+	]
+	"elite": [
+		"Bomber Knight",
+		"Snowmann"
+	]
+}
+"Rainy Day Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Airtight Arsonist",
+		"Flakcatcher",
+		"Airborne Attire",
+		"Warhood",
+		"Field Practice",
+		"Head Mounted Double Observatory",
+		"Blast Defense",
+		"Upgrade",
+		"Speedster's Spandex"
+	]
+	"commando": [
+		"Down Under Duster",
+		"Hawk-Eyed Hunter",
+		"Messenger's Mail Bag",
+		"Pocket Pauling",
+		"Archer's Sterling"
+	]
+	"assassin": [
+		"Guilden Guardian",
+		"Legendary Lid",
+		"Plumber's Cap"
+	]
+	"elite": [
+		"Lightning Lid",
+		"Flash of Inspiration"
+	]
+}
+"Abominable Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Fireman's Essentials",
+		"Conaghers' Utility Idol",
+		"Pithy Professional",
+		"Classy Capper",
+		"Most Dangerous Mane",
+		"Forest Footwear",
+		"Shellmet",
+		"Attack Packs",
+		"Nuke",
+		"Bait and Bite"
+	]
+	"commando": [
+		"Rifleman's Regalia",
+		"Croaking Hazard",
+		"Transparent Trousers",
+		"D-eye-monds",
+		"Hunter in Darkness"
+	]
+	"assassin": [
+		"Tropical Toad",
+		"Jungle Jersey",
+		"Aztec Aggressor"
+	]
+	"elite": [
+		"War Eagle",
+		"Quizzical Quetzal"
+	]
+}
+"Unleash the Beast Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Aloha Apparel",
+		"Commando Elite",
+		"Siberian Tigerstripe",
+		"Cammy Jammies",
+		"Deity's Dress",
+		"Sharp Chest Pain",
+		"Vitals Vest",
+		"Battle Boonie",
+		"Heavy Harness",
+		"Fat Man's Field Cap"
+	]
+	"commando": [
+		"Conspicuous Camouflage",
+		"Feathered Fiend",
+		"Hot Huaraches",
+		"Pocket Saxton",
+		"Crit Cloak"
+	]
+	"assassin": [
+		"Sacrificial Stone",
+		"Bananades",
+		"Jungle Wreath"
+	]
+	"elite": [
+		"Aztec Warrior",
+		"Slithering Scarf"
+	]
+}
+"Jungle Jackpot War Paint Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Mannana Peeled War Paint",
+		"Leopard Printed War Paint",
+		"Tiger Buffed War Paint",
+		"Bamboo Brushed War Paint",
+		"Anodized Aloha War Paint"
+	]
+	"commando": [
+		"Piña Polished War Paint",
+		"Croc Dusted War Paint",
+		"Macaw Masked War Paint"
+	]
+	"assassin": [
+		"Yeti Coated War Paint",
+		"Sax Waxed War Paint"
+	]
+	"elite": [
+		"Park Pigmented War Paint"
+	]
+}
+"Infernal Reward War Paint Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Bloom Buffed War Paint",
+		"Cardboard Boxed War Paint",
+		"Star Crossed War Paint",
+		"Merc Stained War Paint",
+		"Quack Canvassed War Paint"
+	]
+	"commando": [
+		"Clover Camo'd War Paint",
+		"Pizza Polished War Paint",
+		"Kill Covered War Paint",
+		"Bank Rolled War Paint"
+	]
+	"assassin": [
+		"Bonk Varnished War Paint",
+		"Dream Piped War Paint",
+		"Freedom Wrapped War Paint"
+	]
+	"elite": [
+		"Fire Glazed War Paint"
+	]
+}
+"'Decorated War Hero' War Paint Civilian Grade Keyless Case": {
+	"civilian": [
+		"Civic Duty Mk.II War Paint",
+		"Civil Servant Mk.II War Paint"
+	]
+	"freelance": [
+		"Autumn Mk.II War Paint",
+		"Plaid Potshotter Mk.II War Paint"
+	]
+	"mercenary": [
+		"Night Owl Mk.II War Paint",
+		"Woodsy Widowmaker Mk.II War Paint",
+		"Forest Fire Mk.II War Paint"
+	]
+	"commando": [
+		"Woodland Warrior Mk.II War Paint",
+		"Carpet Bomber Mk.II War Paint",
+		"Wrapped Reviver Mk.II War Paint"
+	]
+	"assassin": [
+		
+	]
+	"elite": [
+		
+	]
+}
+"'Decorated War Hero' War Paint Freelance Grade Keyless Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		"Autumn Mk.II War Paint",
+		"Plaid Potshotter Mk.II War Paint"
+	]
+	"mercenary": [
+		"Night Owl Mk.II War Paint",
+		"Woodsy Widowmaker Mk.II War Paint",
+		"Forest Fire Mk.II War Paint"
+	]
+	"commando": [
+		"Woodland Warrior Mk.II War Paint",
+		"Carpet Bomber Mk.II War Paint",
+		"Wrapped Reviver Mk.II War Paint"
+	]
+	"assassin": [
+		
+	]
+	"elite": [
+		
+	]
+}
+"'Decorated War Hero' War Paint Mercenary Grade Keyless Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Night Owl Mk.II War Paint",
+		"Woodsy Widowmaker Mk.II War Paint",
+		"Forest Fire Mk.II War Paint"
+	]
+	"commando": [
+		"Woodland Warrior Mk.II War Paint",
+		"Carpet Bomber Mk.II War Paint",
+		"Wrapped Reviver Mk.II War Paint"
+	]
+	"assassin": [
+		
+	]
+	"elite": [
+		
+	]
+}
+"'Contract Campaigner' War Paint Civilian Grade Keyless Case": {
+	"civilian": [
+		"Nutcracker Mk.II War Paint",
+		"Smalltown Bringdown Mk.II War Paint"
+	]
+	"freelance": [
+		"Macabre Web Mk.II War Paint",
+		"Iron Wood Mk.II War Paint"
+	]
+	"mercenary": [
+		"Backwoods Boomstick Mk.II War Paint",
+		"Masked Mender Mk.II War Paint"
+	]
+	"commando": [
+		"Dead Reckoner Mk.II War Paint",
+		"Bovine Blazemaker Mk.II War Paint"
+	]
+	"assassin": [
+		
+	]
+	"elite": [
+		
+	]
+}
+"'Contract Campaigner' War Paint Freelance Grade Keyless Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		"Macabre Web Mk.II War Paint",
+		"Iron Wood Mk.II War Paint"
+	]
+	"mercenary": [
+		"Backwoods Boomstick Mk.II War Paint",
+		"Masked Mender Mk.II War Paint"
+	]
+	"commando": [
+		"Dead Reckoner Mk.II War Paint",
+		"Bovine Blazemaker Mk.II War Paint"
+	]
+	"assassin": [
+		
+	]
+	"elite": [
+		
+	]
+}
+"'Contract Campaigner' War Paint Mercenary Grade Keyless Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Backwoods Boomstick Mk.II War Paint",
+		"Masked Mender Mk.II War Paint"
+	]
+	"commando": [
+		"Dead Reckoner Mk.II War Paint",
+		"Bovine Blazemaker Mk.II War Paint"
+	]
+	"assassin": [
+		
+	]
+	"elite": [
+		
+	]
+}
+"Winter 2017 Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Blast Blocker",
+		"Caribou Companion",
+		"Pocket Santa",
+		"Down Tundra Coat",
+		"Puffy Polar Cap",
+		"Polar Bear",
+		"Sinner's Shade",
+		"Brass Bucket",
+		"Pocket Yeti",
+		"Trucker's Topper"
+	]
+	"commando": [
+		"Sledder's Sidekick",
+		"Wild West Whiskers",
+		"Coldfront Commander",
+		"Burning Beanie",
+		"Melody of Misery"
+	]
+	"assassin": [
+		"Handsome Hitman",
+		"Cat's Pajamas",
+		"Coldfront Carapace"
+	]
+	"elite": [
+		"Hungover Hero",
+		"Balloonihoodie"
+	]
+}
+"Winter 2017 War Paint Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Geometrical Teams War Paint",
+		"Bomber Soul War Paint",
+		"Polar Surprise War Paint",
+		"Cabin Fevered War Paint",
+		"Alien Tech War Paint",
+		"Dovetailed War Paint",
+		"Damascus & Mahogany War Paint",
+		"Hazard Warning War Paint"
+	]
+	"commando": [
+		"Neo Tokyo War Paint",
+		"Uranium War Paint",
+		"Hana War Paint",
+		"Cosmic Calamity War Paint"
+	]
+	"assassin": [
+		"Mosaic War Paint",
+		"Jazzy War Paint"
+	]
+	"elite": [
+		"Miami Element War Paint"
+	]
+}
+"Blue Moon Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Antarctic Eyewear",
+		"Assassin's Attire",
+		"Hot Case",
+		"Sky High Fly Guy",
+		"Tsar Platinum",
+		"Head Hedge",
+		"Tundra Top",
+		"Wipe Out Wraps"
+	]
+	"commando": [
+		"Punk's Pomp",
+		"Starboard Crusader",
+		"Aristotle",
+		"Burning Question",
+		"Veteran's Attire",
+		"Scourge of the Sky",
+		"Blizzard Britches"
+	]
+	"assassin": [
+		"Cold Case",
+		"Private Maggot Muncher",
+		"Frag Proof Fragger"
+	]
+	"elite": [
+		"Robin Walkers"
+	]
+}
+"Violet Vermin Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Deadbeats",
+		"Murderer's Motif",
+		"Bandit's Boots",
+		"Highway Star",
+		"Mann-O-War",
+		"Olympic Leapers",
+		"Hephaistos' Handcraft",
+		"Vampire Vanquisher",
+		"Mini-Engy",
+		"Arachno-Arsonist"
+	]
+	"commando": [
+		"Gaelic Glutton",
+		"Dressperado",
+		"Pyro in Chinatown",
+		"Athenian Attire",
+		"Tank Top",
+		"Aim Assistant"
+	]
+	"assassin": [
+		"Defragmenting Hard Hat 17%",
+		"Terror-antula",
+		"Mr. Quackers"
+	]
+	"elite": [
+		"Lucky Cat Hat"
+	]
+}
+"Scream Fortress X War Paint Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Haunted Ghosts War Paint",
+		"Totally Boned War Paint",
+		"Horror Holiday War Paint",
+		"Spirit of Halloween War Paint",
+	]
+	"commando": [
+		"Calavera Canvas War Paint",
+		"Spectral Shimmered War Paint",
+		"Skull Study War Paint"
+	]
+	"assassin": [
+		"Ghost Town War Paint",
+		"Tumor Toasted War Paint"
+	]
+	"elite": [
+		"Electroshocked War Paint"
+	]
+}
+"Winter 2018 Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Pocket Pardner",
+		"Wise Whiskers",
+		"Snowcapped",
+		"Paka Parka",
+		"Catcher's Companion",
+		"Juvenile's Jumper",
+		"Crack Pot",
+		"Climbing Commander",
+		"Mighty Mitre"
+	]
+	"commando": [
+		"Puggyback",
+		"Cool Capuchon",
+		"Pocket Admin",
+		"Harry",
+		"Miser's Muttonchops"
+	]
+	"assassin": [
+		"Polar Pal",
+		"Dumb Bell",
+		"Millennial Mercenary"
+	]
+	"elite": [
+		"Bread Heads"
+	]
+}
+"Summer 2019 Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Melted Mop",
+		"Stapler's Specs",
+		"Shutterbug",
+		"Backbreaker's Guards",
+		"Mediterranean Mercenary",
+		"Dancing Doe",
+		"Pompous Privateer",
+		"Bottle Cap",
+		"Brain Interface",
+		"Wanderer's Wear"
+	]
+	"commando": [
+		"Spawn Camper",
+		"Backbreaker's Skullcracker",
+		"Kapitan's Kaftan",
+		"Wagga Wagga Wear",
+		"Speedy Scoundrel",
+		"Dynamite Abs"
+	]
+	"assassin": [
+		"Unforgiven Glory",
+		"Bobby Bonnet",
+		"Bare Necessities",
+		"Fiery Phoenix"
+	]
+	"elite": [
+		"Peacebreaker",
+		"Texas Toast"
+	]
+}
+"Spooky Spoils Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Derangement Garment",
+		"Fuel Injector",
+		"Party Poncho",
+		"Pocket Halloween Boss",
+		"BINOCULUS!",
+		"Candy Cranium",
+		"El Mostacho",
+		"Bat Hat",
+		"Convict Cap",
+		"Bread Biter"
+	]
+	"commando": [
+		"El Zapateador",
+		"Voodoo Vizier",
+		"Soviet Strongmann",
+		"Skullbrero",
+		"Horrible Horns",
+		"Madmann's Muzzle"
+	]
+	"assassin": [
+		"Trick Stabber",
+		"Elizabeth the Third",
+		"Head of the Dead",
+		"Racc Mann"
+	]
+	"elite": [
+		"Pyr'o Lantern",
+		"Mister Bones"
+	]
+}
+"Winter 2019 Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Pebbles the Penguin",
+		"Citizen Cane",
+		"Missing Piece",
+		"Glittering Garland",
+		"Yule Hog",
+		"Gingerbread Mann",
+		"Bumble Beenie",
+		"Spiky Viking",
+		"Pocket-Medes"
+	]
+	"commando": [
+		"Discovision",
+		"Telefragger Toque",
+		"Globetrotter",
+		"Winter Wrap Up",
+		"Mislaid Sweater"
+	]
+	"assassin": [
+		"Public Speaker",
+		"Smissmas Saxton",
+		"Provisions Cap"
+	]
+	"elite": [
+		"Candy Crown"
+	]
+}
+"Winter 2019 War Paint Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Alpine War Paint",
+		"Gift Wrapped War Paint",
+		"Seriously Snowed War Paint",
+		"Igloo War Paint"
+	]
+	"commando": [
+		"Sleighin' Style War Paint",
+		"Snow Covered War Paint",
+		"Frost Ornamented War Paint"
+	]
+	"assassin": [
+		"Smissmas Camo War Paint",
+		"Smissmas Village War Paint"
+	]
+	"elite": [
+		"Winterland Wrapped War Paint"
+	]
+}
+"Summer 2020 Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Self-Care",
+		"Jarmaments",
+		"Sophisticated Smoker",
+		"Soda Specs",
+		"Fire Fighter",
+		"Poolside Polo",
+		"Crabe de Chapeau",
+		"California Cap",
+		"Bazaar Bauble",
+		"Head of Defense"
+	]
+	"commando": [
+		"Flatliner",
+		"Tools of the Tourist",
+		"Hazard Headgear",
+		"Bird's Eye Viewer",
+		"Breach and Bomb",
+		"Momma Kiev",
+	]
+	"assassin": [
+		"Flamehawk",
+		"Loaf Loafers",
+		"Smoking Jacket",
+		"Hawk Warrior"
+	]
+	"elite": [
+		"Breadcrab",
+		"Hypno-eyes"
+	]
+}
+"Wicked Windfall Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Seared Sorcerer",
+		"Boom Boxers",
+		"King Cardbeard",
+		"Flavorful Baggies",
+		"Calamitous Cauldron",
+		"A Handsome Handy Thing",
+		"Handsome Devil",
+		"Hollowed Helm",
+		"Goblineer",
+		"Ghoul Box"
+	]
+	"commando": [
+		"Glow from Below",
+		"Eye-See-You",
+		"Impish Ears",
+		"Sir Pumpkinton",
+		"Gourd Grin",
+		"Semi-tame Trapper's Hat"
+	]
+	"assassin": [
+		"Fire Tooth",
+		"Wavefinder",
+		"Misfortune Fedora",
+		"Wrap-A-Khamon"
+	]
+	"elite": [
+		"Balloonicorpse",
+		"All Hallows' Hatte"
+	]
+}
+"Scream Fortress XII War Paint Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Organ-ically Hellraised War Paint",
+		"Spider Season War Paint",
+		"Gourdy Green War Paint",
+		"Eyestalker War Paint",
+		"Death Deluxe War Paint",
+		"Portal Plastered War Paint",
+		"Candy Coated War Paint"
+	]
+	"commando": [
+		"Spider's Cluster War Paint",
+		"Raving Dead War Paint",
+		"Crawlspace Critters War Paint",
+		"Sweet Toothed War Paint"
+	]
+	"assassin": [
+		"Helldriver War Paint",
+		"Mummified Mimic War Paint",
+		"Pumpkin Pied War Paint"
+	]
+	"elite": [
+		"Spectrum Splattered War Paint"
+	]
+}
+"Winter 2020 Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Elf Care Provider",
+		"Bear Walker",
+		"Festive Flip-thwomps",
+		"Shoestring Santa",
+		"Jolly Jingler",
+		"Candy Cantlers",
+		"Festive Fascinator",
+		"Reindoonibeanie",
+		"Particulate Protector",
+		"Killing Tree"
+	]
+	"commando": [
+		"Smissmas Sorcerer",
+		"SandMann's Brush",
+		"BedBug Protection",
+		"Professional's Pom Pom",
+		"Blitzen Bowl",
+		"Night Ward"
+	]
+	"assassin": [
+		"Helm Helm",
+		"Towering Pillar of Beanies",
+		"Round-A-Bout"
+	]
+	"elite": [
+		"Towering Pile of Presents"
+	]
+}
+"Winter 2020 War Paint Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Snowflake Swirled War Paint",
+		"Snow Globalization War Paint",
+		"Glacial Glazed War Paint",
+		"Gifting Mann's Wrapping Paper War Paint",
+		"Peppermint Swirl War Paint",
+		"Gingerbread Winner War Paint"
+	]
+	"commando": [
+		"Smissmas Spycrabs War Paint",
+		"Elfin Enamel War Paint",
+		"Frozen Aurora War Paint",
+		"Cookie Fortress War Paint"
+	]
+	"assassin": [
+		"Frosty Delivery War Paint",
+		"Saccharine Striped War Paint"
+	]
+	"elite": [
+		"Starlight Serenity War Paint"
+	]
+}
+"Summer 2021 Cosmetic Case": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		"Fried Batter",
+		"Roaming Roman",
+		"Thousand-Yard Stare",
+		"Brim of Fire",
+		"Hook, Line, and Cinder",
+		"Reel Fly Hat",
+		"Two Punch Mann",
+		"Wild Brim Slouch",
+		"Manndatory Attire"
+	]
+	"commando": [
+		"Meal Dealer",
+		"Water Waders",
+		"Snack Stack",
+		"Sightliner",
+		"Crocodile Dandy"
+	]
+	"assassin": [
+		"Fast Food",
+		"Panisher",
+		"Crustaceous Cowl"
+	]
+	"elite": [
+		"Ballooniphones"
+	]
+}
+"template": {
+	"civilian": [
+		
+	]
+	"freelance": [
+		
+	]
+	"mercenary": [
+		
+	]
+	"commando": [
+		
+	]
+	"assassin": [
+		
+	]
+	"elite": [
+		
+	]
+}
+}
