@@ -25,7 +25,7 @@ public class MvmTourCommand extends Command {
 		this.help = "Simulate the specified tour's loot. Defaults to 1 tour, can do up to " + tourLimit + " at once.\n"
 				+ "Will add all the items to your inventory from all missions and the final tour loot."; 
 		//TODO add reference to inventory command.
-		this.cooldown = 5;
+		this.cooldown = 60 * 60;
 	}
 	
 	@Override
