@@ -14,6 +14,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import bot.GambleBot;
+import files.ConfigHelper;
+import model.Crate;
 import repository.ItemRepository;
 
 
@@ -253,7 +255,7 @@ public class Item {
 		if(secondaryQuality != null) {
 			out += " " + secondaryQuality;
 		}
-		out += " " + quality + " " + name + ", Level: " + level;
+		out += " " + quality + " " + name + ", Level: " + level + ", Origin: " + origin;
 		return out;
 	}
 	
@@ -262,10 +264,20 @@ public class Item {
 	 */
 	public String toDiscordString() {
 		String out = "" + quantity;
+		//Amount followed by secondary quality (strange)
 		if(secondaryQuality != null) {
 			out += " " + secondaryQuality;
 		}
-		out += " " + quality;
+		//Primary quality unless it's unusual
+		if(!quality.equals("Unusual")){
+			out += " " + quality;
+		} else if(effect != null) { //If it's unusual put the effect instead, if it's not null (fallback to quality if null effect)
+			out += " " + effect;
+		} else {
+			out += " " + quality;
+		}
+		
+		//Killstreak title
 		if(this.killstreakTier == 1) {
 			out += " Killstreak";
 		} else if(this.killstreakTier == 2) {
@@ -273,11 +285,37 @@ public class Item {
 		} else if(this.killstreakTier == 3) {
 			out += " Professional killstreak";
 		}
+		
+		//Name
 		out += " " + name;
+		
+		//Wear
+		if(wear != null){
+			out += " (" + wear + ")";
+		}
+		
+		//Killstreak effects
 		if(this.killstreakTier == 2) {
 			out += " (" + this.killstreakSheen + ")";
 		} else if(this.killstreakTier == 3) {
 			out += " (" + this.killstreaker + ", " + this.killstreakSheen + ")";
+		}
+		
+		//Include level for pans
+		if(this.name.contains("Golden Frying")) {
+			out += " Level: " + this.level;
+		}
+		
+		//Tier orb
+		if(tier != null) {
+			if(Crate.rarityEmotes.containsKey(tier)) {
+				out += " " + Crate.rarityEmotes.get(tier);
+			}
+		}
+		
+		//Strange orb
+		if(quality.equals("Strange") || (secondaryQuality != null && secondaryQuality.equals("Strange"))) {
+			out += " " + ConfigHelper.getOptionFromFile("STRANGE_EMOTE");
 		}
 		return out;
 	}
@@ -294,6 +332,7 @@ public class Item {
 			for(Item i : itemList) {
 				if(i.canCombine(this)) {
 					i.setQuantity(i.getQuantity() + this.getQuantity());
+					IR.save(i);
 					return; //Don't add to any others that may exist
 				}
 			}

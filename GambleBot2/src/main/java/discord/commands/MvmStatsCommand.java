@@ -15,6 +15,7 @@ import beans.Player;
 import bot.GambleBot;
 import bot.Utils;
 import ch.qos.logback.classic.Logger;
+import model.Tour;
 import net.dv8tion.jda.api.EmbedBuilder;
 import repository.ItemRepository;
 
@@ -98,11 +99,11 @@ public class MvmStatsCommand extends Command {
 				reinforceds += item.getQuantity();
 			} else if(item.getName().contains("Pristine")) {
 				pristines += item.getQuantity();
-			} else if(item.getKillstreakTier() == 1 && item.getOrigin().equals("TwoCities")) {
+			} else if(item.getKillstreakTier() == 1 && item.getOrigin().equals("TwoCities")) { //TODO fix this if allowing items to be KS'd
 				kits += item.getQuantity();
 			} else if(item.getKillstreakTier() == 2 && item.getOrigin().equals("TwoCities")) {
 				specFabs += item.getQuantity();
-			} else if(item.getKillstreakTier() == 3 && item.getOrigin().equals("TwoCities")) {
+			} else if(item.getKillstreakTier() == 3 && item.getOrigin().equals("TwoCities") && !item.getName().contains("Golden Frying Pan")) {
 				proFabs += item.getQuantity();
 			} else if(item.getName().contains("Carbonado Botkiller")) {
 				carbonados += item.getQuantity();
@@ -126,6 +127,8 @@ public class MvmStatsCommand extends Command {
 			
 		double totalAussies = stAussies + meAussies + tcAussies + ggAussies;
 		double totalAusTours = player.getStTour() + player.getMeTour() + player.getTcTour() + player.getGgTour();
+		double totalTours = player.getOsTour() + totalAusTours;
+		double totalTourCost = Tour.tourCost * (player.getOsTour()*6 + player.getStTour()*6 + player.getMeTour()*3 + player.getTcTour()*4 + player.getGgTour()*3);
 		DecimalFormat twoDec = new DecimalFormat("###,###.##");
 		DecimalFormat noDec = new DecimalFormat("###,###");
 		String allText = "";
@@ -139,7 +142,7 @@ public class MvmStatsCommand extends Command {
 			event.reply("You have not completed any tours.");
 			return;
 		}
-		allText = "Total tours: " + noDec.format((player.getOsTour()+totalAusTours)) + " (Australium dropping tours: " + noDec.format(totalAusTours) + ").\n"
+		allText = "Total tours: " + noDec.format(totalTours) + " (Australium dropping tours: " + noDec.format(totalAusTours) + ").\n"
 				+ "Total Australiums: " + noDec.format(totalAussies) + " (" + twoDec.format((totalAussies/totalAusTours)*100) + "%)\n"
 				+ "Total Golden Frying Pans: " + noDec.format(pans) + " (" + twoDec.format((pans/totalAusTours)*100) + "%)\n";
 		
@@ -150,24 +153,28 @@ public class MvmStatsCommand extends Command {
 		}
 		if(player.getStTour() != 0) {
 			stText = "Total tours: " + noDec.format(player.getStTour()) + "\n"
+					+ "Tours Dry: " + noDec.format(player.getSteelDry()) + "\n"
 					+ "Total Silver Mk.I Botkillers: " + noDec.format(silverI) + " (" + twoDec.format(silverI/(double)player.getStTour()*100) + "%)\n"
 					+ "Total Gold Mk.I Botkillers: " + noDec.format(goldI) + " (" + twoDec.format(goldI/(double)player.getStTour()*100) + "%)\n"
 					+ "Total Australiums: " + noDec.format(stAussies) + " (" + twoDec.format(stAussies/(double)player.getStTour()*100) + "%)\n";
 		}	
 		if(player.getMeTour() != 0) {	
 			meText = "Total tours: " + noDec.format(player.getMeTour()) + "\n"
+					+ "Tours Dry: " + noDec.format(player.getMechaDry()) + "\n"
 					+ "Total Silver Mk.II Botkillers: " + noDec.format(silverII) + " (" + twoDec.format(silverII/(double)player.getMeTour()*100) + "%)\n"
 					+ "Total Gold Mk.II Botkillers: " + noDec.format(goldII) + " (" + twoDec.format(goldII/(double)player.getMeTour()*100) + "%)\n"
 					+ "Total Australiums: " + noDec.format(meAussies) + " (" + twoDec.format(meAussies/(double)player.getMeTour()*100) + "%)\n";
 		}
 		if(player.getGgTour() != 0) {
 			ggText = "Total tours: " + noDec.format(player.getGgTour()) + "\n"
+					+ "Tours Dry: " + noDec.format(player.getGearDry()) + "\n"
 					+ "Total Carbonado Botkillers: " + noDec.format(carbonados) + " (" + twoDec.format(carbonados/(double)player.getGgTour()*100) + "%)\n"
 					+ "Total Diamond Botkillers: " + noDec.format(diamonds) + " (" + twoDec.format(diamonds/(double)player.getGgTour()*100) + "%)\n"
 					+ "Total Australiums: " + noDec.format(ggAussies) + " (" + twoDec.format(ggAussies/(double)player.getGgTour()*100) + "%)\n";
 		}
 		if(player.getTcTour() != 0) {
 			tcText = "Total tours: " + noDec.format(player.getTcTour()) + "\n"
+					+ "Tours Dry: " + noDec.format(player.getTwoDry()) + "\n"
 					+ "Total Battle-Worn Parts: " + noDec.format(battleWorns) + " (Avg per mission: " + twoDec.format(battleWorns/((double)player.getTcTour()*4)) + ")\n"
 					+ "Total Reinforced Parts: " + noDec.format(reinforceds) + " (Avg per mission: " + twoDec.format(reinforceds/((double)player.getTcTour()*4)) + ")\n"
 					+ "Total Pristine Parts: " + noDec.format(pristines) + " (Avg per mission: " + twoDec.format(pristines/((double)player.getTcTour()*4)) + ")\n"
@@ -181,6 +188,7 @@ public class MvmStatsCommand extends Command {
 		eb.setAuthor(event.getAuthor().getName());
 		eb.setTitle("Your current mvm stats.\n"
 				+ "Current overall drystreak: " + noDec.format(player.getOverallDry()) + "\n"
+				+ "Cost of tours: $" + twoDec.format(totalTourCost) + "\n"
 				+ "Balance: $" + twoDec.format(player.getBalance()));
 		eb.addField("Overall stats", allText, false);
 		if(!osText.isEmpty()) {

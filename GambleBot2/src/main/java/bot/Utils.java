@@ -2,10 +2,13 @@ package bot;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import beans.Item;
+import beans.Leaderboard;
 import beans.Player;
 import beans.Server;
 import files.ConfigHelper;
@@ -13,6 +16,7 @@ import model.Tour;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.User;
+import repository.LeaderboardRepository;
 import repository.PlayerRepository;
 import repository.ServerRepository;
 
@@ -24,6 +28,7 @@ public class Utils {
 	
 	private static final String TICKET_URL = "https://wiki.teamfortress.com/w/images/9/9b/Backpack_Tour_of_Duty_Ticket.png";
 	private static final String KEY_URL = "https://wiki.teamfortress.com/w/images/8/83/Backpack_Mann_Co._Supply_Crate_Key.png";
+	private static final int MAX_BOARDS = 100;
 	
 	/**
 	 * @param event
@@ -101,18 +106,22 @@ public class Utils {
 			EB.setAuthor(owner.getName());
 		}
 		//TODO maybe figure out how to add avatar pfp
-		EB.setTitle(title);
 		if(thumbnail.equalsIgnoreCase("mvm")) {
 			EB.setThumbnail(TICKET_URL);
 		} else if(thumbnail.equalsIgnoreCase("crate")) {
 			EB.setThumbnail(KEY_URL);
 		}
-		//Off chance user has no pro fabs
+		//Off chance user didn't get enough stuff
 		if(items.isEmpty()) {
-			EB.addField("Unlucky! Did not recieve any stranges or pro ks fabs.", "", false);
+			if(thumbnail.equalsIgnoreCase("mvm")) {
+				EB.addField("Unlucky! Did not recieve any stranges or pro ks fabs.", "", false);
+			} else if(thumbnail.equalsIgnoreCase("crate")) {
+				EB.addField("Unlucky! Did not recieve enough significant items to display.", "", false);
+			}
 			return EB.build();
 		}
-		String itemText = "";
+		ArrayList<String> itemText = new ArrayList<String>();
+		int itemTextIndex = 0;
 		String emote = "";
 		for(Item item : items) {
 			if(Tour.australiumEmotes.containsKey(item.getName())) {
@@ -121,28 +130,129 @@ public class Utils {
 			if(item.getKillstreakTier() == 3) {
 				emote += ConfigHelper.getOptionFromFile("PRO_KS_EMOTE");
 			}
-			itemText += "• " + emote + " " + item.toDiscordString() + "\n";
+			if(item.getEffect() != null) {
+				emote += ConfigHelper.getOptionFromFile("UNUSUAL_EMOTE");
+			} else if(item.getQuality().equals("Unusual") && item.getName().contains("Unusualifier")) {
+				emote += ConfigHelper.getOptionFromFile("UNUSUALIFIER_EMOTE");
+			}
+			String itemStr = "• " + emote + " " + item.toDiscordString();
+			if(itemText.isEmpty()) {
+				itemText.add(itemStr);
+			} else if(itemText.get(itemTextIndex).length()+ itemStr.length() >= 1024) {
+				itemTextIndex++;
+				itemText.add(itemStr);
+			} else {
+				itemText.set(itemTextIndex, itemText.get(itemTextIndex) + "\n" + itemStr);
+			}
 			emote = "";
 		}
 		//Make sure message is valid size.
-		EB.addField("", itemText, false);
-		int i = 1;
-		while(!EB.isValidLength()) {
-			itemText = "";
-			EB.clearFields();
-			for(int j = 0; j < items.size()-i; j++) {
-				if(Tour.australiumEmotes.containsKey(items.get(j).getName())) {
-					emote = Tour.australiumEmotes.get(items.get(j).getName());
-				}
-				if(items.get(j).getKillstreakTier() == 3) {
-					emote += ConfigHelper.getOptionFromFile("PRO_KS_EMOTE");
-				}
-				itemText += "• " + emote + " " + items.get(j).toDiscordString() + "\n";
-				emote = "";
+		int i = 0;
+		boolean modified = false;
+		String modifiedTitle = "Could not display " + (itemText.size() - i) + " items.\n" + title;
+		for(String s : itemText) {
+			if(EB.length() + s.length() + modifiedTitle.length() + 4 < 6000) { //+4 for increased digits itemText.size might be
+				EB.addField("", s, false);
+				i++;
+			} else {
+				modified = true;
+				break;
 			}
-			i++;
+		}
+		
+		
+		if(modified) {
+			EB.setTitle("Could not display " + (itemText.size() - i) + " items.\n" + title);
+		} else {
+			EB.setTitle(title);
 		}
 		return EB.build();
+	}
+	
+	/**
+	 * Return the arraylist of all leaderboard entries for the given event. List is sorted by value
+	 * @param event "{tour OR overall} drystreak", "unusual drought"
+	 * @return
+	 */
+	public static ArrayList<Leaderboard> getLeaderboard(String event) {
+		ArrayList<Leaderboard> boards = new ArrayList<Leaderboard>();
+		LeaderboardRepository LR = GambleBot.getContext().getBean(LeaderboardRepository.class);
+		Optional<List<Leaderboard>> result = LR.findByEventOrderByValueAsc(event);
+		if(result.isPresent()) {
+			for(Leaderboard board : result.get()) {
+				boards.add(board);
+			}
+		}
+		return boards;
+	}
+	
+	/**
+	 * Attempt to add a board to database if it is a new top #MAX_BOARDS, delete bottom board if MAX_BOARDS has been reached
+	 * @param board
+	 * @return
+	 */
+	public static boolean updateLeaderboard(Leaderboard board) {
+		String event = board.getEvent();
+		ArrayList<Leaderboard> boards = getLeaderboard(event);
+		
+		//Empty board just add the event
+		if(boards.isEmpty()) {
+			board.save();
+			return true;
+		}
+		
+		if(boards.size() <= MAX_BOARDS) { //Can add board regardless
+			board.save();
+			return true;
+		} else if(board.getValue() > boards.get(boards.size()-1).getValue()) {
+			//Board value is higher than the lowest value and we need to remove the lowest one
+			board.save();
+			Leaderboard lowest = boards.get(0);
+			//Select lowest one
+			for(Leaderboard l : boards) {
+				if(l.getValue() < lowest.getValue()) {
+					lowest = l;
+				} else if(l.getValue() == lowest.getValue()) { //Tie, set newest one
+					if(l.getDate().compareTo(lowest.getDate()) > 0) {
+						lowest = l;
+					}
+				}
+			}
+			lowest.delete();
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	/**
+	 * Get the rank of the board relative to the event list
+	 * @param board
+	 * @return
+	 */
+	public int getLeaderboardRanking(Leaderboard board) {
+		String event = board.getEvent();
+		ArrayList<Leaderboard> boards = getLeaderboard(event);
+		
+		if(boards.isEmpty()) { //Shouldn't happen
+			return -1;
+		}
+		
+		int rank = 1;
+		for(Leaderboard LB : boards) {
+			if(LB.getValue() < board.getValue()) {
+				rank++;
+			} else if(LB.getValue() == board.getValue()) { //Tie, oldest one has rank priority
+				if(LB.getDate().compareTo(board.getDate()) < 0) {
+					rank++;
+				} else {
+					break;
+				}
+			} else {
+				break;
+			}
+		}
+		return rank;
 	}
 
 }

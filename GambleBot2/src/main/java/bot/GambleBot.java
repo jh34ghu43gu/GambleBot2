@@ -1,5 +1,9 @@
 package bot;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
+
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -10,9 +14,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 
+import beans.Item;
+import beans.Player;
 import ch.qos.logback.classic.Logger;
 import discord.commands.*;
 import files.ConfigHelper;
+import model.Crate;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -34,6 +41,54 @@ public class GambleBot {
 		ConfigHelper.setOptionToFile("DISCORD_PREFIX", "g.", false);
 		ConfigHelper.setOptionToFile("DISCORD_OWNER", "", false);
 		ConfigHelper.setOptionToFile("PRO_KS_EMOTE", "", false);
+		ConfigHelper.setOptionToFile("UNUSUAL_EMOTE", "", false);
+		ConfigHelper.setOptionToFile("UNUSUALIFIER_EMOTE", "", false);
+		ConfigHelper.setOptionToFile("STRANGE_EMOTE", "", false);
+		
+		
+		/*ArrayList<Crate> cases = Crate.getCases();
+		HashMap<Integer, Integer> distr = new HashMap<Integer, Integer>() {{
+			put(0,0);
+			put(1,0);
+			put(2,0);
+			put(3,0);
+			put(4,0);
+			put(5,0);
+			put(6,0);
+			put(7,0);
+			put(8,0);
+			put(9,0);
+		}};
+		ArrayList<String> bCases = new ArrayList<String>() {{
+			add("Creepy Crawly Case");
+			add("Crimson Cache Case");
+			add("Violet Vermin Case");
+			add("Wicked Windfall Case");
+		}};
+		int j = 0;
+		for(Crate c : cases) {
+			if(c.getName().contains("Winter") || bCases.contains(c.getName())) {continue;}
+			for(int i = 0; i < 5000; i ++) {
+				j++;
+				ArrayList<Item> bItems = c.drawBonusItems(new Player("jh34", 0.0));
+				distr.put(bItems.size(), distr.get(bItems.size())+1);
+				for(Item item : bItems) {
+					if(item.getQuality().equals("Unusual")) {
+						log.debug("Unusual item got: " + item.toDiscordString());
+					}
+				}
+			}
+		}
+		System.out.println("Total cases opened: " + j);
+		for(Entry<Integer, Integer> e : distr.entrySet()) {
+			double p = e.getValue().doubleValue()/Double.parseDouble(Integer.toString(j));
+			p = Math.round(p*10000)/(double)100;
+			System.out.println("Bonus drops: " + e.getKey() + "  Amount: " + e.getValue() + " (" + p + "%)");
+		}
+		
+		if(1 == 1) {
+			return;
+		}*/
 		
 		//Start spring application
 		context = new SpringApplicationBuilder(GambleBot.class)
@@ -49,6 +104,14 @@ public class GambleBot {
 		commandBuilder.addCommand(new RemoveCrateChannelCommand());
 		commandBuilder.addCommand(new MvmTourCommand());
 		commandBuilder.addCommand(new MvmStatsCommand());
+		commandBuilder.addCommand(new GetMvmOddsCommand());
+		commandBuilder.addCommand(new GetCrateOddsCommand());
+		commandBuilder.addCommand(new UnboxCrateCommand());
+		commandBuilder.addCommand(new GetPlayerBalance());
+		commandBuilder.addCommand(new GetCrateNamesCommand());
+		commandBuilder.addCommand(new GetPlayerUnusualsCommand());
+		commandBuilder.addCommand(new GetPlayerAustraliumsCommand());
+		commandBuilder.addCommand(new GetPlayerPansCommand());
 		CommandClient commandClient = commandBuilder.build();
 		
 		//Launch discord bot

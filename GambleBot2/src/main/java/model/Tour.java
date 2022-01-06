@@ -3,6 +3,7 @@ package model;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,6 +30,20 @@ public class Tour {
 	
 	private static final Logger log = (Logger) LoggerFactory.getLogger(Tour.class);
 	private static Random rand = new Random();
+	
+	private static double hatAndPaintChance = 0.02;
+	private static double roboHatChance = 0.0595;
+	private static double robroChance = 0.0005;
+	private static double weaponChance = 1-(robroChance+hatAndPaintChance+roboHatChance);
+	private static double rollingBWPartChance = 0.5;
+	private static double rollingRPartChance = 0.25;
+	private static double pristinePartChance = 0.13;
+	private static double specFabChance = 0.11;
+	private static double proFabChance = 0.2;
+	private static double rareBotkillerChance = 0.1;
+	private static double aussieChance = 0.0211;
+	private static double panChance = 1.0/19000.0;
+	
 	//Note these match the order of the item input binary
 	public static String[] battleWorns = {"Battle-Worn Robot KB-808", "Battle-Worn Robot Taunt Processor", "Battle-Worn Robot Money Furnace" };
 	public static String[] reinforceds = {"Reinforced Robot Emotion Detector", "Reinforced Robot Humor Suppression Pump", "Reinforced Robot Bomb Stabilizer" };
@@ -37,6 +52,7 @@ public class Tour {
 	public static String[] botkillers = {"Flame Thrower", "Knife", "Medi Gun", "Minigun", "Rocket Launcher", "Scattergun", "Sniper Rifle", "Stickybomb Launcher", "Wrench"};
 	public static String[] roboHats = {"Robot Running Man", "Tin Pot", "Pyrobotics Pack", "Battery Bandolier",
 			"U-clank-a", "Tin-1000", "Medic Mech-Bag", "Bolted Bushman", "Stealth Steeler" };
+	public static final double tourCost = 0.99;
 	
 	public static HashMap<String, String> australiumEmotes = new HashMap<String, String>() {{
 		put("Australium Ambassador", "<:Backpack_Australium_Ambassador:835951712472531044>");
@@ -61,7 +77,81 @@ public class Tour {
 		put("Golden Frying Pan", "<:Backpack_Golden_Frying_Pan:835951747255107654>");
 	}};
 	
+	public static HashMap<String, String> botkillerEmotes = new HashMap<String, String>() {{
+		
+	}};
+	
 	private static final String WEAPON_FILE = "tf2weapons.json";
+	
+	/**
+	 * @return Information about tour odds.
+	 */
+	public static String getTourInfo() {
+		DecimalFormat twoDec = new DecimalFormat("###,###.##");
+		DecimalFormat fiveDec = new DecimalFormat("###,###.#####");
+		String out = "Current tour related odds:\n"
+				+ "\tRandom item drop from missions (All tours):\n"
+				+ "\t\tWeapon: " + twoDec.format(weaponChance*100) + "%\n"
+				+ "\t\tRobo Hat: " + twoDec.format(roboHatChance*100) + "%\n"
+				+ "\t\tNormal hat or paint: " + twoDec.format(hatAndPaintChance*100) + "%\n"
+				+ "\t\tRobro 3000: " + twoDec.format(robroChance*100) + "%\n"
+				+ "\n\tTwo Cities mission loot:\n"
+				+ "\t\tGuaranteed 4 Battle-Worn and 1 Reinforced parts.\n"
+				+ "\t\tRolling " + twoDec.format(rollingBWPartChance*100) + "% chance for extra Battle-Worn parts.\n"
+				+ "\t\tRolling " + twoDec.format(rollingRPartChance*100) + "% chance for extra Reinforced parts.\n"
+				+ "\t\tPristine part: " + twoDec.format(pristinePartChance*100) + "%\n"
+				+ "\t\tSpecialized Killstreak Fabricator Chance: " + twoDec.format(specFabChance*100) + "%\n"
+				+ "\tTwo Cities tour loot:\n"
+				+ "\t\tGuaranteed 1 Killstreak Kit and 1 Specialized Killstreak Fabricator.\n"
+				+ "\t\tProfessional Killstreak Fabricator Chance: " + twoDec.format(proFabChance*100) + "%\n"
+				+ "\n\tAll other tours tour loot:\n"
+				+ "\t\tGuaranteed botkiller weapon.\n"
+				+ "\t\tChance for botkiller to be high tier: " + twoDec.format(rareBotkillerChance*100) + "%\n"
+				+ "\n\tChance for Australium (All tours except Oil Spill): " + twoDec.format(aussieChance*100) + "%\n"
+				+ "\tChance for Golden Frying Pan (All tours except Oil Spill): " + fiveDec.format(panChance*aussieChance*100) + "%\n";
+		return out;
+	}
+	
+	/**
+	 * @return Information about individual aussie odds.
+	 */
+	public static String getAussieInfo() {
+		String out = "Odds of recieving a certain australium:\n";
+		DecimalFormat fourDec = new DecimalFormat("###,###.####");
+		DecimalFormat fiveDec = new DecimalFormat("###,###.#####");
+		InputStream is = Tour.class.getClassLoader().getResourceAsStream(WEAPON_FILE);
+		Gson gson = new Gson();
+		try {
+			JsonObject weps = gson.fromJson(new InputStreamReader(is, "UTF-8"), JsonObject.class);
+			JsonArray weaponsArray = weps.get("weapons").getAsJsonArray();
+			ArrayList<JsonObject> weaponPool = new ArrayList<JsonObject>();
+			double totalWeight = 0;
+			for(int i = 0; i < weaponsArray.size(); i++) {
+				JsonObject weaponObj = weaponsArray.get(i).getAsJsonObject();
+				if(weaponObj.get("Australium").getAsBoolean()) {
+					weaponPool.add(weaponObj);
+					totalWeight += weaponObj.get("Weight").getAsInt();
+				}
+			}
+			for(JsonObject o : weaponPool) {
+				double odds = o.get("Weight").getAsDouble()/totalWeight;
+				odds = Math.round(odds*1000000)/10000.0; //4 decimals
+				String name = "Australium " + o.get("Name").getAsString();
+				if(australiumEmotes.containsKey(name)) {
+					name = australiumEmotes.get(name) + name;
+				}
+				out += "\t" + name + ": " + fourDec.format(odds) + "%\n";
+			}
+			String pan = "Golden Frying Pan";
+			out += "\t" + australiumEmotes.get(pan) + pan + ": " + fiveDec.format(panChance) + "%\n";
+		} catch (IOException e) {
+			log.error("Could not parse tf2weapons.json.");
+			log.error(e.getMessage());
+			return "Couldn't determine odds at this time.";
+		}
+		
+		return out;
+	}
 	
 	/**
 	 * Creates a full tour's worth of loot (missions + tour finish).
@@ -124,7 +214,7 @@ public class Tour {
 				loot.add(i);
 			}
 			//11% chance for spec fab
-			if(rand.nextInt(100) < 11) {
+			if(rand.nextDouble() < specFabChance) {
 				loot.add(Tour.randomKillstreakFab(2, owner));
 			}
 		}
@@ -142,7 +232,7 @@ public class Tour {
 	public static ArrayList<Item> doTourLoot(String tourName, int tour, Player owner) {
 		ArrayList<Item> loot = new ArrayList<Item>();
 		int level = (int) (tour % 256); //Simulate tour number roll over
-		boolean rareBotkiller = rand.nextInt(10) == 1; //10% chance for the rare botkiller
+		boolean rareBotkiller = rand.nextDouble() <= rareBotkillerChance; //10% chance for the rare botkiller
 		Item botkiller = Tour.randomWeapon(3, owner);
 		botkiller.setOrigin(tourName);
 		botkiller.setLevel(level);
@@ -180,7 +270,7 @@ public class Tour {
 			loot.add(spec);
 			
 			//20% chance prof fab
-			if(rand.nextInt(100) < 20) {
+			if(rand.nextDouble() < proFabChance) {
 				Item pro = Tour.randomKillstreakFab(3, owner);
 				pro.setLevel(level);
 				loot.add(pro);
@@ -196,11 +286,11 @@ public class Tour {
 		
 		//Aussie for not oil spill tours 2.11%
 		if(!tourName.equalsIgnoreCase("OilSpill")) {
-			int ausChance = rand.nextInt(100000);
-			if(ausChance < 2110) {
+			double ausChance = rand.nextDouble();
+			if(ausChance < aussieChance) {
 				Item aus = null;
-				if(ausChance < 5) { //Pan chance 1 in 19000 ~ 5/100000
-					aus = new Item("Golden Frying Pan", "Strange", 1, 1, owner, false);
+				if(ausChance < panChance) { //Pan chance 1 in 19000 ~ 5/100000
+					aus = new Item("Golden Frying Pan", "Strange", level, 1, owner, false);
 					aus.setKillstreakTier(3);
 					aus.setKillstreakSheen(Tour.randomSheen());
 					aus.setKillstreaker(Tour.randomKillstreaker());
@@ -225,20 +315,20 @@ public class Tour {
 	 * @param owner
 	 * @param tourName
 	 * @return
-	 */
+	 */	
 	public static Item randomMissionItem(Player owner, String tourName) {
-		int type = rand.nextInt(10000)+1;
+		double type = rand.nextDouble();
 		String itemName = "";
-		if(type <= 9300) { //Random weapon (93%)
-			return Tour.randomWeapon(0, owner);
-		} else if(type <= 9500) { //Normal hat or paint (2%)
+		if(type <= robroChance) {
+			itemName = "Robro 3000";
+		} else if(type <= robroChance+hatAndPaintChance) {
 			//TODO tool/hat randomizer
 			itemName = "Random Hat/Paint";
-		} else if(type <= 9995) { //Robo hat (5.95%)
+		} else if(type <= robroChance+hatAndPaintChance+roboHatChance) {
 			int roboHat = rand.nextInt(roboHats.length);
 			itemName = roboHats[roboHat];
-		} else { //Robro (0.05%)
-			itemName = "Robro 3000";
+		} else { //Weapon
+			return Tour.randomWeapon(0, owner);
 		}
 		Item item = new Item(itemName, "Unique", 1, 1, owner, true);
 		item.setOrigin(tourName);
@@ -254,7 +344,7 @@ public class Tour {
 	 * 1 Specialized kit - 11% - not in this method
 	 * @param owner
 	 * @return
-	 */
+	 */	
 	public static ArrayList<Item> randomMissionParts(Player owner) {
 		ArrayList<Item> parts = new ArrayList<Item>();
 		
@@ -269,7 +359,7 @@ public class Tour {
 			}
 		}
 		//Roll for extra BW parts 50% chance until failure
-		while(rand.nextInt(100) < 50) {
+		while(rand.nextDouble() <= rollingBWPartChance) {
 			String bw = battleWorns[rand.nextInt(battleWorns.length)];
 			if(partsMap.containsKey(bw)) {
 				partsMap.put(bw, partsMap.get(bw)+1);
@@ -281,7 +371,7 @@ public class Tour {
 		String r = reinforceds[rand.nextInt(reinforceds.length)];
 		partsMap.put(r, 1);
 		//Roll for extra reinforced parts 25% chance until failure
-		while(rand.nextInt(100) < 25) {
+		while(rand.nextDouble() <= rollingRPartChance) {
 			r = reinforceds[rand.nextInt(reinforceds.length)];
 			if(partsMap.containsKey(r)) {
 				partsMap.put(r, partsMap.get(r)+1);
@@ -290,7 +380,7 @@ public class Tour {
 			}
 		}
 		//13% chance for 1 pristine
-		if(rand.nextInt(100) < 13) {
+		if(rand.nextDouble() <= pristinePartChance) {
 			String p = pristines[rand.nextInt(pristines.length)];
 			partsMap.put(p, 1);
 		}

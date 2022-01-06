@@ -150,7 +150,7 @@
 "Name": "Sydney Sleeper", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Bazaar Bargain", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Machina", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
-"Name": "Shooting Star", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Shooting Star", "Stock": false, "Australium": false, "Drop": false, "KS":true}, {
 "Name": "Hitman's Heatmaker", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Classic", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Submachine Gun", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {

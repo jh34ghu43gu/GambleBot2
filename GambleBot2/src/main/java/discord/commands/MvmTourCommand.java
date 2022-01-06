@@ -1,5 +1,6 @@
 package discord.commands;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import org.slf4j.LoggerFactory;
@@ -8,6 +9,7 @@ import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import beans.Item;
+import beans.Leaderboard;
 import beans.Player;
 import bot.Utils;
 import ch.qos.logback.classic.Logger;
@@ -17,7 +19,6 @@ public class MvmTourCommand extends Command {
 	
 	private static final Logger log = (Logger) LoggerFactory.getLogger(MvmTourCommand.class);
 	private static final int tourLimit = 10;
-	private static final double tourCost = 0.99;
 
 	public MvmTourCommand() {
 		this.name = "tour";
@@ -178,19 +179,34 @@ public class MvmTourCommand extends Command {
 			player.setOverallDry(overallDry);
 			player.setPanDry(panDry);
 		}
-		player.setBalance(player.getBalance() - (ticketMulti * tourCost * amt));
+		player.setBalance(player.getBalance() - (ticketMulti * Tour.tourCost * amt));
 		player.save();
+		
 		
 		//Return updates
 		ArrayList<Item> embedItems = new ArrayList<Item>();
 		String out = "";
-		if(lastDry > 0) {
-			out += "Congrats on beating your overall aussie drystreak of " + lastOverallDry + ". "
-					+ "Your drystreak for this tour was " + lastDry + ".\n";
-		}
 		if(lastPanDry > 0) {
 			out += "Congrats on getting a pan. You went " + lastPanDry + " tours overall without one.\n";
+			
+			//Update leaderboards
+			Leaderboard overallDryBoard = new Leaderboard("overall drystreak", lastOverallDry, new Timestamp(System.currentTimeMillis()), player);
+			Leaderboard tourDryBoard = new Leaderboard(tour.toLowerCase() + " drystreak", lastDry, new Timestamp(System.currentTimeMillis()), player);
+			Leaderboard panDryBoard = new Leaderboard("pan drystreak", panDry, new Timestamp(System.currentTimeMillis()), player);
+			Utils.updateLeaderboard(overallDryBoard);
+			Utils.updateLeaderboard(tourDryBoard);
+			Utils.updateLeaderboard(panDryBoard);
+		} else if(lastDry > 0) {
+			out += "Congrats on beating your overall aussie drystreak of " + lastOverallDry + ". "
+					+ "Your drystreak for this tour was " + lastDry + ".\n";
+			
+			//Update leaderboards
+			Leaderboard overallDryBoard = new Leaderboard("overall drystreak", lastOverallDry, new Timestamp(System.currentTimeMillis()), player);
+			Leaderboard tourDryBoard = new Leaderboard(tour.toLowerCase() + " drystreak", lastDry, new Timestamp(System.currentTimeMillis()), player);
+			Utils.updateLeaderboard(overallDryBoard);
+			Utils.updateLeaderboard(tourDryBoard);
 		}
+		
 		
 		if(allLoot.size() > 25) {
 			out += "You have recieved too many items to display properly. Only displaying a limited number of stranges or pro ks fabs:\n";

@@ -3,9 +3,7 @@ package bot;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import beans.Item;
-import beans.Player;
-import beans.Server;
+import beans.*;
 
 @Configuration
 public class BeanConfiguration {
@@ -25,6 +23,12 @@ public class BeanConfiguration {
 	@Bean
 	public Server Server() {
 		Server bean = new Server();
+		return bean;
+	}
+	
+	@Bean
+	public Leaderboard Leaderboard() {
+		Leaderboard bean = new Leaderboard();
 		return bean;
 	}
 }

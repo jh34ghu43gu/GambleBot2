@@ -15,6 +15,7 @@ public interface ItemRepository extends JpaRepository<Item, Integer>{
 	public Item findById(int i);
 	public List<Item> findByOwner(Player id);
 	public Optional<List<Item>> findByOwnerAndName(Player id, String name);
+	public Optional<List<Item>> findByOwnerAndQuality(Player id, String quality);
 	public Optional<List<Item>> findByOwnerAndOrigin(Player id, String origin);
 	
 }
