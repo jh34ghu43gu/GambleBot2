@@ -23,12 +23,16 @@ import ch.qos.logback.classic.Logger;
 public class Crate {
 	
 	private static final Logger log = (Logger) LoggerFactory.getLogger(Crate.class);
-	private static final String HAT_FILE = "tf2hats.json";
-	private static final String CASE_FILE = "tf2cases.json";
+	public static final String HAT_FILE = "tf2hats.json";
+	public static final String CRATE_FILE = "tf2crates.json";
+	public static final String CASE_FILE = "tf2cases.json";
 	public static double unboxPrice = 2.49;
 	
 	//Chances are 0 - 1
 	private static double unusualChance = 0.0069;
+	//Killstreak kit odds
+	private static double specializedChance = 0.15; //TODO get non-guessed values
+	private static double professionalChance = 0.05;
 	//Cases
 	private static double strangeChance = 0.1;
 	private static double tierRollingChance = 0.2; //20% chance to roll the higher tier in cases
@@ -63,17 +67,24 @@ public class Crate {
 	private boolean strangeUnusual;
 	private boolean isCase;
 	private boolean isSkin;
+	private boolean isKillstreakKits;
 	private ArrayList<String> effectList;
 	private ArrayList<CrateItem> itemList;
 	private JsonElement bonusList; //Has a list of arrays, up to 1 item from each array can be won
+	private boolean crateBonus;
+	private String crateHats = "hats";
 	
-	public Crate(String name, int number, boolean unusual, boolean strangeUnusual, boolean isCase, boolean isSkin) {
+	public Crate(String name, int number, boolean unusual, boolean strangeUnusual, boolean isCase, boolean isSkin, boolean isKillstreakKits) {
 		this.name = name;
 		this.number = number;
 		this.unusuals = unusual;
 		this.strangeUnusual = strangeUnusual;
 		this.isCase = isCase;
 		this.isSkin = isSkin;
+		this.isKillstreakKits = isKillstreakKits;
+		itemList = new ArrayList<CrateItem>();
+		effectList = new ArrayList<String>();
+		
 	}
 	
 	/**
@@ -116,8 +127,26 @@ public class Crate {
 		if(isCase) {
 			return openCase(player);
 		} else {
-			return null; //TODO
+			return openCrate(player);
 		}
+	}
+	
+	public ArrayList<Item> openCrate(Player player) {
+		ArrayList<Item> items = new ArrayList<Item>();
+		items.add(this.drawMainItem(player));
+		if(crateBonus) {
+			JsonObject bonusLists = bonusList.getAsJsonObject();
+			Random rand = new Random();
+			for(Entry<String, JsonElement> listObj : bonusLists.entrySet()) {
+				double weight = listObj.getValue().getAsJsonObject().get("weight").getAsDouble();
+				if(rand.nextDouble() <= weight) {
+					JsonArray bonusItems = listObj.getValue().getAsJsonObject().get("items").getAsJsonArray();
+					String itemName = bonusItems.get(rand.nextInt(bonusItems.size())).getAsString();
+					items.add(new Item(itemName, listObj.getValue().getAsJsonObject().get("quality").getAsString(), 1, 1, player, true));
+				}
+			}
+		}
+		return items;
 	}
 	
 	/**
@@ -128,8 +157,10 @@ public class Crate {
 	public ArrayList<Item> openCase(Player player) {
 		ArrayList<Item> items = new ArrayList<Item>();
 		items.add(this.drawMainItem(player));
-		for(Item i : this.drawBonusItems(player)) {
-			items.add(i);
+		if(unusuals) {
+			for(Item i : this.drawBonusItems(player)) {
+				items.add(i);
+			}
 		}
 		return items;
 	}
@@ -151,11 +182,33 @@ public class Crate {
 					}
 					tier = this.getTiers(false).get(tierNum);
 				} else {
-					while(rand.nextDouble() < tierRollingChance && tierNum+1 < this.getTiers(true).size()) {
-						tierNum++;
+					int i = 2;
+					tier = rarities[i];
+					if(rand.nextDouble() < tierRollingChance) { //Merc -> Commando
+						if(this.getTiers(true).contains(rarities[i+1])) {
+							i++;
+							tier = rarities[i];
+						} else {
+							i++;
+						}
+						if(rand.nextDouble() < tierRollingChance) { //Commando -> Assassin
+							if(this.getTiers(true).contains(rarities[i+1])) {
+								i++;
+								tier = rarities[i];
+							} else {
+								i++;
+							}
+							if(rand.nextDouble() < tierRollingChance) { //Assassin -> Elite
+								if(this.getTiers(true).contains(rarities[i+1])) {
+									i++;
+									tier = rarities[i];
+								}
+							}
+						}
 					}
-					tier = this.getTiers(true).get(tierNum);
+					
 				}
+				
 				CrateItem cItem = null;
 				ArrayList<CrateItem> tierItemList = this.getTieredItems(tier);
 				do {
@@ -187,7 +240,7 @@ public class Crate {
 				return item;
 			} else { //Unusual crate draw
 				String effect = effectList.get(rand.nextInt(effectList.size()));
-				Item item = new Item(getCrateUnusualHat(), "Unusual", rand.nextInt(100)+1, 1, player, true);
+				Item item = new Item(getCrateUnusualHat(crateHats), "Unusual", rand.nextInt(100)+1, 1, player, true);
 				item.setEffect(effect);
 				item.setOrigin(this.name);
 				if(strangeUnusual && strange) {
@@ -230,19 +283,37 @@ public class Crate {
 		} else { //Normal crate draw
 			int totalWeight = 0;
 			for(CrateItem ci : itemList) {
-				totalWeight += ci.getWeight() * 100;
+				totalWeight += ci.getWeight() * 10000;
 			}
 			int choice = rand.nextInt(totalWeight);
 			CrateItem cItem = null;
 			for(CrateItem ci : itemList) {
 				cItem = ci;
-				if(choice - (ci.getWeight()*100) <= 0) {
+				if(choice - (ci.getWeight()*10000) <= 0) {
 					break;
 				} else {
-					choice = (int) (choice - (ci.getWeight()*100));
+					choice = (int) (choice - (ci.getWeight()*10000));
 				}
 			}
-			Item item = new Item(cItem.getName(), cItem.getQuality(), 1, 1, player, true);
+			Item item = null;
+			if(isKillstreakKits()) {
+				double tier = rand.nextDouble();
+				item = new Item(cItem.getName() + " Kit", cItem.getQuality(), 5, 1, player, false);
+
+				if(tier <= professionalChance) {
+					item.setKillstreakTier(3);
+					item.setKillstreakSheen(Tour.randomSheen());
+					item.setKillstreaker(Tour.randomKillstreaker());
+				} else if(tier <= (professionalChance + specializedChance)) {
+					item.setKillstreakTier(2);
+					item.setKillstreakSheen(Tour.randomSheen());
+				} else {
+					item.setKillstreakTier(1);
+				}
+				
+			} else {
+				item = new Item(cItem.getName(), cItem.getQuality(), 1, 1, player, true);
+			}
 			item.setOrigin(this.name);
 			if(strangeUnusual && strange) {
 				if(item.getQuality().equals("Unique")) {
@@ -315,7 +386,7 @@ public class Crate {
 		return grades;
 	}
 	
-	public static String getCrateUnusualHat() {
+	public static String getCrateUnusualHat(String type) {
 		String hat = "null";
 		Random rand = new Random();
 		
@@ -323,7 +394,7 @@ public class Crate {
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			JsonObject obj = gson.fromJson(new InputStreamReader(is, "UTF-8"), JsonObject.class);
-			JsonArray hats = obj.get("hats").getAsJsonArray();
+			JsonArray hats = obj.get(type).getAsJsonArray();
 			hat = hats.get(rand.nextInt(hats.size())).getAsString();
 		} catch(Exception e) {
 			log.error("Something went wrong reading tf2hats.json");
@@ -331,6 +402,57 @@ public class Crate {
 		}
 		
 		return hat;
+	}
+	
+	public static ArrayList<Crate> getCrates() {
+		ArrayList<Crate> crates = new ArrayList<Crate>();
+		InputStream is = Tour.class.getClassLoader().getResourceAsStream(CRATE_FILE);
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		try {
+			JsonObject obj = gson.fromJson(new InputStreamReader(is, "UTF-8"), JsonObject.class);
+			JsonObject effects = obj.getAsJsonObject("effects");
+			JsonObject cratesObj = obj.getAsJsonObject("crates");
+			
+			for(Entry<String, JsonElement> crateObj : cratesObj.entrySet()) {
+				String cName = crateObj.getValue().getAsJsonObject().get("name").getAsString();
+				Boolean strangeUnu = crateObj.getValue().getAsJsonObject().get("strangeUnusual").getAsBoolean();
+				Crate crate = new Crate(cName, Integer.parseInt(crateObj.getKey()), true, strangeUnu, false, false, false);
+				for(Entry<String, JsonElement> lootListObj : crateObj.getValue().getAsJsonObject().get("lootlist").getAsJsonObject().entrySet()) {
+					String listQuality = lootListObj.getValue().getAsJsonObject().get("quality").getAsString();
+					double listWeight = lootListObj.getValue().getAsJsonObject().get("weight").getAsDouble();
+					JsonArray listItems = lootListObj.getValue().getAsJsonObject().get("items").getAsJsonArray();
+					listItems.forEach(itemObj -> {
+						//Marking all items as not hat even though some of them might be since crates draw from an overall pool
+						double weight = Math.floor((listWeight/(double)listItems.size())*10000.0)/(double)10000.0;
+						CrateItem item = new CrateItem(itemObj.getAsString(), listQuality, weight, false);
+						crate.addItem(item);
+					});
+				}
+				JsonArray crateEffects = effects.get(crateObj.getValue().getAsJsonObject().get("effects").getAsString()).getAsJsonArray();
+				crateEffects.forEach(effect -> {
+					crate.addEffect(effect.getAsString());
+				});
+				
+				if(crateObj.getValue().getAsJsonObject().has("bonuslist")) {
+					crate.bonusList = crateObj.getValue().getAsJsonObject().get("bonuslist");
+					crate.setCrateBonus(true);
+				} else {
+					crate.setCrateBonus(false);
+				}
+				if(crateObj.getValue().getAsJsonObject().has("hatspool")) {
+					crate.setCrateHats(crateObj.getValue().getAsJsonObject().get("hatspool").getAsString());
+				}
+				if(crateObj.getValue().getAsJsonObject().has("killstreak")) {
+					crate.setKillstreakKits(true);
+				}
+				crates.add(crate);
+			}
+			
+		} catch(Exception e) {
+			log.error("Something went wrong getting crates.");
+			e.printStackTrace();
+		}
+		return crates;
 	}
 	
 	public static ArrayList<Crate> getCases() {
@@ -404,7 +526,7 @@ public class Crate {
 					caseBonus.getAsJsonObject().add("Specific", caseElement.getValue().getAsJsonObject().get("bonus"));
 				}
 				
-				Crate caseItem = new Crate(caseName, caseNum, caseUnusuals, true, true, skins);
+				Crate caseItem = new Crate(caseName, caseNum, caseUnusuals, true, true, skins, false);
 				caseItem.setEffectList(caseEffects);
 				caseItem.setItemList(crateItems);
 				caseItem.setBonusList(caseBonus);
@@ -557,8 +679,33 @@ public class Crate {
 		this.bonusList = bonusList;
 	}
 	
+	public boolean hasCrateBonus() {
+		if(isCase) { return false; }
+		return crateBonus;
+	}
+	
+	public void setCrateBonus(boolean bonus) {
+		this.crateBonus = bonus;
+	}
+	
+	public String getCrateHats() {
+		return crateHats;
+	}
+	
+	public void setCrateHats(String hats) {
+		this.crateHats = hats;
+	}
+	
 	public String getNames() {
 		return name + " #" + number;
+	}
+	
+	public void setKillstreakKits(Boolean ks) {
+		isKillstreakKits = ks;
+	}
+	
+	public boolean isKillstreakKits() {
+		return isKillstreakKits;
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Random;
+
 /**
  * Simple class to hold a crate item. Quality is item grade for case items.
  * @author jh34ghu43gu
@@ -14,7 +16,7 @@ public class CrateItem {
 	/**
 	 * @param name
 	 * @param quality
-	 * @param weight MUST BE 2 DECIMAL PLACES MAX
+	 * @param weight
 	 * @param hat
 	 */
 	public CrateItem(String name, String quality, double weight, boolean hat) {
@@ -43,6 +45,14 @@ public class CrateItem {
 	 * @return the quality
 	 */
 	public String getQuality() {
+		if(quality.equals("StrangeUnique10")) {
+			Random rand = new Random();
+			if(rand.nextDouble() <= 0.1) {
+				return "Strange";
+			} else {
+				return "Unique";
+			}
+		}
 		return quality;
 	}
 

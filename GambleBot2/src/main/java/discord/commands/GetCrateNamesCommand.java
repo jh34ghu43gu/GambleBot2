@@ -6,17 +6,17 @@ import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import bot.Utils;
-import model.Crate;
 
 public class GetCrateNamesCommand extends Command {
 	
-	private ArrayList<Crate> crates;
+	private ArrayList<String> crates;
 	
-	public GetCrateNamesCommand() {
+	public GetCrateNamesCommand(ArrayList<String> names) {
 		this.name = "crates";
-		this.help = "List all available crates and cases."; 
+		this.help = "List all available crates.\n"
+				+ "Use g.cases to view all cases."; 
 		this.cooldown = 15;
-		crates = Crate.getCases();
+		crates = names;
 	}
 	
 	@Override
@@ -27,9 +27,9 @@ public class GetCrateNamesCommand extends Command {
 			return;
 		}
 		
-		String out = "Available crates/cases are: \n";
-		for(Crate c : crates) {
-			out += c.getNames() + "\n";
+		String out = "Available crates are: \n";
+		for(String c : crates) {
+			out += c + "\n";
 		}
 		event.reply(out);
 	}

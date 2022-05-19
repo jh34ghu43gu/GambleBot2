@@ -1,0 +1,2925 @@
+{
+"effects": {
+	"1": [
+		"Green Confetti",
+		"Purple Confetti",
+		"Haunted Ghosts",
+		"Green Energy",
+		"Purple Energy",
+		"Circling TF Logo",
+		"Massed Flies",
+		"Burning Flames",
+		"Scorching Flames",
+		"Searing Plasma",
+		"Vivid Plasma",
+		"Sunbeams",
+		"Circling Peace Sign",
+		"Circling Heart"
+	],
+	"1_ids": [
+		"6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"
+	],
+	"2": [
+		"Stormy Storm",
+		"Blizzardy Storm",
+		"Nuts n' Bolts",
+		"Orbiting Planets",
+		"Orbiting Fire",
+		"Bubbling",
+		"Smoking",
+		"Steaming"
+	],
+	"2_ids": [
+		"29", "30", "31", "32", "33", "34", "35", "36"
+	],
+	"3": [
+		"Kill-a-Watt",
+		"Terror-Watt",
+		"Cloud 9",
+		"Aces High",
+		"Dead Presidents",
+		"Miami Nights",
+		"Disco Beat Down"
+	],
+	"3_ids": [
+		"56", "57", "58", "59", "60", "61", "62"
+	],
+	"123": [
+		"Green Confetti",
+		"Purple Confetti",
+		"Haunted Ghosts",
+		"Green Energy",
+		"Purple Energy",
+		"Circling TF Logo",
+		"Massed Flies",
+		"Burning Flames",
+		"Scorching Flames",
+		"Searing Plasma",
+		"Vivid Plasma",
+		"Sunbeams",
+		"Circling Peace Sign",
+		"Circling Heart",
+		"Stormy Storm",
+		"Blizzardy Storm",
+		"Nuts n' Bolts",
+		"Orbiting Planets",
+		"Orbiting Fire",
+		"Bubbling",
+		"Smoking",
+		"Steaming",
+		"Kill-a-Watt",
+		"Terror-Watt",
+		"Cloud 9",
+		"Aces High",
+		"Dead Presidents",
+		"Miami Nights",
+		"Disco Beat Down"
+	],
+	"SCARY": [
+		"Flaming Fantern",
+		"Cloudy Moon",
+		"Cauldron Bubbles",
+		"Eerie Orbiting Fire"
+	],
+	"SCARY_ids": [
+		"37", "38", "39", "40"
+	],
+	"SPECTRAL": [
+		"Knifestorm",
+		"Misty Skull",
+		"Harvest Moon",
+		"It's A Secret To Everybody",
+		"Stormy 13th Hour"
+	],
+	"SPECTRAL_ids": [
+		"43", "44", "45", "46", "47"
+	],
+	"SPOOKY": [
+		"Arcana",
+		"Spellbound",
+		"Chiroptera Venenata",
+		"Poisoned Shadows",
+		"Something Burning This Way Comes",
+		"Hellfire",
+		"Darkblaze",
+		"Demonflame"
+	],
+	"SPOOKY_ids": [
+		"73", "74", "75", "76", "77", "78", "79", "80"
+	],
+	"VI": [
+		"Bozo The All-Gnawing",
+		"Amaranthine",
+		"Stare From Beyond",
+		"The Ooze",
+		"Ghastly Ghosts Jr",
+		"Haunted Phantasm Jr"
+	],
+	"VI_ids": [
+		"81", "82", "83", "84", "85", "86"
+	],
+	"VII": [
+		"Death by Disco",
+		"It's a mystery to everyone",
+		"It's a puzzle to me",
+		"Ether Trail",
+		"Nether Trail",
+		"Ancient Eldritch",
+		"Eldritch Flame"
+	],
+	"VII_ids": [
+		"100", "101", "102", "103", "104", "105", "106"
+	],
+	"ROBO": [
+		"Phosphorous",
+		"Sulphurous",
+		"Memory Leak",
+		"Overclocked",
+		"Electrostatic",
+		"Power Surge",
+		"Anti-Freeze",
+		"Time Warp",
+		"Green Black Hole",
+		"Roboactive"
+	],
+	"ROBO_ids": [
+		"63", "64", "65", "66", "67", "68", "69", "70", "71", "72"
+	],
+	"EOTL": [
+		"Frostbite",
+		"Molten Mallard",
+		"Morning Glory",
+		"Death at Dusk"
+	],
+	"EOTL_ids": [
+		"87", "88", "89", "90"
+	]
+},
+"crates": {
+	"1": {
+		"name": "Mann Co. Supply Crate Series #1",
+		"lootlist": {
+			"1": {
+				"quality": "",
+				"weight": 1.0,
+				"items": [
+					"Vita-Saw",
+					"Gunslinger",
+					"Equalizer",
+					"Scottish Resistance",
+					"Old Guadalajara",
+					"Napper's Respite",
+					"Name Tag",
+					"An Extraordinary Abundance of Tinge",
+					"A Distinctive Lack of Hue"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"2": {
+		"name": "Mann Co. Supply Crate Series #2",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.82,
+				"items": [
+					"Black Box",
+					"Shortstop",
+					"L'Etranger",
+					"Dueling Mini-Game",
+					"A Deep Commitment to Purple",
+					"Australium Gold"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.18,
+				"items": [
+					"Sober Stuntman",
+					"Chieftan's Challenge"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"3": {
+		"name": "Mann Co. Supply Crate Series #3",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.67,
+				"items": [
+					"Bushwacka",
+					"Crit-a-Cola",
+					"Homewrecker",
+					"Description Tag"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.33,
+				"items": [
+					"Troublemaker's Tossle Cap",
+					"Bombing Run",
+					"Stout Shako",
+					"A Distinctive Lack of Hue"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"4": {
+		"name": "Mann Co. Supply Crate Series #4",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.67,
+				"items": [
+					"Battalion's Backup",
+					"Pain Train",
+					"Your Eternal Reward",
+					"Dueling Mini-Game"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.33,
+				"items": [
+					"Whoopee Cap",
+					"Heavy Duty Rag",
+					"Handyman's Handle",
+					"An Extraordinary Abundance of Tinge"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"5": {
+		"name": "Mann Co. Supply Crate Series #5",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.27,
+				"items": [
+					"Name Tag",
+					"Color No. 216-190-216"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.55,
+				"items": [
+					"Powerjack",
+					"Gunboats",
+					"Southern Hospitality"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.18,
+				"items": [
+					"Bloke's Bucket Hat",
+					"Safe'n'Sound",
+					"Ze Goggles",
+					"Handyman's Handle"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"6": {
+		"name": "Festive Winter Crate Series #6",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.67,
+				"items": [
+					"Jag",
+					"Candy Cane",
+					"Fists of Steel",
+					"Back Scratcher",
+					"Claidheamh Mor"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.33,
+				"items": [
+					"Defiant Spartan",
+					"Détective Noir",
+					"A Rather Festive Tree",
+					"Exquisite Rack",
+					"Buckaroo's Hat",
+					"Prince Tavish's Crown",
+					"Coupe D'isaster",
+					"Blighted Beak",
+					"Madame Dixie",
+					"German Gonzila",
+					"Pyromancer's Mask",
+					"Le Party Phantom",
+					"Industrial Festivizer",
+					"Larrikin Robin",
+					"Flipped Trilby",
+					"Magnificent Mongolian"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"7": {
+		"name": "Mann Co. Supply Crate Series #7",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.85,
+				"items": [
+					"Chargin' Targe",
+					"Direct Hit",
+					"Bushwacka",
+					"Description Tag",
+					"Team Spirit"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.15,
+				"items": [
+					"Demoman's Fro",
+					"Dr's Dapper Topper",
+					"Rimmed Raincatcher",
+					"Milkman"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"8": {
+		"name": "Mann Co. Supply Crate Series #8",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.85,
+				"items": [
+					"Force-A-Nature",
+					"Bonk! Atomic Punch",
+					"Huntsman",
+					"DuelingMini-Game",
+					"Gift Wrap"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.15,
+				"items": [
+					"Trophy Belt",
+					"Horrific Headsplitter",
+					"Cadaver's Cranium",
+					"Familiar Fez"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"9": {
+		"name": "Mann Co. Supply Crate Series #9",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.97,
+				"items": [
+					"Pink as Hell",
+					"A Color Similar to Slate",
+					"Draby Olive",
+					"The Bitter Taste of Defeat and Lime",
+					"The Color of a Gentlemann's Business Pants",
+					"Dark Salmon Injustice"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.03,
+				"items": [
+					"Grenadier's Softcap"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"10": {
+		"name": "Mann Co. Supply Crate Series #10",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"Indubitably Green",
+					"Zepheniah's Greed",
+					"Noble Hatter's Violet"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Ullapool Caber",
+					"Loch-n-Load"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Scotch Bonnet",
+					"Glengarry Bonnet",
+					"Demoman's Fro"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"11": {
+		"name": "Mann Co. Supply Crate Series #11",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"Color No. 216-190-216",
+					"A Deep Commitment to Purple",
+					"Mann Co. Orange"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Crusader's Crossbow",
+					"Amputator"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Berliner's Bucket Helm",
+					"Vintage Tyrolean",
+					"Prussian Pickelhaube"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"12": {
+		"name": "Mann Co. Supply Crate Series #12",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"Muskelmannbraun",
+					"Peculiarly Drab Tincture",
+					"Radigan Conagher Brown"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Brass Beast",
+					"Buffalo Steak Sandvich"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Big Chief",
+					"Officer's Ushanka",
+					"Coupe D'isaster"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"13": {
+		"name": "Mann Co. Supply Crate Series #13",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"An Extraordinary Abundance of Tinge",
+					"Pink as Hell",
+					"A Color Similar to Slate"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Sydney Sleeper",
+					"Bushwacka"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Ol' Snaggletooth",
+					"Professional's Panama",
+					"Shooter's Sola Topi"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"14": {
+		"name": "Mann Co. Supply Crate Series #14",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"A Distinctive Lack of Hue",
+					"Draby Olive",
+					"The Bitter Taste of Defeat and Lime"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"L'Etranger",
+					"Your Eternal Reward"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Familiar Fez",
+					"Backbiter's Billycock",
+					"Détective Noir"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"15": {
+		"name": "Mann Co. Supply Crate Series #15",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"Team Spirit",
+					"The Color of a Gentlemann's Business Pants",
+					"Dark Salmon Injustice"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Black Box",
+					"Battalion's Backup"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Grenadier's Softcap",
+					"Exquisite Rack",
+					"Tyrant's Helm"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"16": {
+		"name": "Mann Co. Supply Crate Series #16",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"Indubitably Green",
+					"Color No. 216-190-216",
+					"Muskelmannbraun"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Shortstop",
+					"Mad Milk"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Milkman",
+					"Flipped Trilby",
+					"Whoopee Cap"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"17": {
+		"name": "Mann Co. Supply Crate Series #17",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"Zepheniah's Greed",
+					"A Deep Commitment to Purple",
+					"Peculiarly Drab Tincture"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Degreaser",
+					"Powerjack"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Attendant",
+					"Madame Dixie",
+					"Pyromancer's Mask"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"18": {
+		"name": "Mann Co. Supply Crate Series #18",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.51,
+				"items": [
+					"Noble Hatter's Violet",
+					"Mann Co. Orange",
+					"Radigan Conagher Brown"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Wrangler",
+					"Gunslinger"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.19,
+				"items": [
+					"Hotrod",
+					"Buckaroo's Hat",
+					"Professor's Peculiarity"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"19": {
+		"name": "Mann Co. Supply Crate Series #19",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.85,
+				"items": [
+					"Chargin' Targe",
+					"Grenade Launcher",
+					"Stickybomb Launcher",
+					"Eyelander"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.15,
+				"items": [
+					"Hustler's Hallmark",
+					"Tippler's Tricorne",
+					"Taunt: The Schadenfreude"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"20": {
+		"name": "Mann Co. Supply Crate Series #20",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Rocket Launcher",
+					"Pain Train",
+					"Shotgun",
+					"Direct Hit"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Killer's Kabuto",
+					"Sergeant's Drill Hat"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"21": {
+		"name": "Mann Co. Supply Crate Series #21",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Gloves of Running Urgently",
+					"Shotgun",
+					"Minigun",
+					"Natascha"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Hound Dog",
+					"Football Helmet"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"22": {
+		"name": "Refreshing Summer Cooler Series #22",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Big Steel Jaw of Summer Fun",
+					"Copper's Hard Top",
+					"Nessie's Nine Iron",
+					"Postal Pummeler",
+					"Prairie Heel Biters",
+					"Rogue's Col Roule",
+					"Security Shades",
+					"Stately Steel Toe",
+					"Tam O' Shanter"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"23": {
+		"name": "Mann Co. Supply Crate Series #23",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Sandman",
+					"Pistol",
+					"Scattergun",
+					"Boston Basher"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Ye Olde Baker Boy",
+					"Milkman"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"24": {
+		"name": "Mann Co. Supply Crate Series #24",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Ambassador",
+					"Conniver's Kunai",
+					"Knife",
+					"Revolver"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Private Eye",
+					"Fancy Fedora"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"25": {
+		"name": "Mann Co. Supply Crate Series #25",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Flame Thrower",
+					"Flare Gun",
+					"Powerjack",
+					"Backburner"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Prancer's Pride",
+					"Respectless Rubber Glove"
+				]
+			}
+		},
+		"effects": "1",
+		"strangeUnusual": false
+	},
+	"26": {
+		"name": "Mann Co. Supply Crate Series #26",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Syringe Gun",
+					"Crusader's Crossbow",
+					"Bonesaw",
+					"Medi Gun"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Gentleman's Gatsby",
+					"Otolaryngologist's Mirror"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"27": {
+		"name": "Mann Co. Supply Crate Series #27",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Sniper Rifle",
+					"Sydney Sleeper",
+					"Bushwacka",
+					"Jarate"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Larrikin Robin",
+					"Villain's Veil"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"28": {
+		"name": "Mann Co. Supply Crate Series #28",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Shotgun",
+					"Frontier Justice",
+					"Jag",
+					"Wrench"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Safe'n'Sound",
+					"Mining Light"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"29": {
+		"name": "Mann Co. Supply Crate Series #29",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Axtinguisher",
+					"Black Box",
+					"Razorback",
+					"Eyelander"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Tough Guy's Toque",
+					"Frenchman's Beret"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"30": {
+		"name": "Salvaged Mann Co. Supply Crate Series #30",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 1.00,
+				"items": [
+					"Ullapool Caber",
+					"Kritzkrieg",
+					"Holy Mackerel",
+					"Gunslinger",
+					"Machina"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"31": {
+		"name": "Mann Co. Supply Crate Series #31",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Mad Milk",
+					"Half-Zatoichi",
+					"Fists",
+					"Degreaser"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Grimm Hatte",
+					"Magnificent Mongolian"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"32": {
+		"name": "Mann Co. Supply Crate Series #32",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Brass Beast",
+					"Übersaw",
+					"L'Etranger",
+					"Equalizer"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Pyromancer's Mask",
+					"Prince Tavish's Crown"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"33": {
+		"name": "Mann Co. Supply Crate Series #33",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Soda Popper",
+					"Family Business",
+					"Amputator",
+					"Your Eternal Reward"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"German Gonzila",
+					"Magnificent Mongolian"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"34": {
+		"name": "Mann Co. Supply Crate Series #34",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Reserve Shooter",
+					"Atomizer",
+					"Southern Hospitality",
+					"Scottish Resistance"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Hard Counter",
+					"Western Wear"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"35": {
+		"name": "Naughty Winter Crate Series #35",
+		"lootlist": {
+			"1": {
+				"quality": "StrangeUnique10",
+				"weight": 1.00,
+				"items": [
+					"Festive Scattergun",
+					"Festive Bat",
+					"Festive Rocket Launcher",
+					"Festive Flame Thrower",
+					"Festive Stickybomb Launcher",
+					"Festive Minigun",
+					"Festive Wrench",
+					"Festive Medi Gun",
+					"Festive Sniper Rifle",
+					"Festive Knife"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"36": {
+		"name": "Nice Winter Crate Series #36",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.50,
+				"items": [
+					"Wrap Assassin",
+					"Holiday Punch",
+					"Spy-cicle"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.50,
+				"items": [
+					"Big Elfin Deal",
+					"Bootie Time",
+					"All-Father",
+					"Ornament Armament",
+					"Kringle Collection",
+					"Head Warmer",
+					"Jingle Belt",
+					"Sandvich Safe",
+					"Stocking Stuffer",
+					"Outback Intellectual",
+					"Brown Bomber"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"37": {
+		"name": "Mann Co. Supply Crate Series #37",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Bazaar Bargain",
+					"Big Earner",
+					"Blutsauger",
+					"Liberty Launcher"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Cosa Nostra Cap",
+					"Private Eye"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"38": {
+		"name": "Mann Co. Supply Crate Series #38",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.90,
+				"items": [
+					"Dead Ringer",
+					"SMG",
+					"Quick-Fix",
+					"Killing Gloves of Boxing"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Flamboyant Flamenco",
+					"Reggaelator"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"39": {
+		"name": "Mann Co. Supply Crate Series #39",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.70,
+				"items": [
+					"Loch-n-Load",
+					"Overdose",
+					"Knife"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.20,
+				"items": [
+					"A Mann's Mint",
+					"After Eight"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Salty Dog",
+					"Bloke's Bucket Hat"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"40": {
+		"name": "Salvaged Mann Co. Supply Crate Series #40",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 1.00,
+				"items": [
+					"Holiday Punch",
+					"Huntsman",
+					"Widowmaker",
+					"Mantreads",
+					"Sapper"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"41": {
+		"name": "Mann Co. Supply Crate Series #41",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Bat",
+					"Direct Hit",
+					"Diamondback"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Gib Kills",
+					"Strange Part: Airborne Enemies Killed",
+					"Strange Part: Heavies Killed"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Crocodile Smile",
+					"Large Luchadore"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"42": {
+		"name": "Mann Co. Supply Crate Series #42",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Bottle",
+					"Back Scratcher",
+					"Pistol"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Buildings Destroyed",
+					"Strange Part: Projectiles Reflected",
+					"Strange Part: Headshot Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Outdoorsman",
+					"Ol' Geezer"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"43": {
+		"name": "Mann Co. Supply Crate Series #43",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.70,
+				"items": [
+					"Tribalman's Shiv",
+					"Detonator",
+					"Shortstop"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.20,
+				"items": [
+					"Strange Part: Allies Extinguished",
+					"Strange Part: Posthumous Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Berliner's Bucket Helm",
+					"Coupe D'isaster"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"44": {
+		"name": "Mann Co. Supply Crate Series #44",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Rocket Launcher",
+					"Market Gardener",
+					"Equalizer"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Critical Kills",
+					"Strange Part: Demomen Killed",
+					"Strange Part: Revenge Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Hat With No Name",
+					"Stout Shako"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"45": {
+		"name": "Mann Co. Supply Crate Series #45",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Stickybomb Launcher",
+					"Scotsman's Skullcutter",
+					"Persian Persuader"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Soldiers Killed",
+					"Strange Part: Domination Kills",
+					"Strange Part: Kills While Explosive Jumping"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Tavish DeGroot Experience",
+					"Rimmed Raincatcher"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"46": {
+		"name": "Scorched Crate Series #46",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.25,
+				"items": [
+					"Lollichop",
+					"Rainblower"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.65,
+				"items": [
+					"Apparatchik's Apparel",
+					"Bird-Man of Aberdeen",
+					"Business Casual",
+					"Captain's Cocktails",
+					"Dillinger's Duffel",
+					"Fed-Fightin' Fedora",
+					"Gentleman's Ushanka",
+					"HazMat Headcase",
+					"Helmet Without a Home",
+					"Idea Tube",
+					"Liquidator's Lid"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Balloonicorn",
+					"Infernal Orchestrina"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"47": {
+		"name": "Mann Co. Supply Crate Series #47",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Force-A-Nature",
+					"Flame Thrower",
+					"Tomislav"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Scouts Killed",
+					"Strange Part: Sappers Destroyed",
+					"Strange Part: Cloaked Spies Killed"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Backwards Ballcap",
+					"Professional's Panama"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"48": {
+		"name": "Fall Crate Series #48",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.95,
+				"items": [
+					"Koala Compact",
+					"Soviet Gentleman",
+					"Pocket Purrer",
+					"Hat of Cards",
+					"Medi-Mask",
+					"Track Terrorizer",
+					"War Pig",
+					"Bearded Bombardier",
+					"Pyrotechnic Tote"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.05,
+				"items": [
+					"RoBro 3000"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"49": {
+		"name": "Mann Co. Supply Crate Series #49",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Homewrecker",
+					"Shovel",
+					"Scattergun"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Engineers Killed",
+					"Strange Part: Robots Destroyed",
+					"Strange Part: Low-Health Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Surgeon's Stahlhelm",
+					"Furious Fukaamigasa"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"50": {
+		"name": "Salvaged Mann Co. Supply Crate Series #50",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.20,
+				"items": [
+					"Strange Bacon Grease"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.80,
+				"items": [
+					"Construction PDA",
+					"Original",
+					"Invis Watch",
+					"Splendid Screen"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"51": {
+		"name": "Eerie Crate Series #51",
+		"lootlist": {
+			"1": {
+				"quality": "Haunted",
+				"weight": 1.00,
+				"items": [
+					"Sir Hootsalot",
+					"Master Mind",
+					"Rump-o'-Lantern",
+					"Scarecrow",
+					"Crone's Dome",
+					"Executioner",
+					"Bonedolier",
+					"Plutonidome",
+					"Spooky Shoes",
+					"Spooky Sleeves",
+					"Zipperface",
+					"Boo Balloon",
+					"Unknown Monkeynaut",
+					"Grand Duchess Tutu",
+					"Grand Duchess Fairy Wings",
+					"Grand Duchess Tiara",
+					"Dead Little Buddy",
+					"Exorcizor",
+					"Voodoo JuJu (Slight Return)",
+					"Wraith Wrap",
+					"Coffin Kit",
+					"Bat Outta Hell"
+				]
+			}
+		},
+		"effects": "SPECTRAL",
+		"strangeUnusual": false
+	},
+	"52": {
+		"name": "Naughty Winter Crate 2012 Series #52",
+		"lootlist": {
+			"1": {
+				"quality": "StrangeUnique10",
+				"weight": 1.00,
+				"items": [
+					"Festive Holy Mackerel",
+					"Festive Axtinguisher",
+					"Festive Buff Banner",
+					"Festive Sandvich",
+					"Festive Ãœbersaw",
+					"Festive Frontier Justice",
+					"Festive Huntsman",
+					"Festive Ambassador",
+					"Festive Grenade Launcher"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"53": {
+		"name": "Nice Winter Crate 2012 Series #53",
+		"lootlist": {
+			"1": {
+				"quality": "StrangeUnique10",
+				"weight": 1.00,
+				"items": [
+					"Winter Wonderland Wrap",
+					"Cut Throat Concierge",
+					"Der Wintermantel",
+					"Cool Breeze",
+					"Soldier's Slope Scopers",
+					"Cold Killer",
+					"Doc's Holiday",
+					"Digit Divulger",
+					"Tough Stuff Muffs",
+					"Heavy's Hockey Hair",
+					"Mutton Mann",
+					"Merc's Muffler",
+					"Barnstormer"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"54": {
+		"name": "Mann Co. Supply Crate Series #54",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Wrap Assassin",
+					"Spy-cicle",
+					"Sniper Rifle"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Snipers Killed",
+					"Strange Part: Kills While Ãœbercharged",
+					"Strange Part: Underwater Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Hottie's Hoodie",
+					"Surgeon's Side Satchel"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"55": {
+		"name": "Mann Co. Supply Crate Series #55",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Baby Face's Blaster",
+					"Pain Train",
+					"Medi Gun"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Pyros Killed",
+					"Strange Part: Defender Kills",
+					"Strange Part: Airborne Enemies Killed"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Counterfeit Billycock",
+					"Desert Marauder"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"56": {
+		"name": "Mann Co. Supply Crate Series #56",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Fire Axe",
+					"Flying Guillotine",
+					"Beggar's Bazooka"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Medics Killed",
+					"Strange Part: Tanks Destroyed",
+					"Strange Part: Long-Distance Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Western Wear",
+					"Modest Pile of Hat"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"57": {
+		"name": "Mann Co. Supply Crate Series #57",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.67,
+				"items": [
+					"Fists of Steel",
+					"Neon Annihilator",
+					"Jarate"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.33,
+				"items": [
+					"Mann Co. Painting Set",
+					"Tam O' Shanter",
+					"Détective Noir"
+				]
+			}
+		},
+		"effects": "2",
+		"strangeUnusual": false
+	},
+	"58": {
+		"name": "Robo Community Crate Series #58",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+				"Bolt Boy",
+				"Bonk Leadwear",
+				"Bot Dogger",
+				"Ye Oiled Baker Boy",
+				"Full Metal Drill Hat",
+				"Soldier's Sparkplug",
+				"Steel Shako",
+				"Tyrantium Helmet",
+				"Bolted Birdcage",
+				"Electric Escorter",
+				"Filamental",
+				"Firewall Helmet",
+				"Googol Glass Eyes",
+				"Metal Slug",
+				"Plumber's Pipe",
+				"Pyro's Boron Beanie",
+				"Respectless Robo-Glove",
+				"Rusty Reaper",
+				"Scrap Sack",
+				"Bolted Bicorne",
+				"Bolted Bombardier",
+				"Broadband Bonnet",
+				"Cyborg Stunt Helmet",
+				"FR-0",
+				"HDMI Patch",
+				"Pure Tin Capotain",
+				"Scrumpy Strongbox",
+				"Strontium Stove Pipe",
+				"Bunsen Brave",
+				"Gridiron Guardian",
+				"Titanium Towel",
+				"Tungsten Toque",
+				"Data Mining Light",
+				"Dual-Core Devil Doll",
+				"Plug-In Prospector",
+				"Teddy Robobelt",
+				"Texas Tin-Gallon",
+				"Timeless Topper",
+				"Byte'd Beak",
+				"Halogen Head Lamp",
+				"Mecha-Medes",
+				"Platinum Pickelhaube",
+				"Practitioner's Processing Mask",
+				"Steam Pipe",
+				"Titanium Tyrolean",
+				"Virus Doctor",
+				"Letch's LED",
+				"Shooter's Tin Topi",
+				"Soldered Sensei",
+				"Base Metal Billycock",
+				"Bootleg Base Metal Billycock",
+				"Megapixel Beard",
+				"Galvanized Gibus",
+				"Modest Metal Pile of Scrap",
+				"Noble Nickel Amassment of Hats",
+				"Towering Titanium Pillar of Hats",
+				"Battery Canteens"
+				]
+			}
+		},
+		"bonuslist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.05,
+				"items": [
+					"Pallet of Crates"
+				]
+			}
+		},
+		"effects": "ROBO",
+		"strangeUnusual": false
+	},
+	"59": {
+		"name": "Mann Co. Supply Crate Series #59",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Kukri",
+					"Huo-Long Heater",
+					"Enforcer"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Medics Killed That Have Full ÜberCharge",
+					"Strange Part: Heavies Killed",
+					"Strange Part: Giant Robots Destroyed"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"War Pig",
+					"Fast Learner"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"60": {
+		"name": "Mann Co. Supply Crate Series #60",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Disciplinary Action",
+					"Loose Cannon",
+					"Fan O'War"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.40,
+				"items": [
+					"Pomson 6000 Strangifier",
+					"Strange Part: Kills with a Taunt Attack"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"61": {
+		"name": "Summer Appetizer Crate Series #61",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Brotherhood of Arms",
+					"Well-Rounded Rifleman",
+					"Breakneck Baggies",
+					"Powdered Practitioner",
+					"Pocket Pyro",
+					"Cloud Crasher",
+					"Pom-Pommed Provocateur",
+					"Dark Age Defender",
+					"Tyurtlenek",
+					"Mair Mask"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"62": {
+		"name": "Red Summer 2013 Cooler Series #62",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Stormin' Norman",
+					"Das Gutenkutteharen",
+					"Blood Banker",
+					"Pardner's Pompadour",
+					"Heavy-Weight Champ",
+					"Backpack Broiler",
+					"Virtual Viewfinder",
+					"Federal Casemaker"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"63": {
+		"name": "Orange Summer 2013 Cooler Series #63",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Wet Works",
+					"Dry Gulch Gulp",
+					"Borscht Belt",
+					"Valley Forge",
+					"Shogun's Shoulder Guard",
+					"Gaelic Golf Bag",
+					"Das Feelinbeterbager",
+					"Belgian Detective"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"64": {
+		"name": "Yellow Summer 2013 Cooler Series #64",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Caribbean Conqueror",
+					"Katyusha",
+					"Das Hazmattenhatten",
+					"Pampered Pyro",
+					"Rogue's Brogues",
+					"Hornblower",
+					"Delinquent's Down Vest",
+					"Glasgow Great Helm"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"65": {
+		"name": "Green Summer 2013 Cooler Series #65",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Rebel Rouser",
+					"El Muchacho",
+					"Das Ubersternmann",
+					"Bolshevik Biker",
+					"Tartan Spartan",
+					"Cobber Chameleon",
+					"Graybanns",
+					"After Dark"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"66": {
+		"name": "Aqua Summer 2013 Cooler Series #66",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Hive Minder",
+					"Das Metalmeatencasen",
+					"Gaelic Garb",
+					"Half-Pipe Hurdler",
+					"Birdman of Australiacatraz",
+					"Tsarboosh",
+					"Macho Mann",
+					"Harmburg"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"67": {
+		"name": "Blue Summer 2013 Cooler Series #67",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Das Maddendoktor",
+					"Red Army Robin",
+					"Greased Lightning",
+					"Whiskey Bib",
+					"Cool Cat Cardigan",
+					"Colonial Clogs",
+					"Burning Bandana",
+					"Falconer"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"68": {
+		"name": "Brown Summer 2013 Cooler Series #68",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Black Watch",
+					"Flared Frontiersman",
+					"Compatriot",
+					"Das Fantzipantzen",
+					"Bear Necessities",
+					"Bigg Mann on Campus",
+					"Lieutenant Bites",
+					"Brawling Buccaneer"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"69": {
+		"name": "Black Summer 2013 Cooler Series #69",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Founding Father",
+					"Caffeine Cooler",
+					"Gabe Glasses",
+					"Trash Toter",
+					"Baron von Havenaplane",
+					"Whirly Warrior",
+					"Das Naggenvatcher",
+					"Soot Suit"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"71": {
+		"name": "Mann Co. Supply Crate Series #71",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Battalion's Backup",
+					"Hitman's Heatmaker",
+					"Bonk! Atomic Punch"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Gib Kills",
+					"Strange Part: Kills During Victory Time",
+					"Strange Part: Robot Spies Destroyed"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Buccaneer's Bicorne",
+					"Soviet Gentleman"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"72": {
+		"name": "Fall 2013 Acorns Crate Series #72",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Viking Braider",
+					"Flapjack",
+					"Gold Digger",
+					"Weight Room Warmer",
+					"Special Eyes",
+					"Chronomancer",
+					"Pirate Bandana",
+					"Brim-Full of Bullets",
+					"Li'l Snaggletooth",
+					"Escapist",
+					"L'homme Burglerre",
+					"Ward"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"73": {
+		"name": "Fall 2013 Gourd Crate Series #73",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Beep Boy",
+					"Cuban Bristle Crisis",
+					"A Brush with Death",
+					"Trickster's Turnout Gear",
+					"Hong Kong Cone",
+					"Hurt Locher",
+					"Bone Dome",
+					"Air Raider",
+					"Medical Mystery",
+					"Cotton Head",
+					"Slick Cut",
+					"Frenchman's Formals"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"74": {
+		"name": "Spooky Crate Series #74",
+		"lootlist": {
+			"1": {
+				"quality": "Haunted",
+				"weight": 1.00,
+				"items": [
+					"Halloweiner",
+					"Horrific Head of Hare",
+					"Hound's Hood",
+					"Face Plante",
+					"Faun Feet",
+					"Sprinting Cephalopod",
+					"Terrier Trousers",
+					"Cadaver's Capper",
+					"Freedom Feathers",
+					"Hardium Helm",
+					"Hidden Dragon",
+					"Larval Lid",
+					"Spellbinder's Bonnet",
+					"Faux Manchu",
+					"Grub Grenades",
+					"Jupiter Jumpers",
+					"Lieutenant Bites the Dust",
+					"Shaolin Sash",
+					"Space Bracers",
+					"Bozo's Bouffant",
+					"Burny's Boney Bonnet",
+					"Corpsemopolitan",
+					"Crispy Golden Locks",
+					"Gothic Guise",
+					"Macabre Mask",
+					"Mucous Membrain",
+					"Raven's Visage",
+					"Spectralnaut",
+					"Abhorrent Appendages",
+					"Beast From Below",
+					"Carrion Companion",
+					"Cauterizer's Caudal Appendage",
+					"Creature From The Heap",
+					"Death Support Pack",
+					"External Organ",
+					"Glob",
+					"Grisly Gumbo",
+					"Handhunter",
+					"Hard-Headed Hardware",
+					"Hollowhead",
+					"Maniac's Manacles",
+					"Monster's Stompers",
+					"PY-40 Incinibot",
+					"Rugged Respirator",
+					"Scorched Skirt",
+					"Up Pyroscopes",
+					"Vicious Visage",
+					"Headtaker's Hood",
+					"Mann-Bird of Aberdeen",
+					"Squid's Lid",
+					"Transylvania Top",
+					"Cap'n Calamari",
+					"Horsemann's Hand-Me-Down",
+					"Lordly Lapels",
+					"Parasight",
+					"Polly Putrid",
+					"Chicken Kiev",
+					"Horned Honcho",
+					"Ivan The Inedible",
+					"Last Bite",
+					"Monstrous Mandible",
+					"Grease Monkey",
+					"Alternative Medicine Mann",
+					"Das Blutliebhaber",
+					"Medimedes",
+					"Shaman's Skull",
+					"Teutonkahmun",
+					"Trepanabotomizer",
+					"Archimedes the Undying",
+					"Lo-Grav Loafers",
+					"Ramses' Regalia",
+					"Second Opinion",
+					"Surgeon's Space Suit",
+					"Vicar's Vestments",
+					"Hallowed Headcase",
+					"Sir Shootsalot",
+					"Carious Chameleon",
+					"Hyperbaric Bowler",
+					"Candyman's Cap",
+					"Bountiful Bow",
+					"Bozo's Brogues",
+					"Foul Cowl",
+					"Baphomet Trotters",
+					"Candleer",
+					"Pin Pals",
+					"Snaggletoothed Stetson",
+					"Ethereal Hood",
+					"Birdie Bonnet",
+					"Dark Helm",
+					"Haunted Hat",
+					"Magical Mercenary",
+					"Manneater",
+					"One-Way Ticket",
+					"Tuque or Treat",
+					"Accursed Apparition",
+					"Beacon from Beyond",
+					"Cryptic Keepsake",
+					"Guano",
+					"Pocket Horsemann",
+					"Quoth",
+					"Sackcloth Spook",
+					"Unidentified Following Object"
+				]
+			}
+		},
+		"effects": "SPOOKY",
+		"strangeUnusual": false
+	},
+	"75": {
+		"name": "Mann Co. Supply Crate Series #75",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Crit-a-Cola",
+					"Solemn Vow",
+					"Sydney Sleeper"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Unusual-Wearing Player Kills",
+					"Strange Part: Spies Killed",
+					"Strange Part: Burning Enemy Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Defiant Spartan",
+					"Apparatchik's Apparel"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"76": {
+		"name": "Mann Co. Supply Crate Series #76",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Concheror",
+					"Revolver",
+					"Eviction Notice"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Part: Killstreaks Ended",
+					"Strange Cosmetic Part: Freezecam Taunt Appearances",
+					"Strange Part: Damage Dealt"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Front Runner",
+					"Cold Killer"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"77": {
+		"name": "Mann Co. Supply Crate Series #77",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.60,
+				"items": [
+					"Rescue Ranger",
+					"Grenade Launcher",
+					"Scorch Shot"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
+					"Strange Cosmetic Part: Fires Survived",
+					"Strange Part: Allied Healing Done",
+					"Strange Part: Point-Blank Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
+					"Builder's Blueprints",
+					"Blighted Beak"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"78": {
+		"name": "Naughty Winter Crate 2013 Series #78",
+		"lootlist": {
+			"1": {
+				"quality": "StrangeUnique10",
+				"weight": 1.00,
+				"items": [
+					"Festive Force-A-Nature",
+					"Festive Sapper",
+					"Festive Crusader's Crossbow",
+					"Festive Flare Gun",
+					"Festive Eyelander",
+					"Festive Jarate",
+					"Festive Gloves of Running Urgently",
+					"Festive Black Box",
+					"Festive Wrangler"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"79": {
+		"name": "Nice Winter Crate 2013 Series #79",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Blizzard Breather",
+					"Sub Zero Suit",
+					"Dictator",
+					"Neckwear Headwear",
+					"Trail-Blazer",
+					"Dead of Night",
+					"Snow Scoper",
+					"Nunhood",
+					"Angel of Death",
+					"Kiss King",
+					"Slo-Poke",
+					"Minnesota Slick",
+					"Toy Soldier",
+					"Five-Month Shadow",
+					"Mann of Reason",
+					"Mann of the House",
+					"Chucklenuts",
+					"Tiny Timber",
+					"Face Full of Festive",
+					"Ruffled Ruprecht",
+					"Golden Garment",
+					"Little Drummer Mann",
+					"Scout Shako",
+					"Toy Tailor",
+					"Extra Layer",
+					"Polar Pullover",
+					"Dogfighter",
+					"Antarctic Parka",
+					"Runner's Warm-Up",
+					"Highland High Heels",
+					"Tartan Tyrolean",
+					"Marshall's Mutton Chops"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"81": {
+		"name": "Mann Co. Strongbox Series #81",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Ticket Boy",
+					"Ground Control",
+					"Killer's Kit",
+					"Cute Suit",
+					"Sole Mate",
+					"Bushi-Dou",
+					"Dark Falkirk Helm",
+					"Juggernaut Jacket",
+					"Sangu Sleeves",
+					"Sole Saviors",
+					"Stylish DeGroot",
+					"Bullet Buzz",
+					"Combat Slacks",
+					"Eliminator's Safeguard",
+					"Gone Commando",
+					"Heavy Lifter",
+					"Leftover Trap",
+					"Rat Stompers",
+					"Sammy Cap",
+					"Trash Man",
+					"War Goggles",
+					"Warmth Preserver",
+					"Antarctic Researcher",
+					"Ein",
+					"Scotch Saver",
+					"Trencher's Topper",
+					"Trencher's Tunic",
+					"Colonel's Coat",
+					"Dough Puncher",
+					"Fashionable Megalomaniac",
+					"Gaiter Guards",
+					"Heat of Winter",
+					"Heer's Helmet",
+					"Mustachioed Mann",
+					"Smock Surgeon",
+					"Teutonic Toque",
+					"Archer's Groundings",
+					"Huntsman's Essentials",
+					"Toowoomba Tunic",
+					"Backstabber's Boomslang",
+					"Napoleon Complex",
+					"Deep Cover Operator"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"82": {
+		"name": "Mann Co. Supply Munition Series #82",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Pretty Boy's Pocket Pistol Strangifier",
+					"Phlogistinator Strangifier",
+					"Cleaner's Carbine Strangifier",
+					"Strange Cosmetic Part: Kills",
+					"Strange Part: Full Health Kills",
+					"Strange Part: Headshot Kills",
+					"Private Eye Strangifier",
+					"Big Chief Strangifier"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"83": {
+		"name": "Mann Co. Supply Munition Series #83",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Rocket Launcher",
+					"Scattergun",
+					"Sniper Rifle",
+					"Shotgun",
+					"Gloves of Running Urgently",
+					"Spy-cicle",
+					"Axtinguisher"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false,
+		"killstreak": true
+	},
+	"84": {
+		"name": "Mann Co. Supply Munition Series #84",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Stickybomb Launcher",
+					"Minigun",
+					"Direct Hit",
+					"Huntsman",
+					"Backburner",
+					"Back Scatter",
+					"Kritzkrieg",
+					"Ambassador",
+					"Frontier Justice"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false,
+		"killstreak": true
+	},
+	"85": {
+		"name": "Mann Co. Supply Munition Series #85",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Air Strike Strangifier",
+					"Classic Strangifier",
+					"Manmelter Strangifier",
+					"Vaccinator Strangifier",
+					"Strange Part: Robot Scouts Destroyed",
+					"Strange Part: Taunting Player Kills",
+					"Strange Part: Buildings Destroyed",
+					"Anger Strangifier",
+					"Apparition's Aspect Strangifier",
+					"Widowmaker Strangifier"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"86": {
+		"name": "Limited Late Summer Crate Series #86",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Mishap Mercenary",
+					"Lady Killer",
+					"Lone Survivor",
+					"Poacher's Safari Jacket",
+					"Thirst Blood",
+					"Mann of the Seven Sees",
+					"Hillbilly Speed-Bump",
+					"Unshaved Bear",
+					"Pocket Heavy"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"87": {
+		"name": "End of the Line Community Crate Series #87",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.90,
+				"items": [
+					"Wartime Warmth",
+					"Insulated Inventor",
+					"Brooklyn Booties",
+					"Double Dynamite",
+					"Coldsnap Cap",
+					"Snow Stompers",
+					"North Polar Fleece",
+					"Fur-Lined Fighter",
+					"Boxcar Bomber",
+					"Bomber's Bucket Hat",
+					"Screamin' Eagle",
+					"Winter Woodsman",
+					"Snow Sleeves",
+					"Flashdance Footies",
+					"Thermal Tracker",
+					"Condor Cap",
+					"Mistaken Movember",
+					"Double Dog Dare Demo Pants",
+					"Sleeveless in Siberia",
+					"Hunter Heavy",
+					"Coldfront Curbstompers",
+					"Crossing Guard",
+					"Pool Party",
+					"Cold Snap Coat"
+				]
+			},
+			"2": {
+				"quality": "Strange",
+				"weight": 0.10,
+				"items": [
+					"Wartime Warmth",
+					"Insulated Inventor",
+					"Brooklyn Booties",
+					"Double Dynamite",
+					"Coldsnap Cap",
+					"Snow Stompers",
+					"North Polar Fleece",
+					"Fur-Lined Fighter",
+					"Boxcar Bomber",
+					"Bomber's Bucket Hat",
+					"Screamin' Eagle",
+					"Winter Woodsman",
+					"Snow Sleeves",
+					"Flashdance Footies",
+					"Thermal Tracker",
+					"Condor Cap",
+					"Mistaken Movember",
+					"Double Dog Dare Demo Pants",
+					"Sleeveless in Siberia",
+					"Hunter Heavy",
+					"Coldfront Curbstompers",
+					"Crossing Guard",
+					"Cold Snap Coat"
+				]
+			}
+		},
+		"effects": "EOTL",
+		"strangeUnusual": false
+	},
+	"88": {
+		"name": "Naughty Winter Crate 2014 Series #88",
+		"lootlist": {
+			"1": {
+				"quality": "StrangeUnique10",
+				"weight": 1.00,
+				"items": [
+					"Festive Bonk! Atomic Punch",
+					"Festive Backburner",
+					"Festive Chargin' Targe",
+					"Festive Bonesaw",
+					"Festive SMG",
+					"Festive Revolver",
+					"Festive Shotgun"
+				]
+			}
+		},
+		"effects": "3",
+		"strangeUnusual": false
+	},
+	"89": {
+		"name": "Nice Winter Crate 2014 Series #89",
+		"lootlist": {
+			"1": {
+				"quality": "StrangeUnique10",
+				"weight": 1.00,
+				"items": [
+					"Co-Pilot",
+					"Courtier's Collar",
+					"Harlequin's Hooves",
+					"Mountebank's Masque",
+					"Skullcap",
+					"Black Knight's Bascinet",
+					"Charred Chainmail",
+					"Pyromancer's Hood",
+					"Pyromancer's Raiments",
+					"Torcher's Tabard",
+					"Scot Bonnet",
+					"Storm Stompers",
+					"Valhalla Helm",
+					"Old Man Frost",
+					"Siberian Facehugger",
+					"Clubsy The Seal",
+					"Conagher's Combover",
+					"Cop Caller",
+					"Holstered Heaters",
+					"Thermal Insulation Layer",
+					"Surgeon's Shako",
+					"Unknown Mann",
+					"Bushman's Bristles",
+					"Marksman's Mohair",
+					"Professional's Ushanka",
+					"Wally Pocket",
+					"Pocket Momma",
+					"Puffy Provocateur",
+					"Stealthy Scarf"
+				]
+			}
+		},
+		"effects": "123",
+		"hatspool": "2014_winter",
+		"strangeUnusual": false
+	},
+	"90": {
+		"name": "Mann Co. Supply Munition Series #90",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.33,
+				"items": [
+					"Winger"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.33,
+				"items": [
+					"Cow Mangler 5000 Strangifier",
+					"Third Degree Strangifier",
+					"Strange Part: Not Crit nor MiniCrit Kills",
+					"Strange Part: Player Hits",
+					"Strange Cosmetic Part: Assists"
+				]
+			},
+			"3": {
+				"quality": "StrangeUnique10",
+				"weight": 0.33,
+				"items": [
+					"Texas Ten Gallon",
+					"Frenchman's Beret"
+				]
+			},
+			"4": {
+				"quality": "Strange",
+				"weight": 0.01,
+				"items": [
+					"AWPer Hand",
+					"Ullapool Caber"
+				]
+			}
+		},
+		"effects": "123",
+		"strangeUnusual": false
+	},
+	"91": {
+		"name": "Mann Co. Supply Munition Series #91",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 1.00,
+				"items": [
+					"Flare Gun",
+					"Wrench",
+					"Revolver",
+					"Machina",
+					"Baby Face's Blaster",
+					"Huo-Long Heater",
+					"Loose Cannon",
+					"Vaccinator",
+					"Air Strike"
+				]
+			}
+		},
+		"effects": "123",
+		"strangeUnusual": false,
+		"killstreak": true
+	},
+	"92": {
+		"name": "Mann Co. Supply Munition Series #92",
+		"lootlist": {
+			"1": {
+				"quality": "Strange",
+				"weight": 0.80,
+				"items": [
+					"Candy Cane",
+					"Dalokohs Bar",
+					"Warrior's Spirit",
+					"Apoco-Fists",
+					"Red-Tape Recorder"
+				]
+			},
+			"2": {
+				"quality": "Strange",
+				"weight": 0.18,
+				"items": [
+					"Claidheamh Mòr",
+					"Wrangler",
+					"Shahanshah",
+					"Cloak and Dagger",
+					"Buff Banner"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.01,
+				"items": [
+					"Righteous Bison Strangifier"
+				]
+			},
+			"4": {
+				"quality": "Strange",
+				"weight": 0.01,
+				"items": [
+					"Kritzkrieg"
+				]
+			}
+		},
+		"effects": "123",
+		"strangeUnusual": false
+	},
+	"103": {
+		"name": "Mann Co. Supply Munition Series #103",
+		"lootlist": {
+			"1": {
+				"quality": "Unique",
+				"weight": 0.33,
+				"items": [
+					"Strange Part: Heavies Killed",
+					"Strange Part: Pyros Killed",
+					"Strange Part: Critical Kills",
+					"Strange Part: Allied Healing Done",
+					"Strange Part: Damage Dealt"
+				]
+			},
+			"2": {
+				"quality": "Strange",
+				"weight": 0.66,
+				"items": [
+					"Natascha",
+					"Powerjack",
+					"Degreaser",
+					"Reserve Shooter",
+					"Ambassador",
+					"Quickiebomb Launcher",
+					"Back Scatter",
+					"Panic Attack",
+					"Iron Bomber"
+				]
+			},
+			"3": {
+				"quality": "Strange",
+				"weight": 0.01,
+				"items": [
+					"Sandvich"
+				]
+			}
+		},
+		"effects": "123",
+		"strangeUnusual": false
+	}
+}
+}

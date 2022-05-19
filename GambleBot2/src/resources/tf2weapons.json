@@ -25,6 +25,7 @@
 "Name": "Fan O'War", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Atomizer", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Wrap Assassin", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Sun-on-a-Stick", "Stock": false, "Australium": false, "Drop": true, "KS": true}, {
 "Name": "Rocket Launcher", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
 "Name": "Original", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Direct Hit", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
@@ -38,7 +39,7 @@
 "Name": "Reserve Shooter", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Buff Banner", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
 "Name": "Gunboats", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
-"Name": "Battallion's Backup", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
+"Name": "Battalion's Backup", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
 "Name": "Concheror", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
 "Name": "Mantreads", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Righteous Bison", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
@@ -84,7 +85,7 @@
 "Name": "Iron Bomber", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Stickybomb Launcher", "Stock": true, "Australium": true, "Drop": false, "KS":true, "Weight":10}, {
 "Name": "Scottish Resistance", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
-"Name": "Chargin' Targe'", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
+"Name": "Chargin' Targe", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Sticky Jumper", "Stock": false, "Australium": false, "Drop": true, "KS":false}, {
 "Name": "Splendid Screen", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {
 "Name": "Tide Turner", "Stock": false, "Australium": false, "Drop": true, "KS":true}, {

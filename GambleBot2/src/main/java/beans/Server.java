@@ -24,6 +24,8 @@ public class Server {
 	private String mvmChannel;
 	@Column(name="server_crate_channel")
 	private String crateChannel;
+	@Column(name="server_misc_channel")
+	private String miscChannel;
 	
 	public Server() {
 		super();
@@ -34,6 +36,7 @@ public class Server {
 		this.id = id;
 		this.mvmChannel = "";
 		this.crateChannel = "";
+		this.miscChannel = "";
 	}
 	
 	/**
@@ -84,5 +87,20 @@ public class Server {
 	public void setCrateChannel(String crateChannel) {
 		this.crateChannel = crateChannel;
 	}
+
+	/**
+	 * @return the miscChannel
+	 */
+	public String getMiscChannel() {
+		return miscChannel;
+	}
+
+	/**
+	 * @param miscChannel the miscChannel to set
+	 */
+	public void setMiscChannel(String miscChannel) {
+		this.miscChannel = miscChannel;
+	}
+	
 	
 }

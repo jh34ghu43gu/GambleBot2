@@ -202,15 +202,29 @@ public class Item {
 	public boolean canCombine(Item item) {
 		boolean canCombine = true;
 		//Check non-nulls are matching
-		if(!craftable || !item.craftable) { //Both must be craftable
-			canCombine = false;
-		} else if(!name.equals(item.getName()) || //Name match
+		if(!name.equals(item.getName()) || //Name match
 				level != item.getLevel() || //Same levels
 				!quality.equals(item.getQuality()) || //Same quality
 				!owner.getId().equals(item.owner.getId()) || //Same owner
 				killstreakTier != item.getKillstreakTier() || //Same killstreak tier
+				craftable != item.isCraftable() || //Same craftable status
 				festive != item.isFestive()) { //Same festive type
 			canCombine = false;
+		}
+		
+		//Secondary quality
+		if(secondaryQuality != null) {
+			if(item.getSecondaryQuality() != null) {
+				if(!secondaryQuality.equals(item.getSecondaryQuality())) {
+					canCombine = false; //We both have 2nd quality but they are different
+				}
+			} else { 
+				canCombine = false; //we have 2nd quality, they do not
+			}
+		} else {
+			if(item.getSecondaryQuality() != null) {
+				canCombine = false; //We don't have 2nd quality, they do
+			}
 		}
 		
 		//Check matching ks combos

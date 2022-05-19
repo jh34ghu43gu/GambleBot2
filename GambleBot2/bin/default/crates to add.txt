@@ -1,0 +1,25 @@
+var tablesVar = document.getElementsByTagName("tbody");
+Array.prototype.forEach.call(tablesVar, function(table) {
+  var items = "";
+  var rows = table.getElementsByTagName("tr");
+  Array.prototype.forEach.call(rows, function(row) {
+    
+    if(row.getElementsByTagName("span").length > 0) {
+      console.log(row.getElementsByTagName("span")[0].nextSibling.textContent)
+    }
+    if(row.style.display === "none") {
+      var tds = row.getElementsByTagName("td");
+      Array.prototype.forEach.call(tds, function(tdEl) {
+        //console.log(tdEl.style.background);
+        if(tdEl.style.background === "rgb(255, 221, 173) none repeat scroll 0% 0%") {
+          if(tdEl.childNodes.length > 1 && tdEl.childNodes[1].innerHTML != null) {
+            items += "\"" + tdEl.childNodes[1].innerHTML + "\"\n";
+          }
+        }
+      });
+    }
+  });
+  if(items.length > 1) {
+  	console.log(items);
+  }
+});

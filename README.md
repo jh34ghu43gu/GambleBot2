@@ -10,3 +10,5 @@ spring.datasource.password=your_password_here
 spring.main.web-application-type=NONE
 spring.data.jpa.repositories.enabled=true
 spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+
+ER diagram is outdated in this commit

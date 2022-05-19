@@ -17,7 +17,8 @@ public class GetPlayerUnusualsCommand extends Command {
 
 	public GetPlayerUnusualsCommand() {
 		this.name = "myunusuals";
-		this.help = "List your unusuals."; 
+		this.arguments = "<hat|hats>";
+		this.help = "List your unusuals. <hat or hats> to only display cosmetics."; 
 		this.cooldown = 60;
 	}
 	
@@ -29,6 +30,16 @@ public class GetPlayerUnusualsCommand extends Command {
 			return;
 		}
 		
+		boolean paints = true;
+		if(!event.getArgs().isEmpty()) {
+			String[] args = event.getArgs().split(" ");
+			for(String s : args) {
+				if(s.equalsIgnoreCase("hat") || s.equalsIgnoreCase("hats")) {
+					paints = false;
+				}
+			}
+		}
+		
 		Player player = Utils.getPlayer(event.getAuthor().getId());
 		ItemRepository IR = GambleBot.getContext().getBean(ItemRepository.class);
 		Optional<List<Item>> oList = IR.findByOwnerAndQuality(player, "Unusual");
@@ -36,7 +47,12 @@ public class GetPlayerUnusualsCommand extends Command {
 			List<Item> itemList = oList.get();
 			ArrayList<Item> items = new ArrayList<Item>();
 			for(Item i : itemList) {
-				items.add(i);
+				if(!i.getName().contains("Unusualifier")) { //TODO filter elsewhere
+					if(paints || i.getWear() == null) {
+						items.add(i);
+					}
+				}
+				
 			}
 			event.reply(Utils.itemsToEmbed(player, items, "You own the following unusuals", "crate")); //TODO new thumbnail
 		} else {

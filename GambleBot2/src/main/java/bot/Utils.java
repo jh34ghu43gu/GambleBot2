@@ -1,10 +1,27 @@
 package bot;
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.CodingErrorAction;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import beans.Item;
@@ -12,6 +29,7 @@ import beans.Leaderboard;
 import beans.Player;
 import beans.Server;
 import files.ConfigHelper;
+import model.Skin;
 import model.Tour;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
@@ -29,10 +47,12 @@ public class Utils {
 	private static final String TICKET_URL = "https://wiki.teamfortress.com/w/images/9/9b/Backpack_Tour_of_Duty_Ticket.png";
 	private static final String KEY_URL = "https://wiki.teamfortress.com/w/images/8/83/Backpack_Mann_Co._Supply_Crate_Key.png";
 	private static final int MAX_BOARDS = 100;
+	private static final String PRICE_URL = "https://backpack.tf/api/IGetPrices/v4?key=";
+	private static final String LOCAL_PRICELIST_FILE = "prices.json";
 	
 	/**
 	 * @param event
-	 * @param channel Channel restriction to check for; either 'mvm' or 'crate'
+	 * @param channel Channel restriction to check for; either 'mvm' 'misc' or 'crate'
 	 * @return If the command can be run in the given channel.
 	 */
 	public static boolean commandCheck(CommandEvent event, String channel) {
@@ -44,6 +64,10 @@ public class Utils {
 			}
 		} else if(channel.equalsIgnoreCase("crate")) {
 			if(server.getCrateChannel().isEmpty() || server.getCrateChannel().equals(cID)) {
+				return true;
+			}
+		} else if(channel.equalsIgnoreCase("misc")) {
+			if(server.getMiscChannel().isEmpty() || server.getMiscChannel().equals(cID)) {
 				return true;
 			}
 		}
@@ -120,10 +144,58 @@ public class Utils {
 			}
 			return EB.build();
 		}
+		
+		//Try to consolidate skins
+		ArrayList<Item> noSkinItems = new ArrayList<Item>();
+		ArrayList<Skin> skinItems = new ArrayList<Skin>();
+		for(Item item : items) {
+			if(item.getWear() == null) {
+				noSkinItems.add(item);
+			} else {
+				Skin tempSkin = new Skin();
+				tempSkin.setName(item.getName());
+				tempSkin.setTier(item.getTier());
+				tempSkin.setStrange(item.getQuality().equals("Strange")
+						|| (item.getSecondaryQuality() != null && item.getSecondaryQuality().equals("Strange")));
+				tempSkin.setUnusual(item.getQuality().equals("Unusual"));
+				if(tempSkin.isUnusual()) {
+					tempSkin.setEffect(item.getEffect());
+				}
+				tempSkin.addWear(item.getWear(), item.getQuantity());
+				for(Skin skin : skinItems) {
+					if(skin.canCombine(tempSkin)) {
+						tempSkin = skin.combine(tempSkin);
+					}
+				}
+				if(tempSkin.totalWears() > 0) {
+					skinItems.add(tempSkin);
+				}
+			}
+		}
+		if(!skinItems.isEmpty()) {
+			skinItems.sort(new Skin());
+		}
+		
 		ArrayList<String> itemText = new ArrayList<String>();
 		int itemTextIndex = 0;
 		String emote = "";
-		for(Item item : items) {
+		for(Skin skin : skinItems) {
+			if(!skin.getEffect().isEmpty()) {
+				emote += ConfigHelper.getOptionFromFile("UNUSUAL_EMOTE");
+			}
+			String itemStr = "• " + emote + " " + skin.toDiscordString();
+			if(itemText.isEmpty()) {
+				itemText.add(itemStr);
+			} else if(itemText.get(itemTextIndex).length()+ itemStr.length() >= 1024) {
+				itemTextIndex++;
+				itemText.add(itemStr);
+			} else {
+				itemText.set(itemTextIndex, itemText.get(itemTextIndex) + "\n" + itemStr);
+			}
+			emote = "";
+		}
+		
+		for(Item item : noSkinItems) {
 			if(Tour.australiumEmotes.containsKey(item.getName())) {
 				emote = Tour.australiumEmotes.get(item.getName());
 			}
@@ -149,25 +221,24 @@ public class Utils {
 		//Make sure message is valid size.
 		int i = 0;
 		boolean modified = false;
-		String modifiedTitle = "Could not display " + (itemText.size() - i) + " items.\n" + title;
+		String modifiedTitle = "Could not display " + (items.size() - i) + " items.\n" + title;
 		for(String s : itemText) {
 			if(EB.length() + s.length() + modifiedTitle.length() + 4 < 6000) { //+4 for increased digits itemText.size might be
 				EB.addField("", s, false);
-				i++;
+				i += s.split("\n").length;
 			} else {
 				modified = true;
 				break;
 			}
 		}
-		
-		
 		if(modified) {
-			EB.setTitle("Could not display " + (itemText.size() - i) + " items.\n" + title);
+			EB.setTitle("Could not display " + (items.size() - i) + " items.\n" + title);
 		} else {
 			EB.setTitle(title);
 		}
 		return EB.build();
 	}
+	
 	
 	/**
 	 * Return the arraylist of all leaderboard entries for the given event. List is sorted by value
@@ -253,6 +324,58 @@ public class Utils {
 			}
 		}
 		return rank;
+	}
+	
+	/**
+	 * Get the pricelist from backpack.tf and create the local file.
+	 * @return false on error
+	 */
+	public static boolean updatePricelist() {
+		try {
+			URL url = new URL(PRICE_URL + ConfigHelper.getOptionFromFile("BACKPACK_API_KEY"));
+			HttpURLConnection httpcon = (HttpURLConnection) url.openConnection();
+		    httpcon.addRequestProperty("User-Agent", "Mozilla/5.0");
+			Scanner sc = new Scanner(httpcon.getInputStream());
+			StringBuffer sb = new StringBuffer();
+			while(sc.hasNextLine()) {
+				sb.append(sc.nextLine());
+			}
+			sc.close();
+			
+			String result = sb.toString();
+			BufferedWriter writer = new BufferedWriter(new FileWriter(LOCAL_PRICELIST_FILE));
+			writer.write(result);
+			writer.close();
+			
+			return true;
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	/**
+	 * @return JsonObject of the local pricelist
+	 */
+	public static JsonObject getLocalPriceList() {
+		Gson gson = new Gson();
+		JsonObject pricelist = new JsonObject();
+		
+		try {
+			FileInputStream input = new FileInputStream(new File(LOCAL_PRICELIST_FILE));
+			CharsetDecoder decoder = Charset.forName("UTF-8").newDecoder();
+	        decoder.onMalformedInput(CodingErrorAction.IGNORE);
+	        InputStreamReader reader = new InputStreamReader(input, decoder);
+	        BufferedReader bufferedReader = new BufferedReader( reader );
+			pricelist = gson.fromJson(bufferedReader, JsonObject.class).getAsJsonObject("response");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return pricelist;
 	}
 
 }

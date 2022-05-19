@@ -15,17 +15,24 @@ import model.Crate;
 
 public class UnboxCrateCommand extends Command {
 	
-	private static int unboxLimit = 100;
+	private static int caseUnboxLimit = 500;
+	private static int crateUnboxLimit = 1000;
 	
 	private ArrayList<Crate> crates;
 	private static final Logger log = (Logger) LoggerFactory.getLogger(UnboxCrateCommand.class);
 	
 	public UnboxCrateCommand() {
 		this.name = "unbox";
-		this.arguments = "{crate/case number or name} {amount 1-" + unboxLimit + "}";
+		this.arguments = "{crate/case number or name} {amount 1-" + caseUnboxLimit + " for cases, " + crateUnboxLimit + "for crates}";
 		this.help = "Unbox the specified crate/case."; 
 		this.cooldown = 2;
-		crates = Crate.getCases();
+		crates = new ArrayList<Crate>();
+		for(Crate c : Crate.getCrates()) {
+			crates.add(c);
+		}
+		for(Crate c : Crate.getCases()) {
+			crates.add(c);
+		}
 	}
 	
 	@Override
@@ -66,12 +73,7 @@ public class UnboxCrateCommand extends Command {
 			event.reply("Crate/Case must be specified.");
 			return;
 		}
-		//Must be between 1 and limit
-		if(amt < 1 || amt > unboxLimit) {
-			event.reply("Amount must be between 1 and " + unboxLimit + ".");
-			log.debug("User wanted to do invalid amount of unboxes." + amt);
-			return;
-		}
+		
 		//See if crate/case is valid
 		int crate = -1;
 		int crateInt = -1;
@@ -87,6 +89,14 @@ public class UnboxCrateCommand extends Command {
 		if(crate == -1) {
 			event.reply("Could not find the specified crate/case.");
 			log.debug("Could not find crate/case: " + crateStr);
+			return;
+		}
+		
+		//Must be between 1 and limit
+		int unboxLimit = (crates.get(crate).isCase() || crates.get(crate).isKillstreakKits()) ? caseUnboxLimit : crateUnboxLimit;
+		if(amt < 1 || amt > unboxLimit) {
+			event.reply("Amount must be between 1 and " + unboxLimit + ".");
+			log.debug("User wanted to do invalid amount of unboxes." + amt);
 			return;
 		}
 		
@@ -120,5 +130,33 @@ public class UnboxCrateCommand extends Command {
 		}
 		
 		event.reply(Utils.itemsToEmbed(player, allLoot, "You unboxed the following", "crate"));
+	}
+	
+	/**
+	 * Used to get names for get crate names command
+	 * @return
+	 */
+	public ArrayList<String> getCrateNames() {
+		ArrayList<String> names = new ArrayList<String>();
+		for(Crate c : crates) {
+			if(!c.isCase()) {
+				names.add(c.getNames());
+			}
+		}
+		return names;
+	}
+	
+	/**
+	 * Used to get names for get case names command
+	 * @return
+	 */
+	public ArrayList<String> getCaseNames() {
+		ArrayList<String> names = new ArrayList<String>();
+		for(Crate c : crates) {
+			if(c.isCase()) {
+				names.add(c.getNames());
+			}
+		}
+		return names;
 	}
 }

@@ -44,6 +44,7 @@ public class GambleBot {
 		ConfigHelper.setOptionToFile("UNUSUAL_EMOTE", "", false);
 		ConfigHelper.setOptionToFile("UNUSUALIFIER_EMOTE", "", false);
 		ConfigHelper.setOptionToFile("STRANGE_EMOTE", "", false);
+		ConfigHelper.setOptionToFile("BACKPACK_API_KEY", "", false);
 		
 		
 		/*ArrayList<Crate> cases = Crate.getCases();
@@ -102,16 +103,25 @@ public class GambleBot {
 		commandBuilder.addCommand(new RemoveMvmChannelCommand());
 		commandBuilder.addCommand(new SetCrateChannelCommand());
 		commandBuilder.addCommand(new RemoveCrateChannelCommand());
+		commandBuilder.addCommand(new SetMiscChannelCommand());
+		commandBuilder.addCommand(new RemoveMiscChannelCommand());
 		commandBuilder.addCommand(new MvmTourCommand());
 		commandBuilder.addCommand(new MvmStatsCommand());
 		commandBuilder.addCommand(new GetMvmOddsCommand());
 		commandBuilder.addCommand(new GetCrateOddsCommand());
-		commandBuilder.addCommand(new UnboxCrateCommand());
+		UnboxCrateCommand UCC = new UnboxCrateCommand();
+		commandBuilder.addCommand(UCC);
 		commandBuilder.addCommand(new GetPlayerBalance());
-		commandBuilder.addCommand(new GetCrateNamesCommand());
+		commandBuilder.addCommand(new GetCrateNamesCommand(UCC.getCrateNames()));
+		commandBuilder.addCommand(new GetCaseNamesCommand(UCC.getCaseNames()));
 		commandBuilder.addCommand(new GetPlayerUnusualsCommand());
 		commandBuilder.addCommand(new GetPlayerAustraliumsCommand());
 		commandBuilder.addCommand(new GetPlayerPansCommand());
+		commandBuilder.addCommand(new UnboxUnusualCommand());
+		commandBuilder.addCommand(new UnboxEliteCommand());
+		commandBuilder.addCommand(new UpdatePricelistCommand());
+		commandBuilder.addCommand(new CraftHatsCommand());
+		commandBuilder.addCommand(new GenerationValueReportCommand());
 		CommandClient commandClient = commandBuilder.build();
 		
 		//Launch discord bot
