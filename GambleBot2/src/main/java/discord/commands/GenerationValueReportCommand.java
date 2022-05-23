@@ -147,7 +147,7 @@ public class GenerationValueReportCommand extends Command {
 											value += tmpValue;
 											valueMap.put(effectName, value);
 											amtMap.put(effectName, amtMap.get(effectName)+1);
-										}						
+										}
 									}
 								}
 							}

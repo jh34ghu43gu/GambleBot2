@@ -1,22 +1,21 @@
 package discord.commands;
 
-import java.util.ArrayList;
-
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
+import bot.GamblerManager;
 import bot.Utils;
 
 public class GetCaseNamesCommand extends Command {
 	
-	private ArrayList<String> cases;
+	private GamblerManager manager;
 	
-	public GetCaseNamesCommand(ArrayList<String> names) {
+	public GetCaseNamesCommand(GamblerManager gm) {
 		this.name = "cases";
 		this.help = "List all available cases.\n"
 				+ "Use g.crates to view all crates."; 
 		this.cooldown = 15;
-		cases = names;
+		manager = gm;
 	}
 	
 	@Override
@@ -28,7 +27,7 @@ public class GetCaseNamesCommand extends Command {
 		}
 		
 		String out = "Available cases are: \n";
-		for(String c : cases) {
+		for(String c : manager.getNames(true)) {
 			out += c + "\n";
 		}
 		event.reply(out);

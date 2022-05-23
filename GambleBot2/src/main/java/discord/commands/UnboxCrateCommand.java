@@ -9,6 +9,7 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 
 import beans.Item;
 import beans.Player;
+import bot.GamblerManager;
 import bot.Utils;
 import ch.qos.logback.classic.Logger;
 import model.Crate;
@@ -18,21 +19,15 @@ public class UnboxCrateCommand extends Command {
 	private static int caseUnboxLimit = 500;
 	private static int crateUnboxLimit = 1000;
 	
-	private ArrayList<Crate> crates;
+	private GamblerManager manager;
 	private static final Logger log = (Logger) LoggerFactory.getLogger(UnboxCrateCommand.class);
 	
-	public UnboxCrateCommand() {
+	public UnboxCrateCommand(GamblerManager gm) {
 		this.name = "unbox";
 		this.arguments = "{crate/case number or name} {amount 1-" + caseUnboxLimit + " for cases, " + crateUnboxLimit + "for crates}";
 		this.help = "Unbox the specified crate/case."; 
 		this.cooldown = 2;
-		crates = new ArrayList<Crate>();
-		for(Crate c : Crate.getCrates()) {
-			crates.add(c);
-		}
-		for(Crate c : Crate.getCases()) {
-			crates.add(c);
-		}
+		manager = gm;
 	}
 	
 	@Override
@@ -77,7 +72,7 @@ public class UnboxCrateCommand extends Command {
 		//See if crate/case is valid
 		int crate = -1;
 		int crateInt = -1;
-		for(Crate c : crates) {
+		for(Crate c : manager.getAllCrates()) {
 			if(c.getNames().toLowerCase().contains(crateStr.toLowerCase())) {
 				crate = crateInt+1;
 				log.debug("Crate found: " + c.getName());
@@ -93,7 +88,7 @@ public class UnboxCrateCommand extends Command {
 		}
 		
 		//Must be between 1 and limit
-		int unboxLimit = (crates.get(crate).isCase() || crates.get(crate).isKillstreakKits()) ? caseUnboxLimit : crateUnboxLimit;
+		int unboxLimit = (manager.getAllCrates().get(crate).isCase() || manager.getAllCrates().get(crate).isKillstreakKits()) ? caseUnboxLimit : crateUnboxLimit;
 		if(amt < 1 || amt > unboxLimit) {
 			event.reply("Amount must be between 1 and " + unboxLimit + ".");
 			log.debug("User wanted to do invalid amount of unboxes." + amt);
@@ -105,7 +100,7 @@ public class UnboxCrateCommand extends Command {
 		
 		ArrayList<Item> allLoot = new ArrayList<Item>();
 		for(int i = 0; i < amt; i++) {
-			for(Item item : crates.get(crate).open(player)) {
+			for(Item item : manager.getAllCrates().get(crate).open(player)) {
 				//Condense
 				for(Item lootItem : allLoot) {
 					if(lootItem.canCombine(item)) {
@@ -130,33 +125,5 @@ public class UnboxCrateCommand extends Command {
 		}
 		
 		event.reply(Utils.itemsToEmbed(player, allLoot, "You unboxed the following", "crate"));
-	}
-	
-	/**
-	 * Used to get names for get crate names command
-	 * @return
-	 */
-	public ArrayList<String> getCrateNames() {
-		ArrayList<String> names = new ArrayList<String>();
-		for(Crate c : crates) {
-			if(!c.isCase()) {
-				names.add(c.getNames());
-			}
-		}
-		return names;
-	}
-	
-	/**
-	 * Used to get names for get case names command
-	 * @return
-	 */
-	public ArrayList<String> getCaseNames() {
-		ArrayList<String> names = new ArrayList<String>();
-		for(Crate c : crates) {
-			if(c.isCase()) {
-				names.add(c.getNames());
-			}
-		}
-		return names;
 	}
 }

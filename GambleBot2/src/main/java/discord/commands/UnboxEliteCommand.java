@@ -9,6 +9,7 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 
 import beans.Item;
 import beans.Player;
+import bot.GamblerManager;
 import bot.Utils;
 import ch.qos.logback.classic.Logger;
 import model.Crate;
@@ -16,22 +17,16 @@ import model.CrateItem;
 
 public class UnboxEliteCommand extends Command {
 
-	private ArrayList<Crate> crates;
+	private GamblerManager manager;
 	private static final Logger log = (Logger) LoggerFactory.getLogger(UnboxCrateCommand.class);
 	
-	public UnboxEliteCommand() {
+	public UnboxEliteCommand(GamblerManager gm) {
 		this.name = "unboxelite";
 		this.aliases = new String[] {"ue"};
 		this.arguments = "{case number or name} <unusual or u> <strange or s> <fn>";
 		this.help = "Unbox the specified case until you get an elite grade item. Can specify if you want unusual, strange, FN, or any combination of."; 
 		this.cooldown = 60;
-		crates = new ArrayList<Crate>();
-		for(Crate c : Crate.getCrates()) {
-			crates.add(c);
-		}
-		for(Crate c : Crate.getCases()) {
-			crates.add(c);
-		}
+		manager = gm;
 	}
 	
 	@Override
@@ -75,7 +70,7 @@ public class UnboxEliteCommand extends Command {
 		//See if case is valid
 		int crate = -1;
 		int crateInt = -1;
-		for(Crate c : crates) {
+		for(Crate c : manager.getAllCrates()) {
 			if(c.getNames().toLowerCase().contains(crateStr.toLowerCase())) {
 				crate = crateInt+1;
 				log.debug("Crate found: " + c.getName());
@@ -90,20 +85,20 @@ public class UnboxEliteCommand extends Command {
 			return;
 		}
 		
-		if(fn && !crates.get(crate).isSkin()) {
+		if(fn && !manager.getAllCrates().get(crate).isSkin()) {
 			event.reply("FN can only be used with skin/paint cases.");
 			return;
 		}
 		
 		//Check for case and contains elite.
-		if(crates.get(crate).isCase()) {
+		if(manager.getAllCrates().get(crate).isCase()) {
 			boolean hasElite = false;
 			boolean eliteUnu = false;
-			for(CrateItem item : crates.get(crate).getItemList()) {
+			for(CrateItem item : manager.getAllCrates().get(crate).getItemList()) {
 				if(item.getQuality().equals("Elite")) {
 					hasElite = true;
 					if(unusual) {
-						if(crates.get(crate).isSkin() || item.isHat()) {
+						if(manager.getAllCrates().get(crate).isSkin() || item.isHat()) {
 							eliteUnu = true;
 							break;
 						}
@@ -133,7 +128,7 @@ public class UnboxEliteCommand extends Command {
 		Item unboxedItem = null;
 		while(!foundItem) {
 			unboxed++;
-			for(Item item : crates.get(crate).open(player)) {
+			for(Item item : manager.getAllCrates().get(crate).open(player)) {
 				//Condense
 				for(Item lootItem : allLoot) {
 					if(lootItem.canCombine(item)) {

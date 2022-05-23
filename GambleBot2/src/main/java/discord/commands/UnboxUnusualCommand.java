@@ -10,28 +10,23 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 
 import beans.Item;
 import beans.Player;
+import bot.GamblerManager;
 import bot.Utils;
 import ch.qos.logback.classic.Logger;
 import model.Crate;
 
 public class UnboxUnusualCommand extends Command {
 
-	private ArrayList<Crate> crates;
+	private GamblerManager manager;
 	private static final Logger log = (Logger) LoggerFactory.getLogger(UnboxCrateCommand.class);
 	
-	public UnboxUnusualCommand() {
+	public UnboxUnusualCommand(GamblerManager gm) {
 		this.name = "unboxunusual";
 		this.aliases = new String[] {"uu"};
 		this.arguments = "<crate/case number or name> <tc>";
 		this.help = "Unbox the specified crate/case until you get an unusual. Omit number/name to randomly pick. tc to go until a team captain, must provide crate number."; 
 		this.cooldown = 5;
-		crates = new ArrayList<Crate>();
-		for(Crate c : Crate.getCrates()) {
-			crates.add(c);
-		}
-		for(Crate c : Crate.getCases()) {
-			crates.add(c);
-		}
+		manager = gm;
 	}
 	
 	@Override
@@ -60,12 +55,12 @@ public class UnboxUnusualCommand extends Command {
 		if(crateStr.isEmpty()) {
 			Random rand = new Random();
 			do {
-				crate = rand.nextInt(crates.size());
-			} while(!crates.get(crate).isUnusuals());
-			crateName = crates.get(crate).getName();
+				crate = rand.nextInt(manager.getAllCrates().size());
+			} while(!manager.getAllCrates().get(crate).isUnusuals());
+			crateName = manager.getAllCrates().get(crate).getName();
 		} else {
 			//See if crate/case is valid
-			for(Crate c : crates) {
+			for(Crate c : manager.getAllCrates()) {
 				if(c.getNames().toLowerCase().contains(crateStr.toLowerCase())) {
 					crate = crateInt+1;
 					log.debug("Crate found: " + c.getName());
@@ -86,7 +81,7 @@ public class UnboxUnusualCommand extends Command {
 		}
 		
 		if(tc) {
-			if(!crates.get(crate).getCrateHats().equalsIgnoreCase("hats") || crates.get(crate).isCase()) {
+			if(!manager.getAllCrates().get(crate).getCrateHats().equalsIgnoreCase("hats") || manager.getAllCrates().get(crate).isCase()) {
 				event.reply("Selected crate does not contain a Team Captain.");
 				return; 
 			}
@@ -101,7 +96,7 @@ public class UnboxUnusualCommand extends Command {
 		Item unusualUnboxed = null;
 		while(!unusual) {
 			unboxed++;
-			for(Item item : crates.get(crate).open(player)) {
+			for(Item item : manager.getAllCrates().get(crate).open(player)) {
 				//Condense
 				for(Item lootItem : allLoot) {
 					if(lootItem.canCombine(item)) {

@@ -24,26 +24,6 @@ public class GetCrateOddsCommand extends Command {
 		}
 		
 		event.reply(Crate.getAllOdds());
-		
-		/*/Are we getting aussie stats or normal stats?
-		boolean aus = false;
-		if(!event.getArgs().isEmpty()) {
-			String[] args = event.getArgs().split(" ");
-			String ausString = args[0];
-			if(ausString.equalsIgnoreCase("aus") || ausString.equalsIgnoreCase("australiums") || ausString.equalsIgnoreCase("aussies") || ausString.equalsIgnoreCase("australium")) {
-				aus = true;
-			}
-		}
-		
-		if(aus) {
-			String out = Tour.getAussieInfo();
-			out += "Use 'mvmodds' to get tour related odds.";
-			event.reply(out);
-		} else {
-			String out = Tour.getTourInfo();
-			out += "Use 'mvmodds aus' for odds of recieving a specific australium.";
-			event.reply(out);
-		} */
 	}
 
 }
