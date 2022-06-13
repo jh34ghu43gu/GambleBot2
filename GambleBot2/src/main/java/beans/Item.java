@@ -274,7 +274,7 @@ public class Item {
 	}
 	
 	/**
-	 * @return A discord friend string
+	 * @return A discord friendly string
 	 */
 	public String toDiscordString() {
 		String out = "" + quantity;

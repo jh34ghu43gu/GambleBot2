@@ -27,7 +27,7 @@ public class GetCaseNamesCommand extends Command {
 		}
 		
 		String out = "Available cases are: \n";
-		for(String c : manager.getNames(true)) {
+		for(String c : manager.getNamesAndPrices(true)) {
 			out += c + "\n";
 		}
 		event.reply(out);

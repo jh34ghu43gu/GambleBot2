@@ -16,9 +16,12 @@ import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CodingErrorAction;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
+
+import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -28,6 +31,7 @@ import beans.Item;
 import beans.Leaderboard;
 import beans.Player;
 import beans.Server;
+import ch.qos.logback.classic.Logger;
 import files.ConfigHelper;
 import model.Skin;
 import model.Tour;
@@ -44,11 +48,106 @@ import repository.ServerRepository;
  */
 public class Utils {
 	
+	private static final Logger log = (Logger) LoggerFactory.getLogger(Utils.class);
+	
 	private static final String TICKET_URL = "https://wiki.teamfortress.com/w/images/9/9b/Backpack_Tour_of_Duty_Ticket.png";
 	private static final String KEY_URL = "https://wiki.teamfortress.com/w/images/8/83/Backpack_Mann_Co._Supply_Crate_Key.png";
 	private static final int MAX_BOARDS = 100;
 	private static final String PRICE_URL = "https://backpack.tf/api/IGetPrices/v4?key=";
 	private static final String LOCAL_PRICELIST_FILE = "prices.json";
+	private static final HashMap<String, Integer> QUALITY_MAP = new HashMap<String, Integer>() {{
+		this.put("Unique", 6);
+		this.put("Strange", 11);
+		this.put("Unusual", 5);
+		this.put("Haunted", 13);
+		this.put("Vintage", 3);
+		this.put("Genuine", 1);
+		this.put("Collectors", 14);
+	}};
+	private static final HashMap<String, Integer> UNUSUAL_EFFECT_MAP = new HashMap<String, Integer>() {{
+		this.put("Green Confetti", 6);
+		this.put("Purple Confetti", 7);
+		this.put("Haunted Ghosts", 8);
+		this.put("Green Energy", 9);
+		this.put("Purple Energy", 10);
+		this.put("Circling TF Logo", 11);
+		this.put("Massed Flies", 12);
+		this.put("Burning Flames", 13);
+		this.put("Scorching Flames", 14);
+		this.put("Searing Plasma", 15);
+		this.put("Vivid Plasma", 16);
+		this.put("Sunbeams", 17);
+		this.put("Circling Peace Sign", 18);
+		this.put("Circling Heart", 19);
+		this.put("Stormy Storm", 29);
+		this.put("Blizzardy Storm", 30);
+		this.put("Nuts n' Bolts", 31);
+		this.put("Orbiting Planets", 32);
+		this.put("Orbiting Fire", 33);
+		this.put("Bubbling", 34);
+		this.put("Smoking", 35);
+		this.put("Steaming", 36);
+		this.put("Flaming Fantern", 37);
+		this.put("Cloudy Moon", 38);
+		this.put("Cauldron Bubbles", 39);
+		this.put("Eerie Orbiting Fire", 40);
+		this.put("Knifestorm", 43);
+		this.put("Misty Skull", 44);
+		this.put("Harvest Moon", 45);
+		this.put("It's A Secret To Everybody", 46);
+		this.put("Stormy 13th Hour", 47);
+		this.put("Kill-a-Watt", 56);
+		this.put("Terror-Watt", 57);
+		this.put("Cloud 9", 58);
+		this.put("Aces High", 59);
+		this.put("Dead Presidents", 60);
+		this.put("Miami Nights", 61);
+		this.put("Disco Beat Down", 62);
+		this.put("Phosphorous", 63);
+		this.put("Sulphurous", 64);
+		this.put("Memory Leak", 65);
+		this.put("Overclocked", 66);
+		this.put("Electrostatic", 67);
+		this.put("Power Surge", 68);
+		this.put("Anti-Freeze", 69);
+		this.put("Time Warp", 70);
+		this.put("Green Black Hole", 71);
+		this.put("Roboactive", 72);
+		this.put("Arcana", 73);
+		this.put("Spellbound", 74);
+		this.put("Chiroptera Venenata", 75);
+		this.put("Poisoned Shadows", 76);
+		this.put("Something Burning This Way Comes", 77);
+		this.put("Hellfire", 78);
+		this.put("Darkblaze", 79);
+		this.put("Demonflame", 80);
+		this.put("Bozo The All-Gnawing", 81);
+		this.put("Amaranthine", 82);
+		this.put("Stare From Beyond", 83);
+		this.put("The Ooze", 84);
+		this.put("Ghastly Ghosts Jr", 85);
+		this.put("Haunted Phantasm Jr", 86);
+		this.put("Frostbite", 87);
+		this.put("Molten Mallard", 88);
+		this.put("Morning Glory", 89);
+		this.put("Death at Dusk", 90);
+		this.put("Abduction", 91);
+		this.put("Atomic", 92);
+		this.put("Subatomic", 93);
+		this.put("Electric Hat Protector", 94);
+		this.put("Magnetic Hat Protector", 95);
+		this.put("Voltaic Hat Protector", 96);
+		this.put("Galactic Codex", 97);
+		this.put("Ancient Codex", 98);
+		this.put("Nebula", 99);
+		this.put("Death by Disco", 100);
+		this.put("It's a mystery to everyone", 101);
+		this.put("It's a puzzle to me", 102);
+		this.put("Ether Trail", 103);
+		this.put("Nether Trail", 104);
+		this.put("Ancient Eldritch", 105);
+		this.put("Eldritch Flame", 106);
+	}};
 	
 	/**
 	 * @param event
@@ -376,6 +475,95 @@ public class Utils {
 			e.printStackTrace();
 		}
 		return pricelist;
+	}
+	
+	/**
+	 * Take an arraylist of items and get the total value in keys. Returned as a json object with "value" and "items".
+	 * @param items
+	 * @return JsonObject with fields "value" and "items". 
+	 * Note that items refers to how many Item objects had prices, not the quantity field of said objects.
+	 */
+	public static JsonObject getTotalItemsValue(ArrayList<Item> items) {
+		double keys = 0.0;
+		double metal = 0.0;
+		int itemsPriced = 0;
+		JsonObject prices = Utils.getLocalPriceList().get("items").getAsJsonObject();;
+		
+		double keyPrice = prices.get("Mann Co. Supply Crate Key").getAsJsonObject()
+				.get("prices").getAsJsonObject()
+				.get("6").getAsJsonObject()
+				.get("Tradable").getAsJsonObject()
+				.get("Craftable").getAsJsonArray()
+				.get(0).getAsJsonObject()
+				.get("value").getAsDouble();
+		double hatPrice = prices.get("Random Craft Hat").getAsJsonObject()
+				.get("prices").getAsJsonObject()
+				.get("6").getAsJsonObject()
+				.get("Tradable").getAsJsonObject()
+				.get("Craftable").getAsJsonArray()
+				.get(0).getAsJsonObject()
+				.get("value").getAsDouble();
+		
+		for(Item item : items) {
+			if(QUALITY_MAP.containsKey(item.getQuality())) {
+				try {
+					JsonObject itemObj = null;
+					if(item.getQuality().equals("Unusual")) {
+						if(UNUSUAL_EFFECT_MAP.containsKey(item.getEffect())) {
+							itemObj = prices.get(item.getName()).getAsJsonObject()
+									.get("prices").getAsJsonObject()
+									.get(QUALITY_MAP.get(item.getQuality()).toString()).getAsJsonObject()
+									.get("Tradable").getAsJsonObject()
+									.get(item.isCraftable() ? "Craftable" : "Non-Craftable").getAsJsonObject()
+									.get(UNUSUAL_EFFECT_MAP.get(item.getEffect()).toString()).getAsJsonObject();
+							
+						} else {
+							log.warn("Effect \"" + item.getEffect() +"\" is not mapped!");
+							continue;
+						}
+					} else {
+						itemObj = prices.get(item.getName()).getAsJsonObject()
+								.get("prices").getAsJsonObject()
+								.get(QUALITY_MAP.get(item.getQuality()).toString()).getAsJsonObject()
+								.get("Tradable").getAsJsonObject()
+								.get(item.isCraftable() ? "Craftable" : "Non-Craftable").getAsJsonArray()
+								.get(0).getAsJsonObject();
+					}
+					if(itemObj.get("currency").getAsString().equals("metal")) {
+						metal += itemObj.get("value").getAsDouble() * (double) item.getQuantity();
+						itemsPriced++;
+					} else if(itemObj.get("currency").getAsString().equals("keys")) {
+						keys += itemObj.get("value").getAsDouble() * (double) item.getQuantity();
+						itemsPriced++;
+					} else if(itemObj.get("currency").getAsString().equals("hat")) {
+						metal += itemObj.get("value").getAsDouble() * hatPrice * (double) item.getQuantity();
+						itemsPriced++;
+					} else {
+						log.warn("Could not find price for: " + item.toString());
+					}
+				} catch(NullPointerException e) {
+					if(item.getLevel() != 99) { //Ignore paints/skins
+						log.warn("(NULL) Could not find price for: " + item.toString());
+					}
+				} catch(Exception e) {
+					log.error("Unexpected error while fetching prices.");
+					e.printStackTrace();
+				}
+			} else {
+				log.warn("Missing quality in map for item: " + item.toString());
+			}
+		}
+		/*
+		log.warn("Metal: " + metal);
+		log.warn("Keys: " + keys);
+		log.warn("Metal to keys: " + (metal/keyPrice)); */
+		
+		keys += metal/keyPrice;
+		JsonObject out = new JsonObject();
+		out.addProperty("value", keys);
+		out.addProperty("items", itemsPriced);
+		
+		return out;
 	}
 
 }

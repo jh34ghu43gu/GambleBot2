@@ -1,10 +1,12 @@
 package discord.commands;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
 import org.slf4j.LoggerFactory;
 
+import com.google.gson.JsonObject;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
@@ -121,6 +123,10 @@ public class UnboxUnusualCommand extends Command {
 				}
 			}
 		}
+		JsonObject valueObj = Utils.getTotalItemsValue(allLoot); //Do this before subtracting balance in case we get an error
+		double value = valueObj.get("value").getAsDouble();
+		int priced = valueObj.get("items").getAsInt();
+		
 		player.setBalance(player.getBalance() - (Crate.unboxPrice * unboxed));
 		player.save();
 		
@@ -143,6 +149,9 @@ public class UnboxUnusualCommand extends Command {
 		
 		firstMsg += "It took you " + unboxed + " unboxes to get " + unusualUnboxed.toDiscordString()
 		+ ".\nAttempting to display " + displayItems.size() + " items out of " + allLoot.size() + " items total in the next message.";
+		
+		DecimalFormat twoDec = new DecimalFormat("###,###.##");
+		event.reply("Found prices for " + priced + "/" + allLoot.size() + " items. Total value in keys: " + twoDec.format(value));
 		event.reply(firstMsg);
 		event.reply(Utils.itemsToEmbed(player, displayItems, "You unboxed the following", "crate"));
 	}

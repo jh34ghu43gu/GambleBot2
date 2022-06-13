@@ -157,10 +157,10 @@
 },
 "crates": {
 	"1": {
-		"name": "Mann Co. Supply Crate Series #1",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
-				"quality": "",
+				"quality": "Unique",
 				"weight": 1.0,
 				"items": [
 					"Vita-Saw",
@@ -179,7 +179,7 @@
 		"strangeUnusual": false
 	},
 	"2": {
-		"name": "Mann Co. Supply Crate Series #2",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -206,7 +206,7 @@
 		"strangeUnusual": false
 	},
 	"3": {
-		"name": "Mann Co. Supply Crate Series #3",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -233,7 +233,7 @@
 		"strangeUnusual": false
 	},
 	"4": {
-		"name": "Mann Co. Supply Crate Series #4",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -260,7 +260,7 @@
 		"strangeUnusual": false
 	},
 	"5": {
-		"name": "Mann Co. Supply Crate Series #5",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -294,7 +294,7 @@
 		"strangeUnusual": false
 	},
 	"6": {
-		"name": "Festive Winter Crate Series #6",
+		"name": "Festive Winter Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -334,7 +334,7 @@
 		"strangeUnusual": false
 	},
 	"7": {
-		"name": "Mann Co. Supply Crate Series #7",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -362,7 +362,7 @@
 		"strangeUnusual": false
 	},
 	"8": {
-		"name": "Mann Co. Supply Crate Series #8",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -390,7 +390,7 @@
 		"strangeUnusual": false
 	},
 	"9": {
-		"name": "Mann Co. Supply Crate Series #9",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -398,7 +398,7 @@
 				"items": [
 					"Pink as Hell",
 					"A Color Similar to Slate",
-					"Draby Olive",
+					"Drably Olive",
 					"The Bitter Taste of Defeat and Lime",
 					"The Color of a Gentlemann's Business Pants",
 					"Dark Salmon Injustice"
@@ -416,7 +416,7 @@
 		"strangeUnusual": false
 	},
 	"10": {
-		"name": "Mann Co. Supply Crate Series #10",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -449,7 +449,7 @@
 		"strangeUnusual": false
 	},
 	"11": {
-		"name": "Mann Co. Supply Crate Series #11",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -482,7 +482,7 @@
 		"strangeUnusual": false
 	},
 	"12": {
-		"name": "Mann Co. Supply Crate Series #12",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -515,7 +515,7 @@
 		"strangeUnusual": false
 	},
 	"13": {
-		"name": "Mann Co. Supply Crate Series #13",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -548,14 +548,14 @@
 		"strangeUnusual": false
 	},
 	"14": {
-		"name": "Mann Co. Supply Crate Series #14",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
 				"weight": 0.51,
 				"items": [
 					"A Distinctive Lack of Hue",
-					"Draby Olive",
+					"Drably Olive",
 					"The Bitter Taste of Defeat and Lime"
 				]
 			},
@@ -581,7 +581,7 @@
 		"strangeUnusual": false
 	},
 	"15": {
-		"name": "Mann Co. Supply Crate Series #15",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -614,7 +614,7 @@
 		"strangeUnusual": false
 	},
 	"16": {
-		"name": "Mann Co. Supply Crate Series #16",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -647,7 +647,7 @@
 		"strangeUnusual": false
 	},
 	"17": {
-		"name": "Mann Co. Supply Crate Series #17",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -680,7 +680,7 @@
 		"strangeUnusual": false
 	},
 	"18": {
-		"name": "Mann Co. Supply Crate Series #18",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -713,7 +713,7 @@
 		"strangeUnusual": false
 	},
 	"19": {
-		"name": "Mann Co. Supply Crate Series #19",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -739,7 +739,7 @@
 		"strangeUnusual": false
 	},
 	"20": {
-		"name": "Mann Co. Supply Crate Series #20",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -764,7 +764,7 @@
 		"strangeUnusual": false
 	},
 	"21": {
-		"name": "Mann Co. Supply Crate Series #21",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -789,7 +789,7 @@
 		"strangeUnusual": false
 	},
 	"22": {
-		"name": "Refreshing Summer Cooler Series #22",
+		"name": "Refreshing Summer Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -811,7 +811,7 @@
 		"strangeUnusual": false
 	},
 	"23": {
-		"name": "Mann Co. Supply Crate Series #23",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -836,7 +836,7 @@
 		"strangeUnusual": false
 	},
 	"24": {
-		"name": "Mann Co. Supply Crate Series #24",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -861,7 +861,7 @@
 		"strangeUnusual": false
 	},
 	"25": {
-		"name": "Mann Co. Supply Crate Series #25",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -886,7 +886,7 @@
 		"strangeUnusual": false
 	},
 	"26": {
-		"name": "Mann Co. Supply Crate Series #26",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -911,7 +911,7 @@
 		"strangeUnusual": false
 	},
 	"27": {
-		"name": "Mann Co. Supply Crate Series #27",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -936,7 +936,7 @@
 		"strangeUnusual": false
 	},
 	"28": {
-		"name": "Mann Co. Supply Crate Series #28",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -961,7 +961,7 @@
 		"strangeUnusual": false
 	},
 	"29": {
-		"name": "Mann Co. Supply Crate Series #29",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -986,7 +986,7 @@
 		"strangeUnusual": false
 	},
 	"30": {
-		"name": "Salvaged Mann Co. Supply Crate Series #30",
+		"name": "Salvaged Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1004,7 +1004,7 @@
 		"strangeUnusual": false
 	},
 	"31": {
-		"name": "Mann Co. Supply Crate Series #31",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1029,7 +1029,7 @@
 		"strangeUnusual": false
 	},
 	"32": {
-		"name": "Mann Co. Supply Crate Series #32",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1054,7 +1054,7 @@
 		"strangeUnusual": false
 	},
 	"33": {
-		"name": "Mann Co. Supply Crate Series #33",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1079,7 +1079,7 @@
 		"strangeUnusual": false
 	},
 	"34": {
-		"name": "Mann Co. Supply Crate Series #34",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1104,7 +1104,7 @@
 		"strangeUnusual": false
 	},
 	"35": {
-		"name": "Naughty Winter Crate Series #35",
+		"name": "Naughty Winter Crate",
 		"lootlist": {
 			"1": {
 				"quality": "StrangeUnique10",
@@ -1127,7 +1127,7 @@
 		"strangeUnusual": false
 	},
 	"36": {
-		"name": "Nice Winter Crate Series #36",
+		"name": "Nice Winter Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -1160,7 +1160,7 @@
 		"strangeUnusual": false
 	},
 	"37": {
-		"name": "Mann Co. Supply Crate Series #37",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1185,7 +1185,7 @@
 		"strangeUnusual": false
 	},
 	"38": {
-		"name": "Mann Co. Supply Crate Series #38",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1210,7 +1210,7 @@
 		"strangeUnusual": false
 	},
 	"39": {
-		"name": "Mann Co. Supply Crate Series #39",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1242,7 +1242,7 @@
 		"strangeUnusual": false
 	},
 	"40": {
-		"name": "Salvaged Mann Co. Supply Crate Series #40",
+		"name": "Salvaged Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1260,7 +1260,7 @@
 		"strangeUnusual": false
 	},
 	"41": {
-		"name": "Mann Co. Supply Crate Series #41",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1293,7 +1293,7 @@
 		"strangeUnusual": false
 	},
 	"42": {
-		"name": "Mann Co. Supply Crate Series #42",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1326,7 +1326,7 @@
 		"strangeUnusual": false
 	},
 	"43": {
-		"name": "Mann Co. Supply Crate Series #43",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1358,7 +1358,7 @@
 		"strangeUnusual": false
 	},
 	"44": {
-		"name": "Mann Co. Supply Crate Series #44",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1391,7 +1391,7 @@
 		"strangeUnusual": false
 	},
 	"45": {
-		"name": "Mann Co. Supply Crate Series #45",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1424,7 +1424,7 @@
 		"strangeUnusual": false
 	},
 	"46": {
-		"name": "Scorched Crate Series #46",
+		"name": "Scorched Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1464,7 +1464,7 @@
 		"strangeUnusual": false
 	},
 	"47": {
-		"name": "Mann Co. Supply Crate Series #47",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1497,7 +1497,7 @@
 		"strangeUnusual": false
 	},
 	"48": {
-		"name": "Fall Crate Series #48",
+		"name": "Fall Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -1526,7 +1526,7 @@
 		"strangeUnusual": false
 	},
 	"49": {
-		"name": "Mann Co. Supply Crate Series #49",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1559,17 +1559,17 @@
 		"strangeUnusual": false
 	},
 	"50": {
-		"name": "Salvaged Mann Co. Supply Crate Series #50",
+		"name": "Salvaged Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
-				"quality": "Strange",
+				"quality": "Unique",
 				"weight": 0.20,
 				"items": [
 					"Strange Bacon Grease"
 				]
 			},
 			"2": {
-				"quality": "Unique",
+				"quality": "Strange",
 				"weight": 0.80,
 				"items": [
 					"Construction PDA",
@@ -1583,7 +1583,7 @@
 		"strangeUnusual": false
 	},
 	"51": {
-		"name": "Eerie Crate Series #51",
+		"name": "Eerie Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Haunted",
@@ -1618,7 +1618,7 @@
 		"strangeUnusual": false
 	},
 	"52": {
-		"name": "Naughty Winter Crate 2012 Series #52",
+		"name": "Naughty Winter Crate 2012",
 		"lootlist": {
 			"1": {
 				"quality": "StrangeUnique10",
@@ -1640,7 +1640,7 @@
 		"strangeUnusual": false
 	},
 	"53": {
-		"name": "Nice Winter Crate 2012 Series #53",
+		"name": "Nice Winter Crate 2012",
 		"lootlist": {
 			"1": {
 				"quality": "StrangeUnique10",
@@ -1666,7 +1666,7 @@
 		"strangeUnusual": false
 	},
 	"54": {
-		"name": "Mann Co. Supply Crate Series #54",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1699,7 +1699,7 @@
 		"strangeUnusual": false
 	},
 	"55": {
-		"name": "Mann Co. Supply Crate Series #55",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1732,7 +1732,7 @@
 		"strangeUnusual": false
 	},
 	"56": {
-		"name": "Mann Co. Supply Crate Series #56",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1765,7 +1765,7 @@
 		"strangeUnusual": false
 	},
 	"57": {
-		"name": "Mann Co. Supply Crate Series #57",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1790,7 +1790,7 @@
 		"strangeUnusual": false
 	},
 	"58": {
-		"name": "Robo Community Crate Series #58",
+		"name": "Robo Community Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -1869,7 +1869,7 @@
 		"strangeUnusual": false
 	},
 	"59": {
-		"name": "Mann Co. Supply Crate Series #59",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1902,7 +1902,7 @@
 		"strangeUnusual": false
 	},
 	"60": {
-		"name": "Mann Co. Supply Crate Series #60",
+		"name": "Select Reserve Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -1926,7 +1926,7 @@
 		"strangeUnusual": false
 	},
 	"61": {
-		"name": "Summer Appetizer Crate Series #61",
+		"name": "Summer Appetizer Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -1949,7 +1949,7 @@
 		"strangeUnusual": false
 	},
 	"62": {
-		"name": "Red Summer 2013 Cooler Series #62",
+		"name": "Red Summer 2013 Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -1970,7 +1970,7 @@
 		"strangeUnusual": false
 	},
 	"63": {
-		"name": "Orange Summer 2013 Cooler Series #63",
+		"name": "Orange Summer 2013 Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -1991,7 +1991,7 @@
 		"strangeUnusual": false
 	},
 	"64": {
-		"name": "Yellow Summer 2013 Cooler Series #64",
+		"name": "Yellow Summer 2013 Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2012,7 +2012,7 @@
 		"strangeUnusual": false
 	},
 	"65": {
-		"name": "Green Summer 2013 Cooler Series #65",
+		"name": "Green Summer 2013 Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2033,7 +2033,7 @@
 		"strangeUnusual": false
 	},
 	"66": {
-		"name": "Aqua Summer 2013 Cooler Series #66",
+		"name": "Aqua Summer 2013 Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2054,7 +2054,7 @@
 		"strangeUnusual": false
 	},
 	"67": {
-		"name": "Blue Summer 2013 Cooler Series #67",
+		"name": "Blue Summer 2013 Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2075,7 +2075,7 @@
 		"strangeUnusual": false
 	},
 	"68": {
-		"name": "Brown Summer 2013 Cooler Series #68",
+		"name": "Brown Summer 2013 Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2096,7 +2096,7 @@
 		"strangeUnusual": false
 	},
 	"69": {
-		"name": "Black Summer 2013 Cooler Series #69",
+		"name": "Black Summer 2013 Cooler",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2117,7 +2117,7 @@
 		"strangeUnusual": false
 	},
 	"71": {
-		"name": "Mann Co. Supply Crate Series #71",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -2150,7 +2150,7 @@
 		"strangeUnusual": false
 	},
 	"72": {
-		"name": "Fall 2013 Acorns Crate Series #72",
+		"name": "Fall 2013 Acorns Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2175,7 +2175,7 @@
 		"strangeUnusual": false
 	},
 	"73": {
-		"name": "Fall 2013 Gourd Crate Series #73",
+		"name": "Fall 2013 Gourd Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2200,7 +2200,7 @@
 		"strangeUnusual": false
 	},
 	"74": {
-		"name": "Spooky Crate Series #74",
+		"name": "Spooky Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Haunted",
@@ -2315,7 +2315,7 @@
 		"strangeUnusual": false
 	},
 	"75": {
-		"name": "Mann Co. Supply Crate Series #75",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -2348,7 +2348,7 @@
 		"strangeUnusual": false
 	},
 	"76": {
-		"name": "Mann Co. Supply Crate Series #76",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -2381,7 +2381,7 @@
 		"strangeUnusual": false
 	},
 	"77": {
-		"name": "Mann Co. Supply Crate Series #77",
+		"name": "Mann Co. Supply Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -2414,7 +2414,7 @@
 		"strangeUnusual": false
 	},
 	"78": {
-		"name": "Naughty Winter Crate 2013 Series #78",
+		"name": "Naughty Winter Crate 2013",
 		"lootlist": {
 			"1": {
 				"quality": "StrangeUnique10",
@@ -2436,7 +2436,7 @@
 		"strangeUnusual": false
 	},
 	"79": {
-		"name": "Nice Winter Crate 2013 Series #79",
+		"name": "Nice Winter Crate 2013",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2481,7 +2481,7 @@
 		"strangeUnusual": false
 	},
 	"81": {
-		"name": "Mann Co. Strongbox Series #81",
+		"name": "Mann Co. Strongbox",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2536,7 +2536,7 @@
 		"strangeUnusual": false
 	},
 	"82": {
-		"name": "Mann Co. Supply Munition Series #82",
+		"name": "Mann Co. Supply Munition",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2557,7 +2557,7 @@
 		"strangeUnusual": false
 	},
 	"83": {
-		"name": "Mann Co. Supply Munition Series #83",
+		"name": "Mann Co. Supply Munition",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2578,7 +2578,7 @@
 		"killstreak": true
 	},
 	"84": {
-		"name": "Mann Co. Supply Munition Series #84",
+		"name": "Mann Co. Supply Munition",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2601,7 +2601,7 @@
 		"killstreak": true
 	},
 	"85": {
-		"name": "Mann Co. Supply Munition Series #85",
+		"name": "Mann Co. Supply Munition",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2624,7 +2624,7 @@
 		"strangeUnusual": false
 	},
 	"86": {
-		"name": "Limited Late Summer Crate Series #86",
+		"name": "Limited Late Summer Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2646,7 +2646,7 @@
 		"strangeUnusual": false
 	},
 	"87": {
-		"name": "End of the Line Community Crate Series #87",
+		"name": "End of the Line Community Crate",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2674,7 +2674,7 @@
 					"Hunter Heavy",
 					"Coldfront Curbstompers",
 					"Crossing Guard",
-					"Pool Party",
+					"Taunt: Pool Party",
 					"Cold Snap Coat"
 				]
 			},
@@ -2712,7 +2712,7 @@
 		"strangeUnusual": false
 	},
 	"88": {
-		"name": "Naughty Winter Crate 2014 Series #88",
+		"name": "Naughty Winter Crate 2014",
 		"lootlist": {
 			"1": {
 				"quality": "StrangeUnique10",
@@ -2732,7 +2732,7 @@
 		"strangeUnusual": false
 	},
 	"89": {
-		"name": "Nice Winter Crate 2014 Series #89",
+		"name": "Nice Winter Crate 2014",
 		"lootlist": {
 			"1": {
 				"quality": "StrangeUnique10",
@@ -2775,7 +2775,7 @@
 		"strangeUnusual": false
 	},
 	"90": {
-		"name": "Mann Co. Supply Munition Series #90",
+		"name": "Mann Co. Supply Munition",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -2816,7 +2816,7 @@
 		"strangeUnusual": false
 	},
 	"91": {
-		"name": "Mann Co. Supply Munition Series #91",
+		"name": "Mann Co. Supply Munition",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
@@ -2839,7 +2839,7 @@
 		"killstreak": true
 	},
 	"92": {
-		"name": "Mann Co. Supply Munition Series #92",
+		"name": "Mann Co. Supply Munition",
 		"lootlist": {
 			"1": {
 				"quality": "Strange",
@@ -2882,7 +2882,7 @@
 		"strangeUnusual": false
 	},
 	"103": {
-		"name": "Mann Co. Supply Munition Series #103",
+		"name": "Mann Co. Supply Munition",
 		"lootlist": {
 			"1": {
 				"quality": "Unique",

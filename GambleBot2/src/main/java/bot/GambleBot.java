@@ -13,6 +13,7 @@ import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import ch.qos.logback.classic.Logger;
 import discord.commands.*;
 import files.ConfigHelper;
+import files.SchemaHelper;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -28,6 +29,8 @@ public class GambleBot {
 	private static JDA jda;
 
 	public static void main(String[] args) {
+		
+		
 		//Setup config
 		ConfigHelper.buildEmptyConfig();
 		ConfigHelper.setOptionToFile("DISCORD_TOKEN", "", false);

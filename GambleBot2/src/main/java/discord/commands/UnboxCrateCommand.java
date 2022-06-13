@@ -1,9 +1,11 @@
 package discord.commands;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import org.slf4j.LoggerFactory;
 
+import com.google.gson.JsonObject;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
@@ -115,15 +117,20 @@ public class UnboxCrateCommand extends Command {
 				}
 			}
 		}
+		JsonObject valueObj = Utils.getTotalItemsValue(allLoot); //Do this before subtracting balance in case we get an error
+		double value = valueObj.get("value").getAsDouble();
+		int priced = valueObj.get("items").getAsInt();
+		
 		player.setBalance(player.getBalance() - (Crate.unboxPrice * amt));
 		player.save();
-		
 		
 		for(Item item : allLoot) {
 			log.debug("Saving item: " + item.toString());
 			item.save();
 		}
 		
+		DecimalFormat twoDec = new DecimalFormat("###,###.##");
+		event.reply("Found prices for " + priced + "/" + allLoot.size() + " items. Total value in keys: " + twoDec.format(value));
 		event.reply(Utils.itemsToEmbed(player, allLoot, "You unboxed the following", "crate"));
 	}
 }

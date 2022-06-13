@@ -18,6 +18,7 @@ public class UpdatePricelistCommand extends Command {
 	
 	@Override
 	protected void execute(CommandEvent event) {
+		event.reply("Updating pricelist.");
 		if(Utils.updatePricelist()) {
 			event.reply("Local pricelist updated.");
 		} else {

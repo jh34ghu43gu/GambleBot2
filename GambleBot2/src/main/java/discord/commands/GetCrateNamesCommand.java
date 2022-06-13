@@ -27,7 +27,7 @@ public class GetCrateNamesCommand extends Command {
 		}
 		
 		String out = "Available crates are: \n";
-		for(String c : manager.getNames(false)) {
+		for(String c : manager.getNamesAndPrices(false)) {
 			out += c + "\n";
 		}
 		event.reply(out);
