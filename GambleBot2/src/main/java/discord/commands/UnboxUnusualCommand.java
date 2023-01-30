@@ -40,14 +40,20 @@ public class UnboxUnusualCommand extends Command {
 		}
 		
 		boolean tc = false;
+		boolean burning = false;
 		String crateStr = "";
 		if(!event.getArgs().isEmpty()) {
 			String[] args = event.getArgs().split(" ");
 			if(args.length >= 1) {
 				crateStr = args[0];
 			}
-			if(args.length > 1 && args[1].equalsIgnoreCase("tc")) {
-				tc = true;
+			
+			for(int i = 1; i < args.length; i++) {
+				if(args[i].equalsIgnoreCase("tc")) {
+					tc = true;
+				} else if(args[i].equalsIgnoreCase("b") || args[i].equalsIgnoreCase("burning")) {
+					burning = true;
+				}
 			}
 		}
 		
@@ -60,6 +66,9 @@ public class UnboxUnusualCommand extends Command {
 				crate = rand.nextInt(manager.getAllCrates().size());
 			} while(!manager.getAllCrates().get(crate).isUnusuals());
 			crateName = manager.getAllCrates().get(crate).getName();
+			if(!manager.getAllCrates().get(crate).isCase()) {
+				crateName += " #" + manager.getAllCrates().get(crate).getNumber();
+			}
 		} else {
 			//See if crate/case is valid
 			for(Crate c : manager.getAllCrates()) {
@@ -88,6 +97,12 @@ public class UnboxUnusualCommand extends Command {
 				return; 
 			}
 		}
+		if(burning) {
+			if(!manager.getAllCrates().get(crate).getEffectList().contains("Burning Flames")) {
+				event.reply("Selected crate cannot unbox burning flames effects.");
+				return;
+			}
+		}
 		
 		Player player = Utils.getPlayer(event.getAuthor().getId());
 		player.save();
@@ -114,11 +129,21 @@ public class UnboxUnusualCommand extends Command {
 				
 				if(item.getQuality().equals("Unusual") && !item.getName().contains("Unusualifier")) {
 					if(tc && item.getName().equalsIgnoreCase("Team Captain")) {
-						unusual = true;
-						unusualUnboxed = item;
+						if(burning && item.getEffect().equalsIgnoreCase("Burning Flames")) {
+							unusual = true;
+							unusualUnboxed = item;
+						} else if(!burning) {
+							unusual = true;
+							unusualUnboxed = item;
+						}
 					} else if(!tc) {
-						unusual = true;
-						unusualUnboxed = item;
+						if(burning && item.getEffect().equalsIgnoreCase("Burning Flames")) {
+							unusual = true;
+							unusualUnboxed = item;
+						} else if(!burning) {
+							unusual = true;
+							unusualUnboxed = item;
+						}
 					}
 				}
 			}

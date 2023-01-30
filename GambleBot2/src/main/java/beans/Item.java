@@ -77,6 +77,7 @@ public class Item {
 	
 	public Item() {
 		super();
+		this.name = "error";
 	}
 	
 	/**

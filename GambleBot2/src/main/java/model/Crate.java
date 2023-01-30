@@ -48,7 +48,7 @@ public class Crate {
 	//FactoryNew will be > minimalWear
 	
 	//Rarities
-	private static String[] rarities = {"Civilian", "Freelance", "Mercenary", "Commando", "Assassin", "Elite"};
+	public static String[] rarities = {"Civilian", "Freelance", "Mercenary", "Commando", "Assassin", "Elite"};
 	public static HashMap<String, String> rarityEmotes = new HashMap<String, String>() {{
 		put("Civilian", "<:Civilian:908844101036814357>");
 		put("Freelance", "<:Freelance:908844101527564331>");
@@ -386,6 +386,73 @@ public class Crate {
 		return grades;
 	}
 	
+	/**
+	 * @param hatsOnly
+	 * @return The highest tier. If hatsOnly then only includes the highest tier that is a valid hat.
+	 */
+	public String getHighestTier(boolean hatsOnly) {
+		if(!isCase) {
+			return "";
+		}
+		
+		for(int i = rarities.length-1; i >= 0; i--) {
+			if(getTiers(hatsOnly).contains(rarities[i])) {
+				return rarities[i];
+			}
+		}
+		
+		log.error("Could not find a valid tier while trying to find the highest tier.");
+		return "";
+	}
+	
+	/**
+	 * @param grade The grade of the items being traded, ie 10 merc for a commando would put "Mercenary"
+	 * @param quality Strange otherwise it defaults to unique
+	 * @param wear "random" for a random wear
+	 * @return Attempt to do a mock trade up with 100% chance
+	 */
+	public Item caseTradeUp(String grade, String quality, String wear) {
+		Item out = new Item();
+		if(!isCase) {
+			return out;
+		}
+		
+		if(getTiers(false).contains(grade) && !getHighestTier(false).equalsIgnoreCase(grade)) {
+			for(int i = 0; i < rarities.length; i++) {
+				if(rarities[i].equalsIgnoreCase(grade)) {
+					Random rand = new Random();
+					ArrayList<CrateItem> items = getTieredItems(rarities[i+1]);
+					CrateItem item = items.get(rand.nextInt(items.size()));
+					if(quality.equalsIgnoreCase("strange")) {
+						quality = "Strange";
+					} else {
+						quality = "Unique";
+					}
+					
+					out = new Item(item.getName(), quality, rand.nextInt(100), 1, null, true);
+					
+					if(isSkin) {
+						if(wear.equalsIgnoreCase("random")) {
+							wear = wears[rand.nextInt(wears.length)];
+							out.setWear(wear);
+						} else {
+							for(int j = 0; j < wears.length; j++) {
+								if(wears[j].equalsIgnoreCase(wear)) {
+									wear = wears[j];
+									out.setWear(wear);
+									break;
+								}
+							}
+						}
+					}
+					return out;
+				}
+			}
+		}
+		log.warn("Invalid grade when trying to do a trade up.");
+		return out;
+	}
+	
 	public static String getCrateUnusualHat(String type) {
 		String hat = "null";
 		Random rand = new Random();
@@ -477,6 +544,11 @@ public class Crate {
 			
 			for(Entry<String, JsonElement> caseElement : obj.entrySet()) {
 				if(caseElement.getKey().equals("GlobalEffects") || caseElement.getKey().equals("GlobalBonus")) { continue; } //Not a case
+				if(caseElement.getValue().getAsJsonObject().has("collection")) { //Collections aren't cases
+					if(caseElement.getValue().getAsJsonObject().get("collection").getAsBoolean()) { //Unless they are
+						continue;
+					}
+				} 
 				String caseName = caseElement.getKey();
 				int caseNum = caseElement.getValue().getAsJsonObject().get("number").getAsInt();
 				boolean skins = caseName.contains("Weapons Case") || caseName.contains("War Paint Case");

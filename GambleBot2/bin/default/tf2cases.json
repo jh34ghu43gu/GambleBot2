@@ -1,34 +1,34 @@
 {
 "GlobalEffects": [
-	"Green Confetti",
-	"Purple Confetti",
-	"Haunted Ghosts",
-	"Green Energy",
-	"Purple Energy",
-	"Circling TF Logo",
-	"Massed Flies",
-	"Burning Flames",
-	"Scorching Flames",
-	"Searing Plasma",
-	"Vivid Plasma",
-	"Sunbeams",
-	"Circling Peace Sign",
-	"Circling Heart",
-	"Stormy Storm",
-	"Blizzardy Storm",
-	"Nuts n' Bolts",
-	"Orbiting Planets",
-	"Orbiting Fire",
-	"Bubbling",
-	"Smoking",
-	"Steaming",
-	"Kill-a-Watt",
-	"Terror-Watt",
-	"Cloud 9",
-	"Aces High",
-	"Dead Presidents",
-	"Miami Nights",
-	"Disco Beat Down"
+    "Green Confetti",
+    "Purple Confetti",
+    "Haunted Ghosts",
+    "Green Energy",
+    "Purple Energy",
+    "Circling TF Logo",
+    "Massed Flies",
+    "Burning Flames",
+    "Scorching Flames",
+    "Searing Plasma",
+    "Vivid Plasma",
+    "Sunbeams",
+    "Circling Peace Sign",
+    "Circling Heart",
+    "Stormy Storm",
+    "Blizzardy Storm",
+    "Nuts n' Bolts",
+    "Orbiting Planets",
+    "Orbiting Fire",
+    "Bubbling",
+    "Smoking",
+    "Steaming",
+    "Kill-a-Watt",
+    "Terror-Watt",
+    "Cloud 9",
+    "Aces High",
+    "Dead Presidents",
+    "Miami Nights",
+    "Disco Beat Down"
 ],
 "GlobalBonus": {
 	"Paint": [
@@ -135,7 +135,15 @@
 		"Zoomin' Broom",
 		"Doctor's Defibrillators",
 		"Shooter's Stakeout",
-		"The Hot Wheeler"
+		"The Hot Wheeler",
+		"The Travel Agent",
+		"The Scaredy-cat!",
+		"Drunk Mann's Cannon",
+		"Texas Twirl 'Em",
+		"Shanty Shipmate",
+		"Russian Rubdown",
+		"Tailored Terminal",
+		"Roasty Toasty"
 	],
 	"Ticket": [
 		"Tour of Duty Ticket"
@@ -149,7 +157,8 @@
 		"Decal Tool",
 		"Gift Wrap",
 		"Backpack Expander",
-		"Giftapult"
+		"Giftapult",
+		"Dueling Mini-Game"
 	],
 	"Strange Parts": [
 		"Strange Part: Airborne Enemies Killed",
@@ -914,6 +923,7 @@
 },
 "'Decorated War Hero' War Paint Civilian Grade Keyless Case": {
 	"number": 111,
+	"collection": false,
 	"civilian": [
 		"Civic Duty Mk.II War Paint",
 		"Civil Servant Mk.II War Paint"
@@ -941,6 +951,7 @@
 },
 "'Decorated War Hero' War Paint Freelance Grade Keyless Case": {
 	"number": 112,
+	"collection": false,
 	"civilian": [
 		
 	],
@@ -967,6 +978,7 @@
 },
 "'Decorated War Hero' War Paint Mercenary Grade Keyless Case": {
 	"number": 113,
+	"collection": false,
 	"civilian": [
 		
 	],
@@ -992,6 +1004,7 @@
 },
 "'Contract Campaigner' War Paint Civilian Grade Keyless Case": {
 	"number": 114,
+	"collection": false,
 	"civilian": [
 		"Nutcracker Mk.II War Paint",
 		"Smalltown Bringdown Mk.II War Paint"
@@ -1017,6 +1030,7 @@
 },
 "'Contract Campaigner' War Paint Freelance Grade Keyless Case": {
 	"number": 115,
+	"collection": false,
 	"civilian": [
 		
 	],
@@ -1041,6 +1055,7 @@
 },
 "'Contract Campaigner' War Paint Mercenary Grade Keyless Case": {
 	"number": 116,
+	"collection": false,
 	"civilian": [
 		
 	],
@@ -2047,6 +2062,470 @@
 	],
 	"bonus": [
 		"Festivizer"
+	]
+},
+"Summer 2022 Cosmetic Case": {
+	"number": 136,
+	"civilian": [
+		
+	],
+	"freelance": [
+		
+	],
+	"mercenary": [
+		"Pest's Pads",
+		"The Western Wraps",
+		"The Chaser",
+		"Hawaiian Hunter",
+		"Barefoot Brawler",
+		"Combat Casual",
+		"Tactical Turtleneck",
+		"The Throttlehead",
+		"The Team Player",
+		"Undercover Brolly"
+	],
+	"commando": [
+		"Lawnmaker",
+		"Squatter's Right",
+		"Tropical Camo",
+		"The Hawaiian Hangover",
+		"The Detective",
+		"Fizzy Pharmacist",
+		"The Ripped Rider",
+		"Boston Brain Bucket"
+	],
+	"assassin": [
+		"Kazan Karategi",
+		"Soda Cap",
+		"Monsieur Grenouille",
+		"Head Banger",
+		"Night Vision Gawkers"
+	],
+	"elite": [
+		"Decorated Veteran",
+		"Rocko"
+	],
+	"effects": [
+		"Crustacean Sensation",
+		"Frosted Decadence",
+		"Frosted Decadence",
+		"Sprinkled Delights",
+		"Terrestrial Favor",
+		"Tropical Thrill",
+		"Flourishing Passion",
+		"Dazzling Fireworks",
+		"Blazing Fireworks",
+		"Shimmering Fireworks",
+		"Twinkling Fireworks",
+		"Sparkling Fireworks",
+		"Glowing Fireworks",
+		"Glimmering Fireworks",
+		"Flying Lights",
+		"Limelight",
+		"Shining Star",
+		"Cold Cosmos",
+		"Refracting Fractals",
+		"Startrance",
+		"Starlush",
+		"Starfire",
+		"Stardust",
+		"Contagious Eruption",
+		"Daydream Eruption",
+		"Volcanic Eruption",
+		"Divine Sunlight",
+		"Audiophile",
+		"Soundwave",
+		"Synesthesia"
+	],
+	"hats": [
+		"Hawaiian Hunter",
+		"The Throttlehead",
+		"Undercover Brolly",
+		"Lawnmaker",
+		"Squatter's Right",
+		"The Detective",
+		"Boston Brain Bucket",
+		"Soda Cap",
+		"Monsieur Grenouille",
+		"Head Banger",
+		"Night Vision Gawkers",
+		"Decorated Veteran"
+	]
+},
+"Ghoulish Gains Case": {
+	"number": 137,
+	"civilian": [
+		
+	],
+	"freelance": [
+		
+	],
+	"mercenary": [
+		"Nightbane Brim",
+		"More Gun Marshal",
+		"Hunting Cloak",
+		"Imp's Imprint",
+		"Starlight Sorcerer",
+		"Beaten and Bruised",
+		"Bombard Brigadier",
+		"Firearm Protector",
+		"Horror Shawl",
+		"Turncoat"
+	],
+	"commando": [
+		"Dustbowl Devil",
+		"Masked Fiend",
+		"Safety Stripes",
+		"Road Block",
+		"Lavish Labwear",
+		"Headhunter's Brim"
+	],
+	"assassin": [
+		"Cranial Cowl",
+		"Alcoholic Automaton",
+		"Road Rage",
+		"Victorian Villainy"
+	],
+	"elite": [
+		"Propaniac",
+		"Onimann"
+	],
+	"effects": [
+		"Haunted Kraken",
+		"Eerie Kraken",
+		"Eerie Kraken",
+		"Soulful Slice",
+		"Horsemann's Hack",
+		"Horsemann's Hack",
+		"Haunted Forever!",
+		"Forever And Forever!",
+		"Cursed Forever!",
+		"Moth Plague",
+		"Moth Plague",
+		"Moth Plague",
+		"Malevolent Monoculi",
+		"Malevolent Monoculi",
+		"Malevolent Monoculi",
+		"Haunted Wick",
+		"Wicked Wick",
+		"Spectral Wick"
+	],
+	"hats": [
+		"Nightbane Brim",
+		"More Gun Marshal",
+		"Starlight Sorcerer",
+		"Bombard Brigadier",
+		"Firearm Protector",
+		"Horror Shawl",
+		"Dustbowl Devil",
+		"Headhunter's Brim",
+		"Cranial Cowl",
+		"Victorian Villainy",
+		"Propaniac",
+		"Onimann"
+	]
+},
+"Scream Fortress XIV War Paint Case": {
+	"number": 138,
+	"civilian": [
+		
+	],
+	"freelance": [
+		
+	],
+	"mercenary": [
+		"Sunriser War Paint",
+		"Health and Hell War Paint",
+		"Health and Hell (Green) War Paint",
+		"Hypergon War Paint",
+		"Cream Corned War Paint"
+	],
+	"commando": [
+		"Metalized Soul War Paint",
+		"Pumpkin Plastered War Paint",
+		"Chilly Autumn War Paint"
+	],
+	"assassin": [
+		"Bonzo Gnawed War Paint",
+		"Ghoul Blaster War Paint"
+	],
+	"elite": [
+		"Sacred Slayer War Paint"
+	],
+	"effects": [
+		
+	]
+},
+"Winter 2022 Cosmetic Case": {
+	"number": 139,
+	"civilian": [
+		
+	],
+	"freelance": [
+		
+	],
+	"mercenary": [
+		"Oktoberfester",
+		"Crosshair Cardigan",
+		"Bulb Bonnet",
+		"Cold Blooded Coat",
+		"Partizan",
+		"Glasgow Bankroll",
+		"Arctic Mole",
+		"Heavy Heating",
+		"The Soft Hard Hat",
+		"Lumbercap"
+	],
+	"commando": [
+		"Infiltrator's Insulation",
+		"Frostbite Bonnet",
+		"Firebrand",
+		"Plaid Lad",
+		"Underminer's Overcoat",
+		"Ol' Reliable",
+		"The Cool Warm Sweater"
+	],
+	"assassin": [
+		"Motley Sleeves",
+		"Battle Bear",
+		"Colonel Kringle",
+		"The Wooly Pulli"
+	],
+	"elite": [
+		"Trapper's Flap",
+		"Festive Rack"
+	],
+	"effects": [
+		"Musical Maelstrom",
+		"Verdant Virtuoso",
+		"Silver Serenade",
+		"Cosmic Constellations",
+		"Cosmic Constellations",
+		"Dazzling Constellations",
+		"Tainted Frost",
+		"Tainted Frost",
+		"Tainted Frost",
+		"Starlight Haze",
+		"Starlight Haze",
+		"Starlight Haze"
+	],
+	"hats": [
+		"Oktoberfester",
+		"Bulb Bonnet",
+		"Partizan",
+		"Arctic Mole",
+		"The Soft Hard Hat",
+		"Lumbercap",
+		"Infiltrator's Insulation",
+		"Frostbite Bonnet",
+		"Plaid Lad",
+		"Ol' Reliable",
+		"Colonel Kringle",
+		"Trapper's Flap",
+		"Festive Rack"
+	]
+},
+"The Teurfort Collection": {
+	"collection": true,
+	"civilian": [
+		"Citizen Pain Minigun",
+		"Smalltown Bringdown Rocket Launcher",
+		"Mayor Revolver",
+		"Local Hero Pistol",
+		"Civil Servant Medi Gun",
+		"Civic Duty Shotgun"
+	],
+	"freelance": [
+		"Rooftop Wrangler Stickybomb Launcher",
+		"Hickory Hole-Puncher Pistol",
+		"Spruce Deuce Scattergun",
+		"Team Sprayer SMG"
+	],
+	"mercenary": [
+		"Earth, Sky and Fire Flame Thrower",
+		"Bogtrotter Sniper Rifle",
+		"Treadplate Tormenter SMG"
+	],
+	"commando": [
+		"War Room Minigun",
+		"Bovine Blazemaker Flame Thrower"
+	],
+	"assassin": [
+		
+	],
+	"elite": [
+	]
+},
+"The Craftsmann Collection": {
+	"collection": true,
+	"civilian": [
+		"Backcountry Blaster Scattergun",
+		"Antique Annihilator Minigun",
+		"Old Country Revolver",
+		"American Pastoral Rocket Launcher",
+		"Reclaimed Reanimator Medi Gun"
+	],
+	"freelance": [
+		"Plaid Potshotter SMG",
+		"Country Crusher Scattergun",
+		"Iron Wood Minigun",
+		"Shot in the Dark Sniper Rifle",
+		"Blasted Bombardier Stickybomb Launcher"
+	],
+	"mercenary": [
+		"Rustic Ruiner Shotgun",
+		"Barn Burner Flame Thrower",
+		"Homemade Heater Pistol"
+	],
+	"commando": [
+		"Tartan Torpedo Scattergun",
+		"Lumber From Down Under Sniper Rifle"
+	],
+	"assassin": [
+		
+	],
+	"elite": [
+	]
+},
+"The Harvest Collection": {
+	"collection": true,
+	"civilian": [
+		"Autumn Rocket Launcher",
+		"Autumn Shotgun",
+		"Autumn Wrench",
+		"Nutcracker Flame Thrower",
+		"Nutcracker Minigun",
+		"Nutcracker Pistol",
+		"Nutcracker Scattergun",
+		"Nutcracker Wrench",
+		"Wildwood Medi Gun",
+		"Wildwood Revolver",
+		"Wildwood SMG",
+		"Wildwood Sniper Rifle"
+	],
+	"freelance": [
+		"Macabre Web Pistol",
+		"Macabre Web Revolver",
+		"Macabre Web Scattergun",
+		"Macabre Web Grenade Launcher",
+		"Macabre Web Stickybomb Launcher",
+		"Macabre Web Minigun",
+		"Autumn Flame Thrower",
+		"Autumn Grenade Launcher",
+		"Autumn Stickybomb Launcher"
+	],
+	"mercenary": [
+		"Pumpkin Patch Flame Thrower",
+		"Pumpkin Patch Minigun",
+		"Pumpkin Patch Sniper Rifle",
+		"Pumpkin Patch Stickybomb Launcher",
+		"Boneyard Knife"
+	],
+	"commando": [
+		"Boneyard Sniper Rifle",
+		"Boneyard Wrench",
+		"Boneyard Revolver"
+	],
+	"assassin": [
+		
+	],
+	"elite": [
+	]
+},
+"The Gentlemanne's Collection": {
+	"collection": true,
+	"civilian": [
+		"Coffin Nail Flame Thrower",
+		"Coffin Nail Medi Gun",
+		"Coffin Nail Minigun",
+		"Coffin Nail Revolver",
+		"Coffin Nail Sniper Rifle",
+		"Coffin Nail Stickybomb Launcher",
+		"Dressed to Kill Knife",
+		"Dressed to Kill Medi Gun",
+		"Dressed to Kill Minigun",
+		"Dressed to Kill Pistol",
+		"Dressed to Kill Shotgun",
+		"Dressed to Kill Sniper Rifle",
+		"Dressed to Kill Stickybomb Launcher",
+		"Dressed to Kill Wrench"
+	],
+	"freelance": [
+		"Coffin Nail Rocket Launcher",
+		"Coffin Nail Scattergun",
+		"Coffin Nail Shotgun",
+		"High Roller's Rocket Launcher",
+		"Coffin Nail Grenade Launcher"
+	],
+	"mercenary": [
+		"Top Shelf Knife",
+		"Top Shelf Revolver",
+		"High Roller's Medi Gun",
+		"High Roller's SMG"
+	],
+	"commando": [
+		"Top Shelf Minigun",
+		"Top Shelf Wrench",
+		"Top Shelf Grenade Launcher"
+	],
+	"assassin": [
+		
+	],
+	"elite": [
+	]
+},
+"Decorated War Hero Collection": {
+	"number": 111,
+	"collection": true,
+	"civilian": [
+		"Civic Duty Mk.II War Paint",
+		"Civil Servant Mk.II War Paint"
+	],
+	"freelance": [
+		"Autumn Mk.II War Paint",
+		"Plaid Potshotter Mk.II War Paint"
+	],
+	"mercenary": [
+		"Night Owl Mk.II War Paint",
+		"Woodsy Widowmaker Mk.II War Paint",
+		"Forest Fire Mk.II War Paint"
+	],
+	"commando": [
+		"Woodland Warrior Mk.II War Paint",
+		"Carpet Bomber Mk.II War Paint",
+		"Wrapped Reviver Mk.II War Paint"
+	],
+	"assassin": [
+		
+	],
+	"elite": [
+		
+	]
+},
+"Contract Campaigner Collection": {
+	"number": 114,
+	"collection": true,
+	"civilian": [
+		"Nutcracker Mk.II War Paint",
+		"Smalltown Bringdown Mk.II War Paint"
+	],
+	"freelance": [
+		"Macabre Web Mk.II War Paint",
+		"Iron Wood Mk.II War Paint"
+	],
+	"mercenary": [
+		"Backwoods Boomstick Mk.II War Paint",
+		"Masked Mender Mk.II War Paint"
+	],
+	"commando": [
+		"Dead Reckoner Mk.II War Paint",
+		"Bovine Blazemaker Mk.II War Paint"
+	],
+	"assassin": [
+		
+	],
+	"elite": [
+		
 	]
 }
 }

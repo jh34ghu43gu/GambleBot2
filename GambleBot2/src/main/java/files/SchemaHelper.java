@@ -214,11 +214,13 @@ public class SchemaHelper {
 				this.put("#TF_CrocLeather_Slouch", "Crocleather Slouch");
 				this.put("#TF_VoodooJuju", "Voodoo JuJu (Slight Return)");
 				this.put("#TF_fall2013_popeyes", "Pop-Eyes");
-				//Remove The for our purposes
+				//Remove "The" for our purposes
 				this.put("The Triad Trinket", "Triad Trinket");
 				this.put("The Champ Stamp", "Champ Stamp");
 				this.put("The Marxman", "Marxman");
 				this.put("The Human Cannonball", "Human Cannonball");
+				this.put("#TF_MNC_Hat", "Athletic Supporter");
+				this.put("#TF_MNC_Mascot_Hat", "Superfan");
 			}};
 			writer = new FileWriter("ENGLISH " + hatFileName);
 			out = "";

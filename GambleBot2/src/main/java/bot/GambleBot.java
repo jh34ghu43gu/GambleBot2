@@ -14,6 +14,7 @@ import ch.qos.logback.classic.Logger;
 import discord.commands.*;
 import files.ConfigHelper;
 import files.SchemaHelper;
+import model.Collection;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -73,8 +74,11 @@ public class GambleBot {
 		commandBuilder.addCommand(new UpdatePricelistCommand());
 		commandBuilder.addCommand(new CraftHatsCommand());
 		commandBuilder.addCommand(new GenerationValueReportCommand());
+		commandBuilder.addCommand(new CaseTradeUpCommand(gManager));
+		commandBuilder.addCommand(new UnboxAllCommand(gManager));
 		CommandClient commandClient = commandBuilder.build();
 		
+
 		//Launch discord bot
 		JDABuilder builder = JDABuilder.createDefault(ConfigHelper.getOptionFromFile("DISCORD_TOKEN"));
 		builder.enableIntents(GatewayIntent.GUILD_MEMBERS);

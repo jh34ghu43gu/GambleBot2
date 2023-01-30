@@ -62,8 +62,7 @@ public class GamblerManager {
 					continue;
 				}
 			} else {
-				log.warn("NO PRICE FOUND FOR: " + crate.getName() + " " + crate.getNumber() + ", SKIPPING.");
-				continue;
+				log.warn("NO PRICE FOUND FOR: " + crate.getName() + " " + crate.getNumber() + ".");
 			}
 			prices.put(crate.getNumber(), value);
 			currencies.put(crate.getNumber(), currency);
@@ -114,12 +113,46 @@ public class GamblerManager {
 	public ArrayList<String> getNamesAndPrices(boolean cases) {
 		DecimalFormat twoDec = new DecimalFormat("###,###.##");
 		ArrayList<String> c = new ArrayList<String>();
-		for(Crate crate : crates) {
-			if(crate.isCase() == cases) {
-				c.add(crate.getNames() + " (" + twoDec.format(prices.get(crate.getNumber())) + " " + currencies.get(crate.getNumber()) + ")");
+		Crate debugCrate = null;
+		try {
+			for(Crate crate : crates) {
+				debugCrate = crate;
+				if(crate.isCase() == cases) {
+					if(prices.get(crate.getNumber()) == 0) {
+						c.add(crate.getNames());
+					} else {
+						c.add(crate.getNames() + " (" + twoDec.format(prices.get(crate.getNumber())) + " " + currencies.get(crate.getNumber()) + ")");
+					}
+				}
 			}
+		} catch (IllegalArgumentException e) {
+			log.error("IllegalArg for crate: " + debugCrate.getNumber());
 		}
 		
 		return c;
+	}
+	
+	/**
+	 * @param crateNumber
+	 * @return
+	 */
+	public double getCratePrice(int crateNumber) {
+		if(prices.containsKey(crateNumber)) {
+			return prices.get(crateNumber);
+		} else {
+			return 0;
+		}
+	}
+	
+	/**
+	 * @param crateNumber
+	 * @return
+	 */
+	public String getCratePriceCurrency(int crateNumber) {
+		if(prices.containsKey(crateNumber)) {
+			return currencies.get(crateNumber);
+		} else {
+			return "!";
+		}
 	}
 }
