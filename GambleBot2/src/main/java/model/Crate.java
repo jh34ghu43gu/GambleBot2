@@ -31,8 +31,8 @@ public class Crate {
 	//Chances are 0 - 1
 	private static double unusualChance = 0.0069;
 	//Killstreak kit odds
-	private static double specializedChance = 0.15; //TODO get non-guessed values
-	private static double professionalChance = 0.05;
+	private static double specializedChance = 0.15; //Based on 1600 unboxes; ~81%, ~15%, ~3%,
+	private static double professionalChance = 0.03;
 	//Cases
 	private static double strangeChance = 0.1;
 	private static double tierRollingChance = 0.2; //20% chance to roll the higher tier in cases

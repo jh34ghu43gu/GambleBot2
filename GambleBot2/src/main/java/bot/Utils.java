@@ -25,6 +25,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonElement;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import beans.Item;
@@ -282,7 +283,7 @@ public class Utils {
 			if(!skin.getEffect().isEmpty()) {
 				emote += ConfigHelper.getOptionFromFile("UNUSUAL_EMOTE");
 			}
-			String itemStr = "• " + emote + " " + skin.toDiscordString();
+			String itemStr = "ï¿½ " + emote + " " + skin.toDiscordString();
 			if(itemText.isEmpty()) {
 				itemText.add(itemStr);
 			} else if(itemText.get(itemTextIndex).length()+ itemStr.length() >= 1024) {
@@ -306,7 +307,7 @@ public class Utils {
 			} else if(item.getQuality().equals("Unusual") && item.getName().contains("Unusualifier")) {
 				emote += ConfigHelper.getOptionFromFile("UNUSUALIFIER_EMOTE");
 			}
-			String itemStr = "• " + emote + " " + item.toDiscordString();
+			String itemStr = "ï¿½ " + emote + " " + item.toDiscordString();
 			if(itemText.isEmpty()) {
 				itemText.add(itemStr);
 			} else if(itemText.get(itemTextIndex).length()+ itemStr.length() >= 1024) {
@@ -468,7 +469,7 @@ public class Utils {
 			CharsetDecoder decoder = Charset.forName("UTF-8").newDecoder();
 	        decoder.onMalformedInput(CodingErrorAction.IGNORE);
 	        InputStreamReader reader = new InputStreamReader(input, decoder);
-	        BufferedReader bufferedReader = new BufferedReader( reader );
+	        BufferedReader bufferedReader = new BufferedReader(reader);
 			pricelist = gson.fromJson(bufferedReader, JsonObject.class).getAsJsonObject("response");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

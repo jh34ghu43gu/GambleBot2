@@ -108,7 +108,7 @@
 		"73", "74", "75", "76", "77", "78", "79", "80"
 	],
 	"VI": [
-		"Bozo The All-Gnawing",
+		"Bonzo The All-Gnawing",
 		"Amaranthine",
 		"Stare From Beyond",
 		"The Ooze",
@@ -312,7 +312,7 @@
 				"weight": 0.33,
 				"items": [
 					"Defiant Spartan",
-					"Détective Noir",
+					"Dï¿½tective Noir",
 					"A Rather Festive Tree",
 					"Exquisite Rack",
 					"Buckaroo's Hat",
@@ -573,7 +573,7 @@
 				"items": [
 					"Familiar Fez",
 					"Backbiter's Billycock",
-					"Détective Noir"
+					"Dï¿½tective Noir"
 				]
 			}
 		},
@@ -1036,7 +1036,7 @@
 				"weight": 0.90,
 				"items": [
 					"Brass Beast",
-					"Übersaw",
+					"ï¿½bersaw",
 					"L'Etranger",
 					"Equalizer"
 				]
@@ -1782,7 +1782,7 @@
 				"items": [
 					"Mann Co. Painting Set",
 					"Tam O' Shanter",
-					"Détective Noir"
+					"Dï¿½tective Noir"
 				]
 			}
 		},
@@ -1884,7 +1884,7 @@
 				"quality": "Unique",
 				"weight": 0.30,
 				"items": [
-					"Strange Part: Medics Killed That Have Full ÜberCharge",
+					"Strange Part: Medics Killed That Have Full ï¿½berCharge",
 					"Strange Part: Heavies Killed",
 					"Strange Part: Giant Robots Destroyed"
 				]
@@ -2540,18 +2540,30 @@
 		"lootlist": {
 			"1": {
 				"quality": "Unique",
-				"weight": 1.00,
+				"weight": 0.60,
 				"items": [
 					"Pretty Boy's Pocket Pistol Strangifier",
 					"Phlogistinator Strangifier",
-					"Cleaner's Carbine Strangifier",
+					"Cleaner's Carbine Strangifier"
+				]
+			},
+			"2": {
+				"quality": "Unique",
+				"weight": 0.30,
+				"items": [
 					"Strange Cosmetic Part: Kills",
 					"Strange Part: Full Health Kills",
-					"Strange Part: Headshot Kills",
+					"Strange Part: Headshot Kills"
+				]
+			},
+			"3": {
+				"quality": "Unique",
+				"weight": 0.10,
+				"items": [
 					"Private Eye Strangifier",
 					"Big Chief Strangifier"
 				]
-			}
+			}			
 		},
 		"effects": "3",
 		"strangeUnusual": false
@@ -2862,7 +2874,7 @@
 				"quality": "Strange",
 				"weight": 0.18,
 				"items": [
-					"Claidheamh Mòr",
+					"Claidheamh Mï¿½r",
 					"Wrangler",
 					"Shahanshah",
 					"Cloak and Dagger",

@@ -31,14 +31,19 @@ public class CraftHatsCommand extends Command {
 	private static final Logger log = (Logger) LoggerFactory.getLogger(CraftHatsCommand.class);
 	private double craftCost = 3.0;
 	private int maxCraft = 100000;
+	private int maxAll = 1000;
 	private HashMap<String, Double> hats;
 	
 	
 	public CraftHatsCommand() {
 		this.name = "crafthats";
 		this.aliases = new String[] {"ch"};
-		this.arguments = "<#||stats>";
-		this.help = "Craft <1-" + maxCraft + "> hats and see if you made profit. Or craft stats for a list of the 50 most valuable hats."; 
+		this.arguments = "<#||stats||all <#>>";
+		this.help = "Craft <1-" + maxCraft + "> hats and see if you made profit."
+				+ "\nOr craft stats for a list of the 50 most valuable hats."
+				+ "\nOr craft all to attempt to craft every craftable hat. "
+					+ "Says how many crafts it took and the starting amount of hats required. "
+					+ "Optional aggregate attempts up to " + maxAll + " attempts.";
 		this.cooldown = 5;
 		this.hats = new HashMap<String, Double>();
 		updateHats();
@@ -54,6 +59,7 @@ public class CraftHatsCommand extends Command {
 		}
 		int amt = 1;
 		boolean stats = false;
+		boolean all = false;
 		if(!event.getArgs().isEmpty()) {
 			String[] args = event.getArgs().split(" ");
 			for(String s : args) {
@@ -61,6 +67,21 @@ public class CraftHatsCommand extends Command {
 			}
 			if(args[0].equalsIgnoreCase("stats")) {
 				stats = true;
+			} else if(args[0].equalsIgnoreCase("all")) {
+				all = true;
+				if(args.length > 1) {
+					try {
+						amt = Integer.parseInt(args[1]);
+						if(amt > maxAll) {
+							amt = maxAll;
+						}
+						if(amt <= 0) {
+							amt = 1;
+						}
+					} catch(Exception e) {
+						//just do 1
+					}
+				}
 			} else {
 				try {
 					amt = Integer.parseInt(args[0]);
@@ -90,6 +111,58 @@ public class CraftHatsCommand extends Command {
 			return;
 		}
 		
+		DecimalFormat twoDec = new DecimalFormat("###,###.##");
+		if(all) {
+			double totalCraftsDone = 0;
+			double totalExcessHats = 0;
+			double totalHatsRequired = 0;
+			for(int i = 0; i < amt; i++) {
+				int craftsDone = 0;
+				int excessHats = 0;
+				int hatsRequired = 0;
+				ArrayList<String> hatsCrafted = new ArrayList<String>();
+				
+				Random rand = new Random();
+				String[] set = hats.keySet().toArray(new String[0]);
+				
+				while(hatsCrafted.size() < hats.size()) {
+					craftsDone++;
+					if(excessHats >= 2) {
+						excessHats -= 2;
+					} else if(excessHats == 1) {
+						hatsRequired++;
+						excessHats--;
+					} else {
+						hatsRequired += 2;
+					}
+					
+					String hat = set[rand.nextInt(hats.size())];
+					if(hatsCrafted.contains(hat)) {
+						excessHats++;
+					} else {
+						hatsCrafted.add(hat);
+					}
+				}
+				if(amt == 1) {
+					String out = "Crafted all " + hatsCrafted.size() + " hats with " + excessHats + " extra hats."
+							+ "\nTook " + craftsDone + " crafts to do and required purchasing " + hatsRequired + " hats.";
+					event.reply(out);
+					return;
+				} else {
+					totalCraftsDone += craftsDone;
+					totalExcessHats += excessHats;
+					totalHatsRequired += hatsRequired;
+				}
+			}
+			
+			String out = "Crafted all " + hats.size() + " hats " + amt + " times."
+					+ "\nAverage crafts done: " + twoDec.format(totalCraftsDone/amt)
+					+ "\nAverage hats required: " + twoDec.format(totalHatsRequired/amt)
+					+ "\nAverage extra hats: " + twoDec.format(totalExcessHats/amt);
+			event.reply(out);
+			return;
+		}
+		
 		Random rand = new Random();
 		double value = 0.0;
 		int badHats = 0;
@@ -115,7 +188,7 @@ public class CraftHatsCommand extends Command {
 		double cost = amt*craftCost;
 		double percent = (value-cost)/cost*100.0;
 		
-		DecimalFormat twoDec = new DecimalFormat("###,###.##");
+		
 		String profit = "";
 		if(value - cost > 0) {
 			profit = twoDec.format(value-cost) + "";
@@ -204,6 +277,11 @@ public class CraftHatsCommand extends Command {
 				}
 				this.hats.put(name, value);
 			}
+			//Add the 3 hats that I am CBA on fixing UTF encoding problems
+			this.hats.put("Detective Noir", 1.22);
+			this.hats.put("Brutal Bouffant", 1.22);
+			this.hats.put("Ze Ubermensch", 1.22);
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

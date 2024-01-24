@@ -43,6 +43,7 @@ public class UnboxEliteCommand extends Command {
 		boolean unusual = false;
 		boolean strange = false;
 		boolean fn = false;
+		boolean nc = false;
 		if(!event.getArgs().isEmpty()) {
 			String[] args = event.getArgs().split(" ");
 			for(String s : args) {
@@ -60,6 +61,9 @@ public class UnboxEliteCommand extends Command {
 				}
 				if(s.equalsIgnoreCase("fn")) {
 					fn = true;
+				}
+				if(s.equalsIgnoreCase("nc")) {
+					nc = true;
 				}
 			}
 		}
@@ -89,6 +93,11 @@ public class UnboxEliteCommand extends Command {
 		
 		if(fn && !manager.getAllCrates().get(crate).isSkin()) {
 			event.reply("FN can only be used with skin/paint cases.");
+			return;
+		}
+		
+		if(nc && crate != 104) {
+			event.reply("NC can only be used on the quarantined (96) case.");
 			return;
 		}
 		
@@ -161,6 +170,14 @@ public class UnboxEliteCommand extends Command {
 					}
 					if(fn) {
 						if(!item.getWear().equals("Factory New")) {
+							checks = false;
+						}
+					}
+					if(nc) {
+						if(!item.getQuality().equals("Unusual") || !item.getEffect().equals("Nebula")) {
+							checks = false;
+						}
+						if(!item.getName().equals("Corona Australis")) {
 							checks = false;
 						}
 					}

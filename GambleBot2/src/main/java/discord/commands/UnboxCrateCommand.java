@@ -19,7 +19,7 @@ import model.Crate;
 public class UnboxCrateCommand extends Command {
 	
 	private static int caseUnboxLimit = 500;
-	private static int crateUnboxLimit = 1000;
+	private static int crateUnboxLimit = 10000;
 	
 	private GamblerManager manager;
 	private static final Logger log = (Logger) LoggerFactory.getLogger(UnboxCrateCommand.class);
