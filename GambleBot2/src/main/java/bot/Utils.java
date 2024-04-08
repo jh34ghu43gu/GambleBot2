@@ -519,7 +519,7 @@ public class Utils {
 									.get(UNUSUAL_EFFECT_MAP.get(item.getEffect()).toString()).getAsJsonObject();
 							
 						} else {
-							log.warn("Effect \"" + item.getEffect() +"\" is not mapped!");
+							//log.warn("Effect \"" + item.getEffect() +"\" is not mapped!");
 							continue;
 						}
 					} else {
@@ -544,7 +544,7 @@ public class Utils {
 					}
 				} catch(NullPointerException e) {
 					if(item.getLevel() != 99) { //Ignore paints/skins
-						log.warn("(NULL) Could not find price for: " + item.toString());
+						//log.warn("(NULL) Could not find price for: " + item.toString());
 					}
 				} catch(Exception e) {
 					log.error("Unexpected error while fetching prices.");

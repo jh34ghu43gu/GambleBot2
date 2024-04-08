@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -110,6 +111,8 @@ public class GenerationValueReportCommand extends Command {
 			JsonArray effectIds = effects.get(effect+"_ids").getAsJsonArray();
 
 			//Create an id:name map and fill the tracking map with names and 0 value
+			LinkedHashMap<String, ArrayList<Double>> medianValuesMap = new LinkedHashMap<String, ArrayList<Double>>();
+			LinkedHashMap<String, Double> medianMap = new LinkedHashMap<String, Double>(); //Using for medians later
 			LinkedHashMap<String, Double> valueMap = new LinkedHashMap<String, Double>();
 			LinkedHashMap<String, Double> amtMap = new LinkedHashMap<String, Double>(); //Use this to get our avgs later
 			HashMap<String, String> effectIdToName = new HashMap<String, String>();
@@ -117,6 +120,8 @@ public class GenerationValueReportCommand extends Command {
 				effectIdToName.put(effectIds.get(i).getAsString(), effectNames.get(i).getAsString());
 				valueMap.put(effectNames.get(i).getAsString(), 0.0);
 				amtMap.put(effectNames.get(i).getAsString(), 0.0);
+				medianValuesMap.put(effectNames.get(i).getAsString(), new ArrayList<Double>());
+				medianMap.put(effectNames.get(i).getAsString(), 0.0);
 			}
 			
 			//Actually get prices now
@@ -147,6 +152,7 @@ public class GenerationValueReportCommand extends Command {
 											value += tmpValue;
 											valueMap.put(effectName, value);
 											amtMap.put(effectName, amtMap.get(effectName)+1);
+											medianValuesMap.get(effectName).add(tmpValue);
 										}
 									}
 								}
@@ -156,13 +162,17 @@ public class GenerationValueReportCommand extends Command {
 				}
 			}
 			
-			//Do the averages
+			//Do the averages and medians
 			for(JsonElement nameElement : effectNames) {
 				String name = nameElement.getAsString();
 				double tmpValue = valueMap.get(name);
 				tmpValue = Math.floor((tmpValue/amtMap.get(name))*1000.0)/1000.0;
 				valueMap.put(name, tmpValue);
+				
+				Collections.sort(medianValuesMap.get(name));
+				medianMap.put(name, medianValuesMap.get(name).get(medianValuesMap.get(name).size()/2));
 			}
+			
 			//Sort
 			LinkedHashMap<String, Double> sorted = (LinkedHashMap<String, Double>) sortByValue(valueMap);
 			DecimalFormat twoDec = new DecimalFormat("###,###.##");
@@ -170,7 +180,8 @@ public class GenerationValueReportCommand extends Command {
 			Object[] keys = sorted.keySet().toArray();
 			double total = 0.0;
 			for(int i = keys.length-1; i >= 0; i--) {
-				out += keys[i] + " : " + twoDec.format(sorted.get(keys[i])) + "keys\n";
+				out += keys[i] + ": Avg " + twoDec.format(sorted.get(keys[i]))
+						+ " | Median " + twoDec.format(medianMap.get(keys[i])) + " keys\n";
 				total += sorted.get(keys[i]);
 			};
 			total = total/keys.length;
